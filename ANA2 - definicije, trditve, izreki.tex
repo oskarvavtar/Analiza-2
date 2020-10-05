@@ -1,0 +1,270 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[slovene]{babel}
+
+\usepackage{amsthm}
+\usepackage{amsmath, amssymb, amsfonts}
+
+\theoremstyle{definition}
+\newtheorem{definicija}{Definicija}[section]
+
+\newtheorem{lema}{Lema}
+\newtheorem{trditev}{Trditev}
+\newtheorem{izrek}{Izrek}
+\newtheorem*{dokaz}{Dokaz}
+\newtheorem*{posledica}{Posledica}
+\newtheorem*{dogovor}{Dogovor}
+
+\title{Analiza 2 - definicije, trditve in izreki}
+\author{Oskar Vavtar}
+\date{2020/21}
+
+\begin{document}
+\maketitle
+\pagebreak
+\tableofcontents
+\pagebreak
+
+% #################################################################################################
+
+\section{Nedoločeni integral in pojem diferencialne enačbe}
+\vspace{0.5cm}
+
+% *************************************************************************************************
+
+\subsection{Primitivna funkcija in nedoločeni integral}
+\vspace{0.5cm}
+
+\begin{definicija}[Primitivna funkcija]
+
+Naj bo $f$ funkcija \textit{ene spremenljivke}. Če $\exists$ \textit{odvedljiva funkcija} $F: A \rightarrow \mathbb{R}$, za katero velja $F' = f$, imenujemo F \textit{primitivna funkcija} funkcije $f$ na $A$. 
+
+\end{definicija}
+\vspace{0.5cm}
+
+\begin{definicija}[Nedoločeni integral]
+
+\textit{Nedoločeni integral} funkcije $f$ je skupek vseh njenih primitivnih funkcij. Označimo ga z $\int f(x) dx$, funkcijo $f$ pa imenujemo \textit{integrand}.
+
+\end{definicija}
+
+\begin{posledica}
+
+Naj bo $F$ neka \textit{primitivna} funkcija za $f$ na intervalu $J$. Potem je za $x \in J$
+$$\int f(x) dx = F(x) + C,$$
+kjer je $C \in \mathbb{R}$ poljubna konstanta, ki jo imenujemo \textit{splošna} ali \textit{integracijska konstanta}.
+
+\end{posledica}
+\vspace{0.5cm}
+
+% *************************************************************************************************
+
+\subsection{Uvedba nove spremenljivke v nedoločeni integral}
+\vspace{0.5cm}
+
+% *************************************************************************************************
+
+\subsection{Integracija po delih v nedoločenem integralu}
+\vspace{0.5cm}
+
+% *************************************************************************************************
+
+\subsection{Diferencialne enačbe 1.reda}
+\vspace{0.5cm}
+
+\begin{definicija}
+
+\textit{Navadna diferencialna enačba} 1.reda je enačba za neznano funkcijo 
+$$y=g(x),$$
+ki vsebuje tudi odvod $y'$ funkcije $y$.
+
+\textit{Splošna oblika} diferencialne enačbe 1.reda je
+$$F(x,y,y')=0,$$
+kjer je $F$ funkcija treh spremenljivk, ki je res odvisna od zadnje spremenljivke.
+
+\textit{Splošna rešitev} diferencialne enačbe 1.reda je funkcija 
+$$y=g(x,C)$$
+(lahko podana implicitno),ki je odvisna od \textit{splošne konstante C} in reši dano diferencialno enačbo za poljubno izbiro vrednosti konstante $C \in \mathbb{R}$, poleg tega pa za poljuben začetni pogoj $\exists$ vrednost konstante $C$, pri kateri rešitev zadošča izbranemu začetnemu pogoju.
+
+Rešitev, ki ne vsebuje splošnih konstant, imenujemo tudi \textit{posebna} ali \textit{partikularna rešitev}.
+
+\end{definicija}
+
+\begin{definicija}[LDE 1.reda]
+
+\textit{Linearna diferencialna enačba} 1.reda ima obliko
+$$r_1(x)y' + r_0(x)y = s(x),$$
+kjer so $r_0, r_1, s: J \rightarrow \mathbb{R}$ funkcije, definirane na nekem intervalu J. Če je $s$ ničelna funkcija, rečemo, da je enačba \textit{homogena}. Če sta funkciji $r_0$, $r_1$ \textit{konstantni}, pa rečemo, da ima enačba \textit{konstante koeficiente}.
+
+\textit{Standardna oblika} linearne diferencialne enačbe 1.reda je
+$$y' + p(x)y = q(x),$$
+kjer sta $p, q: J \rightarrow \mathbb{R}$ funkciji, definirani na intervalu $J$.
+
+\end{definicija}
+\vspace{0.5cm}
+
+% *************************************************************************************************
+
+\pagebreak
+
+% #################################################################################################
+
+\section{Določeni integral}
+\vspace{0.5cm}
+
+% *************************************************************************************************
+
+\subsection{Motivacija za določeni integral}
+\vspace{0.5cm}
+
+\begin{definicija}
+
+Naj bo $f:[a, b] \rightarrow \mathbb{R}$ \textit{nenegativna funkcija}, torej $f(x) \geq 0$ za vse $x \in [a, b]$. Rečemo, da graf funkicje f \textit{določa območje} $A \subset \mathbb{R}^2$  nad intervalom $[a, b]$. Množica $A$ je navzgor omejena z grafom funkcije $f$, na levi s premico $x=a$ in na desni s premico $x=b$.
+
+\end{definicija}
+\vspace{0.5cm}
+
+% *************************************************************************************************
+
+\subsection{Riemannova vsota in Riemannov integral}
+\vspace{0.5cm}
+
+\begin{definicija}[Riemannova vsota]
+
+\textit{Delitev} $D$ intervala $[a, b]$ na podintervale je dana z izbiro \textit{delilnih točk} $x_i$:
+$$a=x_0 < x_1 < x_2 < \dots < x_{n-1} < x_n=b,$$
+kjer je $n \in \mathbb{N}$. Dolžino $i$-tega podintervala $[x_{i-1},x_i]$ (za $i=1,2,...,n$) označimo z $\delta_i := x_i - x_{i-1}$. \textit{Velikost delitve} $D$ je dolžina najdaljšega podintervala delitve $D$, torej
+$$\delta(D) = \max{\{\delta_i \mid i = 1, 2, ..., n\}}.$$
+
+Na vsakem od podintervalov, na katere delitev $D$ razdeli interval $[a, b]$, izberemo \textit{testno točko} $t_i \in [x_{i-1}, x_i]$ in s $T_D = (t_1, t_2, \dots, t_n)$ označimo nabor teh točk; nabor testnih točk je \textit{usklajen} z delitvijo $D$, ker smo na vsakem podintervalu $[x_{i-1},x_i]$, določenem z $D$, izbrali natanko eno testno točko $t_i$.
+
+\textit{Riemannova vsota} funkcije $f:[a, b] \rightarrow \mathbb{R}$, pridružena delitvi $D$ in usklajenemu naboru testnih točk $T_D$ je 
+$$R(f, D, T_D) := \sum_{i=1}^{n} f(t_i) \delta_i.$$
+
+\end{definicija}
+\vspace{0.5cm}
+
+\begin{definicija}[Riemannov integral]
+
+\textit{Riemannov integral} ali \textit{določeni integral} funkcije $f:[a, b] \rightarrow \mathbb{R}$ je limita Riemannovih vsot $R(f, D, T_D)$, kjer limito vzamemo po $\forall$ delitvah D intervala [a, b] in usklajenih naborih testnih točk $T_D$, ko pošljemo velikost delitev $\delta(D)$ proti $0$, če ta limita $\exists$ (torej je končna in neodvisna od izbire delitev in testnih točk). Pišemo
+$$\int_{a}^{b} f(x) dx := \lim_{\delta(D) \rightarrow 0} R(f, D, T_D).$$
+Če zgornja limita $\exists$, rečemo, da je funkcija $f$ \textit{integrabilna} na $[a, b]$.
+
+\end{definicija}
+\vspace{0.5cm}
+
+\begin{definicija}
+
+$$\lim_{\delta(D) \rightarrow 0} R(f, D, T_D) = I,$$
+če za $\forall \epsilon > 0 ~ \exists \delta > 0$, da za poljubno delitev $D$ z $\delta(D) < \delta$ in poljuben usklajen nabor testnih točk $T_D$ velja
+$$|R(f, D, T_D) - I| < \epsilon.$$ 
+
+\end{definicija}
+\vspace{0.5cm}
+
+% *************************************************************************************************
+
+\subsection{Integrabilne funkcije}
+
+\begin{definicija}[Zožitev]
+
+Naj bo $f:A \rightarrow \mathbb{R}$ funkcija in $B \subset A$. Tedaj $f |_B: B \rightarrow \mathbb{R}$ označuje funkcijo z definicijskim območjem $B$, ki $\forall x \in B$ preslika v $f(x)$. Funkcijo $f |_B$ imenujemo \textit{zožitev} funkcije $f$ na $B$.   
+
+\end{definicija}
+\vspace{0.5cm}
+
+\begin{definicija}[Enakomerna zveznost]
+
+Naj bo $A \subseteq \mathbb{R}^n$. Funkcija $f: A \rightarrow \mathbb{R}$ je \textit{enakomerno zvezna} na $A$, če za $\forall \epsilon > 0 ~ \exists \delta = \delta_\epsilon > 0$, da za poljubna $x, y \in A$, ki zadoščata $|x-y| < \delta$, velja
+$$|f(x) - f(y)| < \epsilon.$$ 
+
+\end{definicija}
+\vspace{0.5cm}
+
+\begin{definicija}[Odsekoma zvezna funkcija]
+
+Funkcija $f: J \rightarrow \mathbb{R}$, definirana na omejenem intervalu $J$, je \textit{odsekoma zvezna}, če je zvezna v $\forall$ točkah intervala razen morda v končno mnogo točkah, kjer ima skoke.
+
+Funkcija f ima \textit{skos} v točki $c \in J$, če $f$ ni zvezna v $c$, ima pa (končno) levo in desno limito $c$ (če je $c$ krajišče intervala, zahtevamo le obstoj limite na tisti strani $c$, ki leži v $J$). 
+
+\end{definicija}
+
+\begin{posledica}
+
+Če je $f:[a, b] \rightarrow \mathbb{R}$ \textit{odsekoma zvezna}, potem je \textit{integrabilna}. Vrednosti funkcije f v skokih ne vplivajo niti na integrabilnost niti na integral funkcije $f$ na $[a, b]$.
+
+\end{posledica}
+\vspace{0.5cm}
+
+\begin{dogovor}
+	\begin{itemize}
+		\item Integral po izrojenemu intervalu $[a, a]$ je nič: 
+		$$\int_{a}^{a} f(x) dx = 0.$$ \\
+		\item Če je $a < b$, je 
+		$$\int_{b}^{a} f(x) dx = - \int_{a}^{b} f(x) dx.$$
+	\end{itemize}
+\end{dogovor}
+\vspace{0.5cm}
+
+\begin{definicija}[Povprečna vrednost]
+
+\textit{Povprečna vrednost} integrabilne funkcije $f$ na intervalu $[a, b]$ je 
+$$\mu := \frac{1}{b-a} \int_{a}^{b} f(x) dx.$$
+
+\end{definicija}
+\vspace{0.5cm}
+
+% *************************************************************************************************
+
+\subsection{Osnovni izrek analize}
+\vspace{0.5cm}
+
+\begin{definicija}
+
+Naj bo $f:[a, b] \rightarrow \mathbb{R}$ \textit{integrabilna} funkcija. Funkcijo $F:[a, b] \rightarrow \mathbb{R}$, definirano s predpisom
+$$F(x) = \int_{a}^{x} f(t) dt,$$
+imenujemo \textit{integral kot funkcija zgornje meje}.
+
+\end{definicija}
+\vspace{0.5cm}
+
+% *************************************************************************************************
+
+\subsection{Pravila za integriranje in Leibnizova formula}
+\vspace{0.5cm}
+
+% *************************************************************************************************
+
+\subsection{Posplošeni integral na omejenem intervalu}
+\vspace{0.5cm}
+
+\begin{definicija}[Posplošeni integral]
+
+Naj bo $f:(a, b] \rightarrow \mathbb{R}$ funkcija, ki je integrabilna na intervalu $[t, b]$ za $\forall t \in (a, b)$. Potem je \textit{posplošeni integral} funkcije $f$ na intervalu $[a, b]$
+$$\int_{a}^{b} f(x) dx := \lim_{t \searrow a} \int_{t}^{b} f(x) dx,$$
+če ta limita $\exists$.
+
+Če limita $\exists$ , rečemo, da je $f$ \textit{posplošeno integrabilna} na $[a, b]$ in da je $\int_{a}^{b} f(x) dx$ \textit{konvergenten}, sicer pa rečemo, da je integral \textit{divergenten}.
+
+\end{definicija}
+\vspace{0.5cm}
+
+% *************************************************************************************************
+
+\subsection{Posplošeni integral na neomejenem intervalu}
+\vspace{0.5cm}
+
+\begin{definicija}[Posplošena integrabilnost]
+	\begin{itemize}
+		\item Naj bo $f:[a, \infty) \rightarrow \mathbb{R}$ integrabilna na $[a, s]$ za $\forall s > a$. Potem je \textit{posplošeni integral} funkcije $f$ na $[a, \infty)$
+		$$\int_{a}^{\infty} f(x) dx := \lim_{s \rightarrow \infty} \int_{a}^{s} f(x) dx,$$
+		če ta limita $\exists$. Če limita $\exists$, rečemo, da je posplošeni integral \textit{konvergenten}, sicer pa, da je \textit{divergenten}. \\
+		\item Naj bo $f:(-\infty, b] \rightarrow \mathbb{R}$ integrabilna na $[t, b]$ za $\forall t < b$. Potem je \textit{posplošeni integral} funkcije $f$ na $(-\infty, b]$
+		$$\int_{-\infty}^{b} f(x) dx := \lim_{t \rightarrow -\infty} \int_{t}^{b} f(x) dx,$$
+		če ta limita $\exists$. Če limita $\exists$, rečemo, da je posplošeni integral \textit{konvergenten}, sicer pa, da je \textit{divergenten}. \\
+		\item Funkcija $f:(-\infty, \infty) \rightarrow \mathbb{R}$ je \textit{posplošeno integrabilna}, če sta posplošeno integrabilni zožitvi $f |_{(-\infty, a]}$ in $f |_{[a, \infty)}$ za $\forall a \in \mathbb{R}$. 
+	\end{itemize}
+\end{definicija}
+\vspace{0.5cm}
+
+\end{document}
