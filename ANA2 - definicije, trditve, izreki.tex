@@ -267,4 +267,76 @@ $$\int_{a}^{b} f(x) dx := \lim_{t \searrow a} \int_{t}^{b} f(x) dx,$$
 \end{definicija}
 \vspace{0.5cm}
 
+% *************************************************************************************************
+
+\pagebreak
+
+% #################################################################################################
+
+\section{KRIVULJE V RAVNINI}
+\vspace{0.5cm}
+
+% *************************************************************************************************
+
+\subsection{Podajanje krivulj}
+\vspace{0.5cm}
+
+\begin{itemize}
+	\item \textsc{Eksplicitno:} Funkcija $f: j \rightarrow \mathbb{R}$ za $J \subseteq \mathbb{R}$ določa krivuljo $\Gamma_f$, ki je graf te funkcije, torej
+	$$\Gamma_f = \{(x, f(x)) \mid x \in J\}.$$
+	\item \textsc{Implicitno:} Funkcija $g: A \rightarrow \mathbb{R}$ za $A \subseteq \mathbb{R}^2$ določa krivuljo $K_g$, ki je množica rešitev enačbe $g(x, y) = 0$, torej
+	$$K_g = \{(x, y) \in A \mid g(x, y) = 0\}.$$
+	\item \textsc{Parametrično:} Funkciji $\alpha, \beta: J \rightarrow \mathbb{R}$ za $J \subseteq \mathbb{R}$ določata krivuljo $K_F$, ki je množica vseh točk $(x, y)$, določenih z $x = \alpha(t)$ in $y = \beta(t)$, torej
+	$$K_F = \{(\alpha(t), \beta(t)) \mid J\}.$$
+	Preslikavo $F: J \rightarrow \mathbb{R}^2$, $F(t) := (\alpha(t), \beta(t))$ imenujemo \textit{pot} ali \textit{parametrizacija} krivulje $K_F$. Krivuljo $K_F$ imenujemo tudi \textit{tir} poti $F$.
+	\item \textsc{Polarno:} Funkcija $h: J \rightarrow \mathbb{R}$ za $J \subseteq \mathbb{R}$ določa krivuljo $K_h$, ki je množica točk v ravnini s polarnima koordinatama $(r, \theta)$, kjer je $r = h(\theta)$, torej
+	$$K_h = \{(h(\theta)\cos{\theta}, h(\theta)\sin{\theta}) \mid \theta \in J\}.$$
+\end{itemize}
+\vspace{0.5cm}
+
+% *************************************************************************************************
+
+\subsection{Enačba tangente na krivuljo}
+\vspace{0.5cm}
+
+\begin{definicija}[Regularna točka]
+
+Naj bo $g: A \rightarrow \mathbb{R}$ odvedljiva v točki $(a, b) \in A \subseteq \mathbb{R}^2$. Če je 
+$$\nabla g(a, b) \neq (0, 0),$$
+rečemo, da je $(a, b)$ \textit{regularna točka} za $g$, sicer pa, da je $(a, b)$ \textit{singularna točka} za $g$. 
+
+\end{definicija}
+\vspace{0.5cm}
+
+\begin{definicija}
+
+Naj bosta $\alpha, \beta: J \rightarrow \mathbb{R}$ \textit{odvedljivi}, kjer je $J \subseteq \mathbb{R}$ interval, ter $F = (\alpha, \beta)$ pripadajoča \textit{odvedljiva} pot. \textit{Odvod poti} $F$ po $t$ je hitrostni vektor $\dot{F}(t) = (\dot{\alpha}(t), \dot{\beta}(t))$. \\
+Če je 
+$$\dot{F}(t) \neq (0, 0)$$ 
+za neki $t \in J$, imenujemo $t$ \textit{regularna točka} parametrizacije $F$. Če so $\forall$ točke intervala $J$ regularne, imenujemo $F$ \textit{regularna parametrizacija}. \\
+Naj bo $g: I \rightarrow J$ \textit{odvedljiva surjektivna} funkcija, kjer je $I \subset \mathbb{R}$ interval. Pot
+$$G := F \circ g$$
+imenujemo \textit{reparametrizacija} poti $F$.
+
+\end{definicija}
+\vspace{0.5cm}
+
+% *************************************************************************************************
+
+\subsection{Dolžina loka krivulje}
+\vspace{0.5cm}
+
+\begin{definicija}
+
+Naj bo dana pot $F:[a, b] \rightarrow \mathbb{R}^2$, $F(t) = (\alpha(t), \beta(t))$, ki določa krivuljo $K$. Izberimo delitev
+$$D = \{a = t_0 < t_1 < \dots < t_n = b\}$$
+intervala $[a, b]$. Pot $F(t)$ na $i$-tem podintervalu $[t_{i-1}, t_i]$ zamenjamo z daljico od $F(t_{i-1})$ do $F(t_i)$. \\
+Dolžina tako nastale lomljene črte, ki aproksimira tir poti $F$, je 
+$$\ell(D) = \sum_{i = 1}^{n} \sqrt{ (\alpha(t_i) - \alpha(t_{i-1}))^2 + (\beta(t_i) - \beta(t_{i-1}))^2 }.$$
+Če $\exists$ limita dolžin $\ell(D)$, ko pošljemo velikost delitve $\delta(D)$ proti nič (neodvisno od izbire delitev), jo imenujemo \textit{dolžina poti} $F$ in označimo $\ell(F)$:
+$$\ell(F) = \lim_{D,\delta(D) \rightarrow 0} \ell(D).$$
+
+\end{definicija}
+\vspace{0.5cm}
+
 \end{document}
