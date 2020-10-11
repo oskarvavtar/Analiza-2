@@ -8,6 +8,9 @@
 \theoremstyle{definition}
 \newtheorem{definicija}{Definicija}[section]
 
+\theoremstyle{theorem}
+\newtheorem{uporaba}{Uporaba}[section]
+
 \newtheorem{lema}{Lema}
 \newtheorem{trditev}{Trditev}
 \newtheorem{izrek}{Izrek}
@@ -132,7 +135,7 @@ Naj bo $f:[a, b] \rightarrow \mathbb{R}$ \textit{nenegativna funkcija}, torej $f
 \begin{definicija}[Riemannova vsota]
 
 \textit{Delitev} $D$ intervala $[a, b]$ na podintervale je dana z izbiro \textit{delilnih točk} $x_i$:
-$$a=x_0 < x_1 < x_2 < \dots < x_{n-1} < x_n=b,$$
+$$a=x_0 < x_1 < x_2 < \ldots < x_{n-1} < x_n=b,$$
 kjer je $n \in \mathbb{N}$. Dolžino $i$-tega podintervala $[x_{i-1},x_i]$ (za $i=1,2,...,n$) označimo z $\delta_i := x_i - x_{i-1}$. \textit{Velikost delitve} $D$ je dolžina najdaljšega podintervala delitve $D$, torej
 $$\delta(D) = \max{\{\delta_i \mid i = 1, 2, ..., n\}}.$$
 
@@ -329,12 +332,86 @@ imenujemo \textit{reparametrizacija} poti $F$.
 \begin{definicija}
 
 Naj bo dana pot $F:[a, b] \rightarrow \mathbb{R}^2$, $F(t) = (\alpha(t), \beta(t))$, ki določa krivuljo $K$. Izberimo delitev
-$$D = \{a = t_0 < t_1 < \dots < t_n = b\}$$
+$$D = \{a = t_0 < t_1 < \ldots < t_n = b\}$$
 intervala $[a, b]$. Pot $F(t)$ na $i$-tem podintervalu $[t_{i-1}, t_i]$ zamenjamo z daljico od $F(t_{i-1})$ do $F(t_i)$. \\
 Dolžina tako nastale lomljene črte, ki aproksimira tir poti $F$, je 
 $$\ell(D) = \sum_{i = 1}^{n} \sqrt{ (\alpha(t_i) - \alpha(t_{i-1}))^2 + (\beta(t_i) - \beta(t_{i-1}))^2 }.$$
 Če $\exists$ limita dolžin $\ell(D)$, ko pošljemo velikost delitve $\delta(D)$ proti nič (neodvisno od izbire delitev), jo imenujemo \textit{dolžina poti} $F$ in označimo $\ell(F)$:
 $$\ell(F) = \lim_{D,\delta(D) \rightarrow 0} \ell(D).$$
+
+\end{definicija}
+\vspace{0.5cm}
+
+\begin{definicija}[Ločna dolžina]
+
+Diferencial dolžina loka krivulje označimo z $ds$ in ga imenujemo \textit{ločna dolžina}. V vseh opisih krivulje velja 
+$$ds^2 = dx^2 + dy^2.$$
+
+\end{definicija}
+\vspace{0.5cm}
+
+\begin{uporaba}[Površina rotacijske ploskve]
+
+Naj bo $f:[a, b] \rightarrow \mathbb{R}$ \textit{nenegativna zvezna} funkcija. Ploskev, ki jo dobimo z vrtenjem grafa funkcije $f$ nad intervalom $[a, b]$ okoli osi $x$, imenujemo \textit{rotacijska ploskev}. \\
+
+Izberemo neko delitev
+$$D = \{a = x_0 < x_1 < \ldots < x_n = b\}$$
+intervala $[a, b]$. Nad intervalom $[x_{i-1}, x_i]$ graf funkcije $f$ aproksimiramo z daljico od točke $(x_{i-1}, f(x_{i-1})$ do točke $(x_i, f(x_i))$. Ko daljico zavrtimo okoli $x$-osi, dobimo plašč prisekanega stožca s polmeroma leve in desne mejne krožnice $f(x_{i-1})$ in $f(x_i)$ ter višino $\delta_i = x_i - x_{i-1}$. To da približek za površino ploskve:
+$$\sum_{i=1}^{n} \pi (f(x_{i-1}) + f(x_i)) \sqrt{{\delta_i}^2 + (f(x_{i-1}) - f(x_i))^2}.$$
+Če je $f$ \textit{zvezno odvedljiva}, dobimo za površino v limiti, ko pošljemo velikost delitve $\delta(D)$ proti $0$, formulo
+$$P = 2 \pi \int_{a}^{b} f(x) \sqrt{1 + (f'(x))^2} dx = 2 \pi \int_{a}^{b} y \sqrt{1 + {y'}^2} dx.$$
+
+\end{uporaba}
+\vspace{0.5cm}
+
+% *************************************************************************************************
+
+\subsection{Ploščina območja, določenega s krivuljo}
+\vspace{0.5cm}
+
+\begin{definicija}
+
+Naj bo $F:[a, b] \rightarrow \mathbb{R}^2$ regularna parametrizacija krivulje K. Potem $F$ določa \textit{usmerjenost} K, določeno s smerjo, v kateri potuje točka $F(t)$ po $K$, ko potuje $t$ od $a$ do $b$. \\
+
+\textit{Gladka enostavna sklenjena krivulja} je krivulja $K$, ki ima regularno parametrizacijo $F:[a, b] \rightarrow \mathbb{R}^2$, za katero velja $F(a) = F(b)$ in $\dot{F}(a) = \dot{F}(b)$, $F |_{[a, b)}$ pa je \textit{injektivna}. \\
+
+Naj bo $A$ območje, ki ga omejuje \textit{gladka enostavna sklenjena krivulja} $K$. Regularna parametrizacija $F$ krivulje $K$ določa \textit{pozitivno usmerjenost} krivulje $K$, če je $A$ na levi strani, ko se pomikamo vzdolž $K$ v smeri usmerjenosti, ki jo določa $F$.
+
+\end{definicija}
+\vspace{0.5cm}
+
+% *************************************************************************************************
+
+\subsection{Diferencialne enačbe v obliki diferenciala}
+\vspace{0.5cm}
+
+\begin{definicija}
+
+\textit{Diferencialna enačba v obliki diferenciala} je enačba oblike 
+$$P(x, y)~dx + Q(x, y)~dy = 0,$$
+kjer sta $P, Q: A \rightarrow \mathbb{R}$ definirani na nekem območju $A \subset \mathbb{R}^2$. \\
+
+Naj bosta $P, Q: A \rightarrow \mathbb{R}$ \textit{odvedljivi}. Diferencialna enačba $P(x, y)~dx + Q(x, y)~dy = 0$ je \textit{eksaktna} na $A$, če velja 
+$$\frac{\partial P}{\partial y}(x, y) = \frac{\partial Q}{\partial x}(x, y)$$
+za $\forall x \in A$.
+
+\end{definicija}
+\vspace{0.5cm}
+
+\begin{definicija}[Integral s parametrom]
+
+Naj bo $A = [a, b] \times [c, d] \subset \mathbb{R}^2$ pravokotnik in naj bo $f: A \rightarrow \mathbb{R}$ \textit{zvezna} funkcija. Funkcijo $F:[a, b] \rightarrow \mathbb{R}$, definirano s predpisom 
+$$F(x) = \int_{c}^{d} f(x, y) dy,$$
+imenujemo \textit{integral s parametrom}.
+
+\end{definicija}
+\vspace{0.5cm}
+
+\begin{definicija}[Integrirajoči množitelj]
+
+Naj bo dana diferencialna enačba $P(x, y)~dx + Q(x, y)~dy = 0$, kjer sta $P, Q: A \rightarrow \mathbb{R}$ \textit{zvezno odvedljivi} funkciji. Če je $\mu: A \rightarrow \mathbb{R}$ takšna \textit{zvezno odvedljiva} funkcija, da je enačba
+$$\mu(x, y) P(x, y)~dx + \mu(x, y) Q(x, y)~dy = 0$$
+\textit{eksaktna}, potem funkcijo $\mu$ imenujemo \textit{integrirajoči množitelj} dane enačbe.
 
 \end{definicija}
 \vspace{0.5cm}
