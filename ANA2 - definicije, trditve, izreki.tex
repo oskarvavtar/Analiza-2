@@ -4,6 +4,13 @@
 
 \usepackage{amsthm}
 \usepackage{amsmath, amssymb, amsfonts}
+\usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=20mm,
+ top=20mm,
+ }
 
 \theoremstyle{definition}
 \newtheorem{definicija}{Definicija}[section]
@@ -17,6 +24,7 @@
 \newtheorem*{dokaz}{Dokaz}
 \newtheorem*{posledica}{Posledica}
 \newtheorem*{dogovor}{Dogovor}
+\newtheorem*{opomba}{Opomba}
 
 \title{Analiza 2 - definicije, trditve in izreki}
 \author{Oskar Vavtar}
@@ -87,7 +95,7 @@ kjer je $F$ funkcija treh spremenljivk, ki je res odvisna od zadnje spremenljivk
 
 \textit{Splošna rešitev} diferencialne enačbe 1.reda je funkcija 
 $$y=g(x,C)$$
-(lahko podana implicitno),ki je odvisna od \textit{splošne konstante C} in reši dano diferencialno enačbo za poljubno izbiro vrednosti konstante $C \in \mathbb{R}$, poleg tega pa za poljuben začetni pogoj $\exists$ vrednost konstante $C$, pri kateri rešitev zadošča izbranemu začetnemu pogoju.
+(lahko podana implicitno),ki je odvisna od \textit{splošne konstante C} in reši dano diferencialno enačbo za poljubno izbiro vrednosti konstante $C \in \mathbb{R}$, poleg tega pa za poljuben začetni pogoj obstaja vrednost konstante $C$, pri kateri rešitev zadošča izbranemu začetnemu pogoju.
 
 Rešitev, ki ne vsebuje splošnih konstant, imenujemo tudi \textit{posebna} ali \textit{partikularna rešitev}.
 
@@ -149,9 +157,9 @@ $$R(f, D, T_D) := \sum_{i=1}^{n} f(t_i) \delta_i.$$
 
 \begin{definicija}[Riemannov integral]
 
-\textit{Riemannov integral} ali \textit{določeni integral} funkcije $f:[a, b] \rightarrow \mathbb{R}$ je limita Riemannovih vsot $R(f, D, T_D)$, kjer limito vzamemo po $\forall$ delitvah D intervala [a, b] in usklajenih naborih testnih točk $T_D$, ko pošljemo velikost delitev $\delta(D)$ proti $0$, če ta limita $\exists$ (torej je končna in neodvisna od izbire delitev in testnih točk). Pišemo
+\textit{Riemannov integral} ali \textit{določeni integral} funkcije $f:[a, b] \rightarrow \mathbb{R}$ je limita Riemannovih vsot $R(f, D, T_D)$, kjer limito vzamemo po vseh delitvah D intervala [a, b] in usklajenih naborih testnih točk $T_D$, ko pošljemo velikost delitev $\delta(D)$ proti $0$, če ta limita obstaja (torej je končna in neodvisna od izbire delitev in testnih točk). Pišemo
 $$\int_{a}^{b} f(x) dx := \lim_{\delta(D) \rightarrow 0} R(f, D, T_D).$$
-Če zgornja limita $\exists$, rečemo, da je funkcija $f$ \textit{integrabilna} na $[a, b]$.
+Če zgornja limita obstaja, rečemo, da je funkcija $f$ \textit{integrabilna} na $[a, b]$.
 
 \end{definicija}
 \vspace{0.5cm}
@@ -159,8 +167,8 @@ $$\int_{a}^{b} f(x) dx := \lim_{\delta(D) \rightarrow 0} R(f, D, T_D).$$
 \begin{definicija}
 
 $$\lim_{\delta(D) \rightarrow 0} R(f, D, T_D) = I,$$
-če za $\forall \epsilon > 0 ~ \exists \delta > 0$, da za poljubno delitev $D$ z $\delta(D) < \delta$ in poljuben usklajen nabor testnih točk $T_D$ velja
-$$|R(f, D, T_D) - I| < \epsilon.$$ 
+če za $\forall \varepsilon > 0 ~ \exists \delta > 0$, da za poljubno delitev $D$ z $\delta(D) < \delta$ in poljuben usklajen nabor testnih točk $T_D$ velja
+$$|R(f, D, T_D) - I| < \varepsilon.$$ 
 
 \end{definicija}
 \vspace{0.5cm}
@@ -178,8 +186,8 @@ Naj bo $f:A \rightarrow \mathbb{R}$ funkcija in $B \subset A$. Tedaj $f |_B: B \
 
 \begin{definicija}[Enakomerna zveznost]
 
-Naj bo $A \subseteq \mathbb{R}^n$. Funkcija $f: A \rightarrow \mathbb{R}$ je \textit{enakomerno zvezna} na $A$, če za $\forall \epsilon > 0 ~ \exists \delta = \delta_\epsilon > 0$, da za poljubna $x, y \in A$, ki zadoščata $|x-y| < \delta$, velja
-$$|f(x) - f(y)| < \epsilon.$$ 
+Naj bo $A \subseteq \mathbb{R}^n$. Funkcija $f: A \rightarrow \mathbb{R}$ je \textit{enakomerno zvezna} na $A$, če za $\forall \varepsilon > 0 ~ \exists \delta = \delta_\varepsilon > 0$, da za poljubna $x, y \in A$, ki zadoščata $|x-y| < \delta$, velja
+$$|f(x) - f(y)| < \varepsilon.$$ 
 
 \end{definicija}
 \vspace{0.5cm}
@@ -245,9 +253,9 @@ imenujemo \textit{integral kot funkcija zgornje meje}.
 
 Naj bo $f:(a, b] \rightarrow \mathbb{R}$ funkcija, ki je integrabilna na intervalu $[t, b]$ za $\forall t \in (a, b)$. Potem je \textit{posplošeni integral} funkcije $f$ na intervalu $[a, b]$
 $$\int_{a}^{b} f(x) dx := \lim_{t \searrow a} \int_{t}^{b} f(x) dx,$$
-če ta limita $\exists$.
+če ta limita obstaja.
 
-Če limita $\exists$ , rečemo, da je $f$ \textit{posplošeno integrabilna} na $[a, b]$ in da je $\int_{a}^{b} f(x) dx$ \textit{konvergenten}, sicer pa rečemo, da je integral \textit{divergenten}.
+Če limita obstaja , rečemo, da je $f$ \textit{posplošeno integrabilna} na $[a, b]$ in da je $\int_{a}^{b} f(x) dx$ \textit{konvergenten}, sicer pa rečemo, da je integral \textit{divergenten}.
 
 \end{definicija}
 \vspace{0.5cm}
@@ -261,10 +269,10 @@ $$\int_{a}^{b} f(x) dx := \lim_{t \searrow a} \int_{t}^{b} f(x) dx,$$
 	\begin{itemize}
 		\item Naj bo $f:[a, \infty) \rightarrow \mathbb{R}$ integrabilna na $[a, s]$ za $\forall s > a$. Potem je \textit{posplošeni integral} funkcije $f$ na $[a, \infty)$
 		$$\int_{a}^{\infty} f(x) dx := \lim_{s \rightarrow \infty} \int_{a}^{s} f(x) dx,$$
-		če ta limita $\exists$. Če limita $\exists$, rečemo, da je posplošeni integral \textit{konvergenten}, sicer pa, da je \textit{divergenten}. \\
+		če ta limita obstaja. Če limita obstaja, rečemo, da je posplošeni integral \textit{konvergenten}, sicer pa, da je \textit{divergenten}. \\
 		\item Naj bo $f:(-\infty, b] \rightarrow \mathbb{R}$ integrabilna na $[t, b]$ za $\forall t < b$. Potem je \textit{posplošeni integral} funkcije $f$ na $(-\infty, b]$
 		$$\int_{-\infty}^{b} f(x) dx := \lim_{t \rightarrow -\infty} \int_{t}^{b} f(x) dx,$$
-		če ta limita $\exists$. Če limita $\exists$, rečemo, da je posplošeni integral \textit{konvergenten}, sicer pa, da je \textit{divergenten}. \\
+		če ta limita obstaja. Če limita obstaja, rečemo, da je posplošeni integral \textit{konvergenten}, sicer pa, da je \textit{divergenten}. \\
 		\item Funkcija $f:(-\infty, \infty) \rightarrow \mathbb{R}$ je \textit{posplošeno integrabilna}, če sta posplošeno integrabilni zožitvi $f |_{(-\infty, a]}$ in $f |_{[a, \infty)}$ za $\forall a \in \mathbb{R}$. 
 	\end{itemize}
 \end{definicija}
@@ -412,6 +420,194 @@ imenujemo \textit{integral s parametrom}.
 Naj bo dana diferencialna enačba $P(x, y)~dx + Q(x, y)~dy = 0$, kjer sta $P, Q: A \rightarrow \mathbb{R}$ \textit{zvezno odvedljivi} funkciji. Če je $\mu: A \rightarrow \mathbb{R}$ takšna \textit{zvezno odvedljiva} funkcija, da je enačba
 $$\mu(x, y) P(x, y)~dx + \mu(x, y) Q(x, y)~dy = 0$$
 \textit{eksaktna}, potem funkcijo $\mu$ imenujemo \textit{integrirajoči množitelj} dane enačbe.
+
+\end{definicija}
+\vspace{0.5cm}
+
+% *************************************************************************************************
+
+\pagebreak
+
+% #################################################################################################
+
+\section{ŠTEVILSKE VRSTE}
+\vspace{0.5cm}
+
+% *************************************************************************************************
+
+\subsection{Osnovni pojmi}
+\vspace{0.5cm}
+
+\begin{definicija}[Številska vrsta]
+
+\textit{Številska vrsta} je vsote (neskončnega) zaporedja realnih števil. Če je $(a_n)_{n \in \mathbb{N}}$ zaporedje realnih števil, je pripadajoča številska vrsta
+$$\sum_{n=1}^{\infty} a_n = a_1 + a_2 + \ldots + a_n + \ldots .$$
+Za naravno število $k$ je \textit{$k$-ta delna vsota} vrste $\sum_{n=1}^{\infty} a_n$ enak
+$$s_k := \sum_{n=1}^{k} a_n = a_1 + a_2 + \ldots + a_k.$$
+Vrsta $\sum_{n=1}^{\infty} a_n$ je \textit{konvergentna (divergentna)}, če je konvergentno (divergentno) zaporedje delnih vsot $(s_k)_{k \in \mathbb{N}}$. Če je vrsta konvergentna, za njeno vsoto vzamemo limito delnih vsot.
+
+\end{definicija}
+\vspace{0.5cm}
+
+% *************************************************************************************************
+
+\subsection{Vrste s pozitivnimi členi}
+\vspace{0.5cm}
+
+% *************************************************************************************************
+
+\subsection{Alternirajoče vrste}
+\vspace{0.5cm}
+
+\begin{definicija}[Alternirajoča vrsta]
+
+Vrsta $\sum_{n=1}^{\infty} a_n$ je \textit{alternirajoča}, če je člen $a_{n+1}$ nasprotno predznačen kot člen $a_n$ za $\forall n \in \mathbb{N}$.
+
+\end{definicija}
+\vspace{0.5cm}
+
+% *************************************************************************************************
+
+\subsection{Absolutna konvergenca}
+
+\begin{definicija}
+
+Vrsta $\sum_{n=1}^{\infty} a_n$ je \textit{absolutno konvergentna}, če je konvergentna vrsta $\sum_{n=1}^{\infty} |a_n|$ iz absolutnih vrednosti členov vrste. \\
+Če je vrsta $\sum_{n=1}^{\infty} a_n$ konvergentna, ni pa absolutno konvergenta, rečemo, da je \textit{pogojno konvergentna}.
+
+\end{definicija}
+\vspace{0.5cm}
+
+% *************************************************************************************************
+
+\pagebreak
+
+% #################################################################################################
+
+\section{FUNKCIJSKA ZAPOREDJA IN FUNKCIJSKE VRSTE}
+\vspace{0.5cm}
+
+% *************************************************************************************************
+
+\subsection{Konvergenca funkcijskih zaporedij}
+\vspace{0.5cm}
+
+\begin{definicija}[Funkcijsko zaporedje]
+
+Naj bo $A \subset \mathbb{R}$ in naj bo za $\forall n \in \mathbb{N}$ dana funkcija $f_n: A \rightarrow \mathbb{R}$. Tedaj funkcije $f_n$ sestavljajo \textit{funkcijsko zaporedje} $(f_n)_{n \in \mathbb{N}}$. \\
+
+Če za $\forall a \in A$ obstaja limita številskega zaporedja $(f_n(a))_n$, rečemo, da funkcijsko zaporedje \textit{konvergira po točkah} na $A$. V tem primeru za $a \in A$ označimo 
+$$f(a) := \lim_{n \rightarrow \infty} f_n(a).$$
+Tako dobljeno funkcijo $f: A \rightarrow \mathbb{R}$ imenujemo \textit{limitna funkcija} zaporedja $(f_n)_n$; pišemo 
+$$f = \lim_{n \rightarrow \infty} f_n$$
+in rečemo, da zaporedje $(f_n)_n$ \textit{konvergira k $f$ po točkah}.
+
+\end{definicija}
+\vspace{0.5cm}
+
+\begin{opomba}
+
+Funkcijsko zaporedje $(f_n: A \rightarrow \mathbb{R})_n$ v splošnem konvergira le v točkah iz neke podmnožice $B$ definicijskega območja $A$; množico $B$ imenujemo \textit{konvergenčno območje} funkcijskega zaporedja.
+
+\end{opomba}
+\vspace{0.5cm}
+
+\begin{definicija}[Enakomerna konvergenca funkcijskega zaporedja]
+
+Naj funkcijsko zaporedje \\ $(f_n: A \rightarrow \mathbb{R})_n$ konvergira po točkah proti limitni funkciji $f: A \rightarrow \mathbb{R}$, torej za $\forall x \in A$ in za $\forall \varepsilon > 0$ \\ $\exists n_{x,\varepsilon}$, da za $\forall n \geq n_{x,\varepsilon}$ velja 
+$$|f_n(x) - f(x)| < \varepsilon.$$
+Pravimo, da zaporedje $(f_n)_n$ \textit{konvergira proti $f$ enakomerno na $A$}, če za $\forall  \varepsilon > 0 ~\exists n_{\varepsilon}$, da za $\forall n \geq n_{\varepsilon}$ in za $\forall x \in A$ velja
+$$|f_n(x) - f(x)| < \varepsilon.$$
+
+\end{definicija}
+\vspace{0.5cm}
+
+\begin{definicija}[Funkcijska vrsta]
+
+Naj bo dano zaporedje funkcij $(f_n: A \rightarrow \mathbb{R})_n$. Vsoto $\sum_{n=1}^{\infty} f_n$ imenujemo \textit{funkcijska vrsta}. \\
+
+Funkcijska vrsta $\sum_{n=1}^{\infty} f_n$ \textit{konvergira po točkah na $A$}, če zaporedje delnih vsot $s_k = \sum_{n=1}^{k} f_n$ konvergira po točah na A; to pomeni, da za $\forall a \in A$ konvergira številska vrsta $\sum_{n=1}^{\infty} f_n(a).$ \\
+
+Naj bo $s: A \rightarrow \mathbb{R}$ limitna funkcija zaporedja delnih vsot $(s_k)_k$. \\
+Funkcijska vrsta $\sum_{n=1}^{\infty}f_n$ \textit{konvergira k $s: A \rightarrow \mathbb{R}$ enakomerno na A}, če zaporedje delnih vsot $(s_k)_k$ konvergira k $s$ enakomerno na $A$.
+ 
+
+\end{definicija}
+\vspace{0.5cm}
+
+\begin{posledica}
+
+Če so funkcije $(f_n: A \rightarrow \mathbb{R})_n$ zvezne in funkcijska vrsta $\sum_{n=1}^{\infty} f_n$ konvergira k $s: A \rightarrow \mathbb{R}$ enakomerno na $A$, potem je $s$ zvezna na $A$.
+
+\end{posledica}
+\vspace{0.5cm}
+
+% *************************************************************************************************
+
+\subsection{Enakomerno konvergentne vrste}
+\vspace{0.5cm}
+
+% *************************************************************************************************
+
+\subsection{Potenčne vrste}
+\vspace{0.5cm}
+
+\begin{definicija}[Potenčna vrsta]
+
+Naj bo $(a_n)_{n \geq 0}$ \textit{realno zaporedje} in $c \in \mathbb{R}$. Funkcijsko zaporedje $$\sum_{n=0}^{\infty} a_n (x - c)^n$$
+imenujemo \textit{potenčna vrsta s središčem v $c$}.
+
+\end{definicija}
+\vspace{0.5cm}
+
+\begin{opomba}
+~
+\begin{enumerate}
+	\item Potenčna vrsta vedno konvergira v središču $c$.
+	\item Središče $c$ lahko vedno prestavimo v $0$ z uvedbo nove spremenljivke $t = x - c$:
+	$$\sum_{n=0}^{\infty} a_n (x-c)^n = \sum_{n=0}^{\infty} a_n t^n.$$
+\end{enumerate}
+\end{opomba}
+\vspace{0.5cm}
+
+\begin{definicija}[Konvergenčni polmer]
+
+Naj bo dana potenčna vrsta $\sum_{n=0}^{\infty} a_n x^n$. Število
+$$R := \sup \{b \geq 0 \mid \text{vrsta konvergira pri } b \} \in [0, \infty)$$
+imenujemo \textit{konvergenčni polmer} potenčne vrste. \\
+Konvergenčno območje potenčne vrste označimo z $D$.
+
+\end{definicija}
+\vspace{0.5cm}
+
+\begin{posledica}
+
+Naj bo $R > 0$ \textit{konvergenčni polmer potenčne vrste} $\sum_{n=0}^{\infty} a_n x^n$. Potem vrsta \textit{absolutno konvergira} za $|x| < R$. Vrsta enakomerno konvergira na vsakem manjšem intervalu $|x| \leq r < R$. Vsota potenčne vrste je zvezna funkcija na $(-R, R)$. Vrsta divergira za $\forall x$, $|x| > R$; v krajiščih intervala lahko potenčna vrsta konvergira ali divergira. Torej je
+$$(-R, R) \subseteq D \subseteq [-R, R].$$
+
+\end{posledica}
+\vspace{0.5cm}
+
+\begin{definicija}[Limes superior]
+
+Naj bo $(b_n)_n$ \textit{zaporedje realnih števil}. Največje stekališče zaporedja $(b_n)_n$ označimo 
+$$\lim_{n \rightarrow \infty} \sup b_n \in [-\infty, \infty]$$
+in ga imenujemo \textit{limes superior}.
+
+\end{definicija}
+\vspace{0.5cm}
+
+% *************************************************************************************************
+
+\subsection{Taylorjeva vrsta in analitične funkcije}
+\vspace{0.5cm}
+
+\begin{definicija}[Taylorjeva vrsta]
+
+Naj bo $f$ \textit{poljubno mnogokrat zvezno odvedljiva} v okolici točke $c \in \mathbb{R}$. \textit{Taylorjeva vrsta funkcije $f$ s središčem v $c$} je 
+$$T_c(x) = \sum_{n=0}^{\infty} \frac{f^{(n)}(c)}{n!} (x-c)^n.$$ \\
+
+Naj bo $J \subset \mathbb{R}$ \textit{odprt interval} in $f \in \mathcal{C}^{\infty}(J)$. Rečemo, da je $f$ \textit{analitična} na $J$, če je za $\forall c \in J$ Taylorjeva vrsta $T_e$ enaka funkciji $f$ na neki okolici točke $c$.
 
 \end{definicija}
 \vspace{0.5cm}
