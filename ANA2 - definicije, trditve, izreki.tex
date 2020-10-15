@@ -4,6 +4,7 @@
 
 \usepackage{amsthm}
 \usepackage{amsmath, amssymb, amsfonts}
+\usepackage{relsize}
 \usepackage{geometry}
  \geometry{
  a4paper,
@@ -442,9 +443,9 @@ $$\mu(x, y) P(x, y)~dx + \mu(x, y) Q(x, y)~dy = 0$$
 
 \textit{Številska vrsta} je vsote (neskončnega) zaporedja realnih števil. Če je $(a_n)_{n \in \mathbb{N}}$ zaporedje realnih števil, je pripadajoča številska vrsta
 $$\sum_{n=1}^{\infty} a_n = a_1 + a_2 + \ldots + a_n + \ldots .$$
-Za naravno število $k$ je \textit{$k$-ta delna vsota} vrste $\sum_{n=1}^{\infty} a_n$ enak
+Za naravno število $k$ je \textit{$k$-ta delna vsota} vrste $\mathlarger{\sum_{n=1}^{\infty} a_n}$ enak
 $$s_k := \sum_{n=1}^{k} a_n = a_1 + a_2 + \ldots + a_k.$$
-Vrsta $\sum_{n=1}^{\infty} a_n$ je \textit{konvergentna (divergentna)}, če je konvergentno (divergentno) zaporedje delnih vsot $(s_k)_{k \in \mathbb{N}}$. Če je vrsta konvergentna, za njeno vsoto vzamemo limito delnih vsot.
+Vrsta $\mathlarger{\sum_{n=1}^{\infty} a_n}$ je \textit{konvergentna (divergentna)}, če je konvergentno (divergentno) zaporedje delnih vsot $(s_k)_{k \in \mathbb{N}}$. Če je vrsta konvergentna, za njeno vsoto vzamemo limito delnih vsot.
 
 \end{definicija}
 \vspace{0.5cm}
@@ -461,7 +462,7 @@ Vrsta $\sum_{n=1}^{\infty} a_n$ je \textit{konvergentna (divergentna)}, če je k
 
 \begin{definicija}[Alternirajoča vrsta]
 
-Vrsta $\sum_{n=1}^{\infty} a_n$ je \textit{alternirajoča}, če je člen $a_{n+1}$ nasprotno predznačen kot člen $a_n$ za $\forall n \in \mathbb{N}$.
+Vrsta $\mathlarger{\sum_{n=1}^{\infty} a_n}$ je \textit{alternirajoča}, če je člen $a_{n+1}$ nasprotno predznačen kot člen $a_n$ za $\forall n \in \mathbb{N}$.
 
 \end{definicija}
 \vspace{0.5cm}
@@ -472,8 +473,8 @@ Vrsta $\sum_{n=1}^{\infty} a_n$ je \textit{alternirajoča}, če je člen $a_{n+1
 
 \begin{definicija}
 
-Vrsta $\sum_{n=1}^{\infty} a_n$ je \textit{absolutno konvergentna}, če je konvergentna vrsta $\sum_{n=1}^{\infty} |a_n|$ iz absolutnih vrednosti členov vrste. \\
-Če je vrsta $\sum_{n=1}^{\infty} a_n$ konvergentna, ni pa absolutno konvergenta, rečemo, da je \textit{pogojno konvergentna}.
+Vrsta $\mathlarger{\sum_{n=1}^{\infty} a_n}$ je \textit{absolutno konvergentna}, če je konvergentna vrsta $\mathlarger{\sum_{n=1}^{\infty} |a_n|}$ iz absolutnih vrednosti členov vrste. \\
+Če je vrsta $\mathlarger{\sum_{n=1}^{\infty} a_n}$ konvergentna, ni pa absolutno konvergenta, rečemo, da je \textit{pogojno konvergentna}.
 
 \end{definicija}
 \vspace{0.5cm}
@@ -524,12 +525,12 @@ $$|f_n(x) - f(x)| < \varepsilon.$$
 
 \begin{definicija}[Funkcijska vrsta]
 
-Naj bo dano zaporedje funkcij $(f_n: A \rightarrow \mathbb{R})_n$. Vsoto $\sum_{n=1}^{\infty} f_n$ imenujemo \textit{funkcijska vrsta}. \\
+Naj bo dano zaporedje funkcij $(f_n: A \rightarrow \mathbb{R})_n$. Vsoto $\mathlarger{\sum_{n=1}^{\infty} f_n}$ \\ imenujemo \textit{funkcijska vrsta}. \\
 
-Funkcijska vrsta $\sum_{n=1}^{\infty} f_n$ \textit{konvergira po točkah na $A$}, če zaporedje delnih vsot $s_k = \sum_{n=1}^{k} f_n$ konvergira po točah na A; to pomeni, da za $\forall a \in A$ konvergira številska vrsta $\sum_{n=1}^{\infty} f_n(a).$ \\
+Funkcijska vrsta $\sum_{n=1}^{\infty} f_n$ \textit{konvergira po točkah na $A$}, če zaporedje delnih vsot $s_k = \mathlarger{\sum_{n=1}^{k} f_n}$ \\ konvergira po točah na A; to pomeni, da za $\forall a \in A$ konvergira številska vrsta $\mathlarger{\sum_{n=1}^{\infty} f_n(a)}.$ \\
 
 Naj bo $s: A \rightarrow \mathbb{R}$ limitna funkcija zaporedja delnih vsot $(s_k)_k$. \\
-Funkcijska vrsta $\sum_{n=1}^{\infty}f_n$ \textit{konvergira k $s: A \rightarrow \mathbb{R}$ enakomerno na A}, če zaporedje delnih vsot $(s_k)_k$ konvergira k $s$ enakomerno na $A$.
+Funkcijska vrsta $\mathlarger{\sum_{n=1}^{\infty}f_n}$ \textit{konvergira k $s: A \rightarrow \mathbb{R}$ enakomerno na A}, če zaporedje delnih vsot $(s_k)_k$ konvergira k $s$ enakomerno na $A$.
  
 
 \end{definicija}
@@ -537,7 +538,7 @@ Funkcijska vrsta $\sum_{n=1}^{\infty}f_n$ \textit{konvergira k $s: A \rightarrow
 
 \begin{posledica}
 
-Če so funkcije $(f_n: A \rightarrow \mathbb{R})_n$ zvezne in funkcijska vrsta $\sum_{n=1}^{\infty} f_n$ konvergira k $s: A \rightarrow \mathbb{R}$ enakomerno na $A$, potem je $s$ zvezna na $A$.
+Če so funkcije $(f_n: A \rightarrow \mathbb{R})_n$ zvezne in funkcijska vrsta $\mathlarger{\sum_{n=1}^{\infty} f_n}$ konvergira k $s: A \rightarrow \mathbb{R}$ enakomerno na $A$, potem je $s$ zvezna na $A$.
 
 \end{posledica}
 \vspace{0.5cm}
@@ -572,7 +573,7 @@ imenujemo \textit{potenčna vrsta s središčem v $c$}.
 
 \begin{definicija}[Konvergenčni polmer]
 
-Naj bo dana potenčna vrsta $\sum_{n=0}^{\infty} a_n x^n$. Število
+Naj bo dana potenčna vrsta $\mathlarger{\sum_{n=0}^{\infty} a_n x^n}$. Število
 $$R := \sup \{b \geq 0 \mid \text{vrsta konvergira pri } b \} \in [0, \infty)$$
 imenujemo \textit{konvergenčni polmer} potenčne vrste. \\
 Konvergenčno območje potenčne vrste označimo z $D$.
@@ -582,7 +583,7 @@ Konvergenčno območje potenčne vrste označimo z $D$.
 
 \begin{posledica}
 
-Naj bo $R > 0$ \textit{konvergenčni polmer potenčne vrste} $\sum_{n=0}^{\infty} a_n x^n$. Potem vrsta \textit{absolutno konvergira} za $|x| < R$. Vrsta enakomerno konvergira na vsakem manjšem intervalu $|x| \leq r < R$. Vsota potenčne vrste je zvezna funkcija na $(-R, R)$. Vrsta divergira za $\forall x$, $|x| > R$; v krajiščih intervala lahko potenčna vrsta konvergira ali divergira. Torej je
+Naj bo $R > 0$ \textit{konvergenčni polmer potenčne vrste} $\mathlarger{\sum_{n=0}^{\infty} a_n x^n}$. Potem vrsta \textit{absolutno konvergira} za $|x| < R$. Vrsta enakomerno konvergira na vsakem manjšem intervalu $|x| \leq r < R$. Vsota potenčne vrste je zvezna funkcija na $(-R, R)$. Vrsta divergira za $\forall x$, $|x| > R$; v krajiščih intervala lahko potenčna vrsta konvergira ali divergira. Torej je
 $$(-R, R) \subseteq D \subseteq [-R, R].$$
 
 \end{posledica}
@@ -611,5 +612,147 @@ Naj bo $J \subset \mathbb{R}$ \textit{odprt interval} in $f \in \mathcal{C}^{\in
 
 \end{definicija}
 \vspace{0.5cm}
+
+% *************************************************************************************************
+
+\subsection{Fourierove vrste}
+\vspace{0.5cm}
+
+\begin{definicija}[Fourierova vrsta]
+
+\textit{Fourierova vrsta} je funkcijska vrsta oblike
+$$a_0 + \sum_{n=1}^{\infty} (a_n \cos(nx) + b_n \sin(nx)),$$
+kjer sta $(a_n)_{n \geq 0}$ in $(b_n)_{n \geq 1}$ \textit{realni} zaporedji.
+
+\end{definicija}
+\vspace{0.5cm}
+
+\begin{definicija}[Skalarni produkt]
+
+Naj bosta $f, g: [a, b] \rightarrow \mathbb{R}$ odekoma zvezni funkciji. \\ Izraz
+$$\langle f, g \rangle := \int_{a}^{b} f(x) g(x) dx$$
+imenujemo \textit{skalarni produkt} funkcij $f$ in $g$. Če je $\langle f, g \rangle = 0$, rečemo, da sta $f$ in $g$ \textit{ortogonalni}. Izraz $\| f \| = \sqrt{\langle f, f \rangle}$ imenujemo \textit{norma} funkcije $f$.
+
+\end{definicija}
+\vspace{0.5cm}
+
+\begin{dogovor}
+
+Za \textit{odsekoma zvezno} funkcijo $f$ v točkah nezveznosti vrednost funkcije v točki določimo kot
+$$f(x) = \frac{1}{2} \left( \lim_{t \nearrow x} f(t) + \lim_{t \searrow x} f(t) \right).$$
+
+\end{dogovor}
+\vspace{0.5cm}
+
+\begin{definicija}
+
+Funkcija $f:[a, b] \rightarrow \mathbb{R}$ je \textit{odsekoma zvezno odvedljiva}, če je \textit{odsekoma zvezna} na $[a, b]$ in \text{zvezno odvedljiva} na $[a, b]$ razen morda v končno mnogo točkah, v katerih obstajata leva in desna limita odvoda.
+
+\end{definicija}
+\vspace{0.5cm}
+
+\begin{opomba}
+
+\textit{Odsekoma zvezno odvedljiva} funkcija ni odvedljiva v skokih in v točkah, kjer se graf $f$ zlomi, torej ima različni levo in desno tangento v tej točki. V takšni točki namreč res obstajata levi in desni odvod, saj na primer 
+$$f'(x^-) = \lim_{t \nearrow x} \frac{f(t) - f(x)}{t-x} = \lim_{t \nearrow x} f'(t),$$
+torej levi odvod obstaja, saj pbstaja leva limita odvodov; analogno velja za desni odvod.
+
+Če torej v skoku spremenimo vrednost funkcije $f$ tako, da je enaka levi (desni) limiti $f$ v tej točki, potem obstaja levi (desni) odvod funckije $f$ v tej točki.
+
+\end{opomba}
+\vspace{0.5cm}
+
+\begin{definicija}
+
+Ker lahko vsako \textit{odsekoma zvezno odvedljivo} funkcijo na $[-\pi, \pi]$ razvijemo v Fourierovo vrsto, ki konvergira proti $f$ (vsaj po točkah), rečemo, da funkcije 
+$$ \{ 1, \cos(nx), \sin(nx) \mid n \in \mathbb{N} \}$$
+sestavljajo \textit{poln sistem funkcij} na intervalu $[-\pi, \pi]$.
+
+\end{definicija}
+\vspace{0.5cm}
+
+\begin{posledica}[Fourierova sinusna in kosinusna vrsta]
+
+Naj bo $f:[0, \pi] \rightarrow \mathbb{R}$ \textit{odsekoma zvezno odvedljiva}. Potem lahko $f$ na intervalu $[0, \pi]$ ravzijemo v \textit{sinusno} Fourierovo vrsto
+$$f(x) = \sum_{n=1}^{\infty} b_n \sin(nx), ~~b_n = \frac{2}{\pi} \int_{0}^{\pi} f(x) \sin(nx) dx$$
+in v \textit{kosinusno} Fourierovo vrsto
+$$f(x) = a_0 + \sum_{n=1}^{\infty} a_n \cos(nx), ~~a_0 = \frac{1}{\pi} \int_{0}^{\pi} f(x) dx, ~~a_n = \frac{2}{\pi} \int_{0}^{\pi} f(x) \cos(nx) dx.$$
+
+\end{posledica}
+\vspace{0.5cm}
+
+\begin{posledica}[Kompleksna Fourierova vrsta]
+
+Naj bo $f:[-\pi, \pi] \rightarrow \mathbb{R}$ \textit{odsekoma zvezno odvedljiva}. Potem lahko $f$ razvijemo v \textit{kompleksno} Fourierovo vrsto
+$$f(x) = \sum_{n=-\infty}^{\infty} A_n e^{inx},$$
+kjer je $i = \sqrt{-1}$ \textit{imaginarna enota}, koeficienti $A_n$ za $n \in \mathbb{Z}$ pa so dani z
+$$A_n = \frac{1}{2\pi} \int_{-\pi}^{\pi} f(x) e^{-inx} dx.$$
+
+\end{posledica}
+\vspace{0.5cm}
+
+\begin{posledica}[Razvoj v Fourierovo vrsto na drugih intervalih]
+
+Naj bo $f:[a, b] \rightarrow \mathbb{R}$ \textit{odsekoma zvezno odvedljiva}. Potem $f$ lahko razvijemo v Fourierovo vrsto po funkcijah
+$$\{ 1, \cos(\frac{2n\pi}{b-a}x), \sin(\frac{2n\pi}{b-a}x) \mid n \in \mathbb{N} \}.$$
+Tako dobimo
+$$f(x) = a_0 + \sum_{n=1}^{\infty} \left( a_n \cos(\frac{2n\pi}{b-a}x) + b_n \sin(\frac{2n\pi}{b-a}x) \right),$$
+kjer je 
+$$a_0 = \frac{1}{b-a} \int_{a}^{b} f(x) dx,$$
+$$a_n = \frac{2}{b-a} \int_{a}^{b} f(x) \cos(\frac{2n\pi}{b-a}x) dx,$$
+$$b_n = \frac{2}{b-a} \int_{a}^{b} f(x) \sin(\frac{2n\pi}{b-a}x) dx.$$
+
+\end{posledica}
+\vspace{0.5cm}
+
+% *************************************************************************************************
+
+\pagebreak
+
+% #################################################################################################
+
+\section{NAVADNE DIFERENCIALNE ENAČBE}
+\vspace{0.5cm}
+
+% *************************************************************************************************
+
+\subsection{Diferencialna enačba prvega reda}
+\vspace{0.5cm}
+
+\begin{definicija}
+
+Radi bi poiskali \textit{enkrat odvedljivo} funkcijo, ki zadošča enačbi
+$$y' = f(x, y).$$
+Vsako tako funkcijo imenujemo \textit{rešitev} dane diferencialne enačbe, njen graf $y = y(x)$ pa \textit{rešitvena krivulja}.
+
+Pravimo, da je z enačbo podano \textit{polje smeri}, v vsaki točki je predpisana smer, v kateri mora potekati rešitvena krivulja. To polje smeri grafično predstavimo kot družino krivulj \--- \textit{izoklin} \--- vzdolž katerih je smer \textit{konstantna}.
+
+\end{definicija}
+\vspace{0.5cm}
+
+\begin{definicija}[Ortogonalne trajektorije]
+
+\textit{Ortogonalne trajektorije} dane družine krivulj so take krivulje, ki v vsaki svoji točki sekajo tisto od krivulj dane družine, ki poteka skozi točko, pod pravim kotom.
+
+Tej ortogonalni družini pripada diferencialna enačba, ki je v preprosti zvezi z diferencialno enačbo prvotne družine krivulj. V enačbi prvotne družine le zamenjamo $y'$ z $\cfrac{1}{y'}$ (kar določa pravokotno smer).
+
+\end{definicija}
+\vspace{0.5cm}
+
+% *************************************************************************************************
+
+\subsection{Linearna diferencialna enačba prvega reda}
+\vspace{0.5cm}
+
+% *************************************************************************************************
+
+\subsection{Diferencialna enačba drugega reda}
+\vspace{0.5cm}
+
+% *************************************************************************************************
+
+\pagebreak
+
+% #################################################################################################
 
 \end{document}
