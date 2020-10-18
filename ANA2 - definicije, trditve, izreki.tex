@@ -49,14 +49,14 @@
 
 \begin{definicija}[Primitivna funkcija]
 
-Naj bo $f$ funkcija \textit{ene spremenljivke}. Če $\exists$ \textit{odvedljiva funkcija} $F: A \rightarrow \mathbb{R}$, za katero velja $F' = f$, imenujemo F \textit{primitivna funkcija} funkcije $f$ na $A$. 
+Naj bo $f$ funkcija \textit{ene spremenljivke}. Če obstaja \textit{odvedljiva funkcija} $F: A \rightarrow \mathbb{R}$, za katero velja $F' = f$, imenujemo F \textit{primitivna funkcija} funkcije $f$ na $A$. 
 
 \end{definicija}
 \vspace{0.5cm}
 
 \begin{definicija}[Nedoločeni integral]
 
-\textit{Nedoločeni integral} funkcije $f$ je skupek vseh njenih primitivnih funkcij. Označimo ga z $\int f(x) dx$, funkcijo $f$ pa imenujemo \textit{integrand}.
+\textit{Nedoločeni integral} funkcije $f$ je skupek vseh njenih primitivnih funkcij. Označimo ga z $\mathlarger{\int f(x) dx}$, funkcijo $f$ pa imenujemo \textit{integrand}.
 
 \end{definicija}
 
@@ -81,20 +81,20 @@ kjer je $C \in \mathbb{R}$ poljubna konstanta, ki jo imenujemo \textit{splošna}
 
 % *************************************************************************************************
 
-\subsection{Diferencialne enačbe 1.reda}
+\subsection{Diferencialne enačbe 1. reda}
 \vspace{0.5cm}
 
 \begin{definicija}
 
-\textit{Navadna diferencialna enačba} 1.reda je enačba za neznano funkcijo 
+\textit{Navadna diferencialna enačba} 1. reda je enačba za neznano funkcijo 
 $$y=g(x),$$
 ki vsebuje tudi odvod $y'$ funkcije $y$.
 
-\textit{Splošna oblika} diferencialne enačbe 1.reda je
+\textit{Splošna oblika} diferencialne enačbe 1. reda je
 $$F(x,y,y')=0,$$
 kjer je $F$ funkcija treh spremenljivk, ki je res odvisna od zadnje spremenljivke.
 
-\textit{Splošna rešitev} diferencialne enačbe 1.reda je funkcija 
+\textit{Splošna rešitev} diferencialne enačbe 1. reda je funkcija 
 $$y=g(x,C)$$
 (lahko podana implicitno),ki je odvisna od \textit{splošne konstante C} in reši dano diferencialno enačbo za poljubno izbiro vrednosti konstante $C \in \mathbb{R}$, poleg tega pa za poljuben začetni pogoj obstaja vrednost konstante $C$, pri kateri rešitev zadošča izbranemu začetnemu pogoju.
 
@@ -102,13 +102,13 @@ Rešitev, ki ne vsebuje splošnih konstant, imenujemo tudi \textit{posebna} ali 
 
 \end{definicija}
 
-\begin{definicija}[LDE 1.reda]
+\begin{definicija}[LDE 1. reda]
 
-\textit{Linearna diferencialna enačba} 1.reda ima obliko
+\textit{Linearna diferencialna enačba} 1. reda ima obliko
 $$r_1(x)y' + r_0(x)y = s(x),$$
 kjer so $r_0, r_1, s: J \rightarrow \mathbb{R}$ funkcije, definirane na nekem intervalu J. Če je $s$ ničelna funkcija, rečemo, da je enačba \textit{homogena}. Če sta funkciji $r_0$, $r_1$ \textit{konstantni}, pa rečemo, da ima enačba \textit{konstante koeficiente}.
 
-\textit{Standardna oblika} linearne diferencialne enačbe 1.reda je
+\textit{Standardna oblika} linearne diferencialne enačbe 1. reda je
 $$y' + p(x)y = q(x),$$
 kjer sta $p, q: J \rightarrow \mathbb{R}$ funkciji, definirani na intervalu $J$.
 
@@ -195,7 +195,7 @@ $$|f(x) - f(y)| < \varepsilon.$$
 
 \begin{definicija}[Odsekoma zvezna funkcija]
 
-Funkcija $f: J \rightarrow \mathbb{R}$, definirana na omejenem intervalu $J$, je \textit{odsekoma zvezna}, če je zvezna v $\forall$ točkah intervala razen morda v končno mnogo točkah, kjer ima skoke.
+Funkcija $f: J \rightarrow \mathbb{R}$, definirana na omejenem intervalu $J$, je \textit{odsekoma zvezna}, če je zvezna v vseh točkah intervala razen morda v končno mnogo točkah, kjer ima skoke.
 
 Funkcija f ima \textit{skos} v točki $c \in J$, če $f$ ni zvezna v $c$, ima pa (končno) levo in desno limito $c$ (če je $c$ krajišče intervala, zahtevamo le obstoj limite na tisti strani $c$, ki leži v $J$). 
 
@@ -209,6 +209,7 @@ Funkcija f ima \textit{skos} v točki $c \in J$, če $f$ ni zvezna v $c$, ima pa
 \vspace{0.5cm}
 
 \begin{dogovor}
+~
 	\begin{itemize}
 		\item Integral po izrojenemu intervalu $[a, a]$ je nič: 
 		$$\int_{a}^{a} f(x) dx = 0.$$ \\
@@ -256,7 +257,7 @@ Naj bo $f:(a, b] \rightarrow \mathbb{R}$ funkcija, ki je integrabilna na interva
 $$\int_{a}^{b} f(x) dx := \lim_{t \searrow a} \int_{t}^{b} f(x) dx,$$
 če ta limita obstaja.
 
-Če limita obstaja , rečemo, da je $f$ \textit{posplošeno integrabilna} na $[a, b]$ in da je $\int_{a}^{b} f(x) dx$ \textit{konvergenten}, sicer pa rečemo, da je integral \textit{divergenten}.
+Če limita obstaja , rečemo, da je $f$ \textit{posplošeno integrabilna} na $[a, b]$ in da je $\mathlarger{\int_{a}^{b} f(x) dx}$ \textit{konvergenten}, sicer pa rečemo, da je integral \textit{divergenten}.
 
 \end{definicija}
 \vspace{0.5cm}
@@ -325,7 +326,7 @@ rečemo, da je $(a, b)$ \textit{regularna točka} za $g$, sicer pa, da je $(a, b
 Naj bosta $\alpha, \beta: J \rightarrow \mathbb{R}$ \textit{odvedljivi}, kjer je $J \subseteq \mathbb{R}$ interval, ter $F = (\alpha, \beta)$ pripadajoča \textit{odvedljiva} pot. \textit{Odvod poti} $F$ po $t$ je hitrostni vektor $\dot{F}(t) = (\dot{\alpha}(t), \dot{\beta}(t))$. \\
 Če je 
 $$\dot{F}(t) \neq (0, 0)$$ 
-za neki $t \in J$, imenujemo $t$ \textit{regularna točka} parametrizacije $F$. Če so $\forall$ točke intervala $J$ regularne, imenujemo $F$ \textit{regularna parametrizacija}. \\
+za neki $t \in J$, imenujemo $t$ \textit{regularna točka} parametrizacije $F$. Če so vse točke intervala $J$ regularne, imenujemo $F$ \textit{regularna parametrizacija}. \\
 Naj bo $g: I \rightarrow J$ \textit{odvedljiva surjektivna} funkcija, kjer je $I \subset \mathbb{R}$ interval. Pot
 $$G := F \circ g$$
 imenujemo \textit{reparametrizacija} poti $F$.
@@ -345,7 +346,7 @@ $$D = \{a = t_0 < t_1 < \ldots < t_n = b\}$$
 intervala $[a, b]$. Pot $F(t)$ na $i$-tem podintervalu $[t_{i-1}, t_i]$ zamenjamo z daljico od $F(t_{i-1})$ do $F(t_i)$. \\
 Dolžina tako nastale lomljene črte, ki aproksimira tir poti $F$, je 
 $$\ell(D) = \sum_{i = 1}^{n} \sqrt{ (\alpha(t_i) - \alpha(t_{i-1}))^2 + (\beta(t_i) - \beta(t_{i-1}))^2 }.$$
-Če $\exists$ limita dolžin $\ell(D)$, ko pošljemo velikost delitve $\delta(D)$ proti nič (neodvisno od izbire delitev), jo imenujemo \textit{dolžina poti} $F$ in označimo $\ell(F)$:
+Če obstaja limita dolžin $\ell(D)$, ko pošljemo velikost delitve $\delta(D)$ proti nič (neodvisno od izbire delitev), jo imenujemo \textit{dolžina poti} $F$ in označimo $\ell(F)$:
 $$\ell(F) = \lim_{D,\delta(D) \rightarrow 0} \ell(D).$$
 
 \end{definicija}
@@ -527,7 +528,7 @@ $$|f_n(x) - f(x)| < \varepsilon.$$
 
 Naj bo dano zaporedje funkcij $(f_n: A \rightarrow \mathbb{R})_n$. Vsoto $\mathlarger{\sum_{n=1}^{\infty} f_n}$ \\ imenujemo \textit{funkcijska vrsta}. \\
 
-Funkcijska vrsta $\sum_{n=1}^{\infty} f_n$ \textit{konvergira po točkah na $A$}, če zaporedje delnih vsot $s_k = \mathlarger{\sum_{n=1}^{k} f_n}$ \\ konvergira po točah na A; to pomeni, da za $\forall a \in A$ konvergira številska vrsta $\mathlarger{\sum_{n=1}^{\infty} f_n(a)}.$ \\
+Funkcijska vrsta $\mathlarger{\sum_{n=1}^{\infty} f_n}$ \textit{konvergira po točkah na $A$}, če zaporedje delnih vsot $s_k = \mathlarger{\sum_{n=1}^{k} f_n}$ \\ konvergira po točah na A; to pomeni, da za $\forall a \in A$ konvergira številska vrsta $\mathlarger{\sum_{n=1}^{\infty} f_n(a)}.$ \\
 
 Naj bo $s: A \rightarrow \mathbb{R}$ limitna funkcija zaporedja delnih vsot $(s_k)_k$. \\
 Funkcijska vrsta $\mathlarger{\sum_{n=1}^{\infty}f_n}$ \textit{konvergira k $s: A \rightarrow \mathbb{R}$ enakomerno na A}, če zaporedje delnih vsot $(s_k)_k$ konvergira k $s$ enakomerno na $A$.
