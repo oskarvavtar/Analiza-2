@@ -5,13 +5,13 @@
 \usepackage{amsthm}
 \usepackage{amsmath, amssymb, amsfonts}
 \usepackage{relsize}
-\usepackage{geometry}
- \geometry{
- a4paper,
- total={170mm,257mm},
- left=20mm,
- top=20mm,
- }
+%\usepackage{geometry}
+% \geometry{
+% a4paper,
+% total={170mm,257mm},
+% left=20mm,
+% top=20mm,
+% }
 
 \theoremstyle{definition}
 \newtheorem{definicija}{Definicija}[section]
@@ -54,6 +54,14 @@ Naj bo $f$ funkcija \textit{ene spremenljivke}. Če obstaja \textit{odvedljiva f
 \end{definicija}
 \vspace{0.5cm}
 
+\begin{lema}
+
+Naj bosta $F$ in $G$ \textit{primitivni funkciji} za funkcijo $f$ na nekem intervalu $J$. Potem obstaja konstanta $C \in \mathbb{R}$, da velja 
+$$G(x) ~=~ F(x) + C ~~~\textit{za}~ \forall x \in J.$$
+
+\end{lema}
+\vspace{0.5cm}
+
 \begin{definicija}[Nedoločeni integral]
 
 \textit{Nedoločeni integral} funkcije $f$ je skupek vseh njenih primitivnih funkcij. Označimo ga z $\mathlarger{\int f(x) dx}$, funkcijo $f$ pa imenujemo \textit{integrand}.
@@ -63,10 +71,24 @@ Naj bo $f$ funkcija \textit{ene spremenljivke}. Če obstaja \textit{odvedljiva f
 \begin{posledica}
 
 Naj bo $F$ neka \textit{primitivna} funkcija za $f$ na intervalu $J$. Potem je za $x \in J$
-$$\int f(x) dx = F(x) + C,$$
+$$\int f(x) dx ~=~ F(x) + C,$$
 kjer je $C \in \mathbb{R}$ poljubna konstanta, ki jo imenujemo \textit{splošna} ali \textit{integracijska konstanta}.
 
 \end{posledica}
+\vspace{0.5cm}
+
+\begin{trditev}[Lastnosti nedoločenega integrala]
+
+Za poljubni funkciji $f$ in $g$, ki imata primitivni funkciji na intervalu $J$, ter skalar $a \in \mathbb{R}$ velja
+\begin{align*}
+\int \left( f(x) \pm g(x) \right)~dx ~&=~ \int f(x)~dx \pm \int g(x)~dx \\
+\int a f(x)~dx ~&=~ a \int f(x)~dx
+\end{align*}
+za $x \in J$; torej je nedoločeni integral \textit{linearen}. Če je $F$ odvedljiva na $J$, potem za $x \in J$ velja
+$$\int F'(x) dx ~=~ F(x) + C,$$
+kjer je $C \in \mathbb{R}$ poljubna konstanta.
+
+\end{trditev}
 \vspace{0.5cm}
 
 % *************************************************************************************************
@@ -74,10 +96,31 @@ kjer je $C \in \mathbb{R}$ poljubna konstanta, ki jo imenujemo \textit{splošna}
 \subsection{Uvedba nove spremenljivke v nedoločeni integral}
 \vspace{0.5cm}
 
+\begin{trditev}
+
+Naj bo funkcija $g$ \textit{odvedljiva} na intervalu $J$ in naj ima funkcija $f$ primitivno funkcijo $F$ na intervalu $g(J) = \{ g(x); ~x \in J \}$. Potem je $F \circ g$ \textit{primitivna} funkcija za $(f \circ g) \cdot g'$ na $J$, torej je
+$$\int f \left( g(x) \right) g'~dx ~=~ \int f(t)~dt,$$
+kjer smo s $t = g(x)$ označili novo spremenljivko.
+
+\end{trditev}
+\vspace{0.5cm}
+
 % *************************************************************************************************
 
 \subsection{Integracija po delih v nedoločenem integralu}
 \vspace{0.5cm}
+
+\begin{trditev}
+
+Naj bosta $f$ in $g$ \textit{odvedljivi} funkciji na intervalu $J$. Potem velja
+$$\int f(x) g'(x)~dx ~=~ f(x) g(x) - \int g(x) f'(x)~dx.$$
+Če označimo $u = f(x)$ in $v = g(x)$, lahko zgornjo formulo krajše zapišemo kot
+$$\int u~dv ~=~ uv - \int v~du.$$
+
+\end{trditev}
+\vspace{0.5cm}
+
+\pagebreak
 
 % *************************************************************************************************
 
@@ -88,31 +131,65 @@ kjer je $C \in \mathbb{R}$ poljubna konstanta, ki jo imenujemo \textit{splošna}
 
 \textit{Navadna diferencialna enačba} 1. reda je enačba za neznano funkcijo 
 $$y=g(x),$$
-ki vsebuje tudi odvod $y'$ funkcije $y$.
+ki vsebuje tudi odvod $y'$ funkcije $y$. \\
 
-\textit{Splošna oblika} diferencialne enačbe 1. reda je
+\noindent \textit{Splošna oblika} diferencialne enačbe 1. reda je
 $$F(x,y,y')=0,$$
-kjer je $F$ funkcija treh spremenljivk, ki je res odvisna od zadnje spremenljivke.
+kjer je $F$ funkcija treh spremenljivk, ki je res odvisna od zadnje spremenljivke. \\
 
-\textit{Splošna rešitev} diferencialne enačbe 1. reda je funkcija 
-$$y=g(x,C)$$
-(lahko podana implicitno),ki je odvisna od \textit{splošne konstante C} in reši dano diferencialno enačbo za poljubno izbiro vrednosti konstante $C \in \mathbb{R}$, poleg tega pa za poljuben začetni pogoj obstaja vrednost konstante $C$, pri kateri rešitev zadošča izbranemu začetnemu pogoju.
+\noindent Če iz diferencialne enačbe izrazimo odvod funkcije, dobimo \textit{standardno obliko} diferencialne enačbe 1. reda
+$$y' ~=~ f(x,y).$$
 
-Rešitev, ki ne vsebuje splošnih konstant, imenujemo tudi \textit{posebna} ali \textit{partikularna rešitev}.
+\noindent Začetni pogoj za diferencialno enačbo 1. reda v točki $x = a$ je podan z vrednostjo iskane funkcije $y$ v točki $a$, torej $y(a) = b$, kjer je $b \in \mathbb{R}$. Diferencialna enačba in začetni pogoj skupaj sestavljata začetno nalogo.
 
 \end{definicija}
+\vspace{0.5cm}
+
+\begin{definicija}
+
+\textit{Eksplicitna rešitev} diferencialne enačbe $F(x,y,y') = 0$ je takšna odvedljiva funkcija $g:J \rightarrow R$, definirana na intervalu $J$, da postane diferencialna enačba identiteta na $J$, le vanjo vstavimo $y = g(x)$, torej za $\forall x \in J$ velja 
+$$F(x,g(x),g'(x)) ~=~ 0.$$
+
+\noindent \textit{Implicitna rešitev} diferencialne enačbe je dana z enačbo $G(x,y) = 0$, ki na nekem intervalu določa eksplicitno rešitev dane diferencialne enačbe. \\
+
+\noindent \textit{Splošna rešitev} diferencialne enačbe 1. reda je funkcija 
+$$y=g(x,C)~\footnote{\text{Lahko podana implicitno.}},$$ ki je odvisna od splošne konstante $C$ in reši dano diferencialno enačbo za poljubno izbiro vrednosti konstante $C \in \mathbb{R}$, poleg tega pa za poljuben začetni pogoj obstaja vrednost konstante $C$, pri kateri rešitev zadošča izbranemu začetnemu pogoju. Rešitev, ki ne vsebuje splošnih konstant, imenujemo tudi \textit{posebna} ali \textit{partikularna} rešitev.
+
+\end{definicija}
+\vspace{0.5cm}
 
 \begin{definicija}[LDE 1. reda]
 
 \textit{Linearna diferencialna enačba} 1. reda ima obliko
 $$r_1(x)y' + r_0(x)y = s(x),$$
-kjer so $r_0, r_1, s: J \rightarrow \mathbb{R}$ funkcije, definirane na nekem intervalu J. Če je $s$ ničelna funkcija, rečemo, da je enačba \textit{homogena}. Če sta funkciji $r_0$, $r_1$ \textit{konstantni}, pa rečemo, da ima enačba \textit{konstante koeficiente}.
+kjer so $r_0, r_1, s: J \rightarrow \mathbb{R}$ funkcije, definirane na nekem intervalu $J$. Če je $s$ ničelna funkcija, rečemo, da je enačba \textit{homogena}. Če sta funkciji $r_0$, $r_1$ \textit{konstantni}, pa rečemo, da ima enačba \textit{konstante koeficiente}. \\
 
-\textit{Standardna oblika} linearne diferencialne enačbe 1. reda je
+\noindent \textit{Standardna oblika} linearne diferencialne enačbe 1. reda je
 $$y' + p(x)y = q(x),$$
 kjer sta $p, q: J \rightarrow \mathbb{R}$ funkciji, definirani na intervalu $J$.
 
 \end{definicija}
+\vspace{0.5cm}
+
+\begin{trditev}
+
+Naj bo dana \textit{linearna} diferencialna enačba 
+$$y' + p(x) y ~=~ q(x),$$
+kjer sta $p, q: J \rightarrow \mathbb{R}$ \textit{zvezni} funkciji, definirani na intervalu $J$.
+\begin{enumerate}
+
+	\item[(i)] Splošna rešitev pripadajoče homogene diferencialne enačbe \\ $y' + p(x) y = 0$ je
+	$$y(x) ~=~ Ce^{-\int p(x)~dx},$$
+	kjer je $C \in \mathbb{R}$ splošna konstanta, v kateri je zajeta integracijska konstanta.
+	
+	\item[(ii)] Splošna rešitev dane diferencialne enačbe dobimo iz splošne rešitve pripadajoče homogene enačbe z variacijo konstante, torej z nastavkom
+	$$y(x) ~=~ C(x)e^{-\int p(x)~dx},$$
+	kjer funkcija $C(x)$ zadošča
+	$$C'(x) ~=~ g(x)e^{\int p(x)~dx}.$$
+
+\end{enumerate}
+
+\end{trditev}
 \vspace{0.5cm}
 
 % *************************************************************************************************
