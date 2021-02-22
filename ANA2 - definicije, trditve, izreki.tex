@@ -17,13 +17,16 @@
 \theoremstyle{definition}
 \newtheorem{definicija}{Definicija}[section]
 
+\theoremstyle{definition}
+\newtheorem{trditev}{Trditev}[section]
+
+\theoremstyle{definition}
+\newtheorem{izrek}{Izrek}[section]
+
 \theoremstyle{theorem}
 \newtheorem{uporaba}{Uporaba}[section]
 
 \newtheorem{lema}{Lema}
-\newtheorem{trditev}{Trditev}
-\newtheorem{izrek}{Izrek}
-\newtheorem*{dokaz}{Dokaz}
 \newtheorem*{posledica}{Posledica}
 \newtheorem*{dogovor}{Dogovor}
 \newtheorem*{opomba}{Opomba}
@@ -223,22 +226,24 @@ Naj bo $f:[a, b] \rightarrow \mathbb{R}$ \textit{nenegativna funkcija}, torej $f
 \begin{definicija}[Riemannova vsota]
 
 \textit{Delitev} $D$ intervala $[a, b]$ na podintervale je dana z izbiro \textit{delilnih točk} $x_i$:
-$$a=x_0 < x_1 < x_2 < \ldots < x_{n-1} < x_n=b,$$
+$$a ~=~ x_0 < x_1 < x_2 < \ldots < x_{n-1} < x_n ~=~ b,$$
 kjer je $n \in \mathbb{N}$. Dolžino $i$-tega podintervala $[x_{i-1},x_i]$ (za $i=1,2,...,n$) označimo z $\delta_i := x_i - x_{i-1}$. \textit{Velikost delitve} $D$ je dolžina najdaljšega podintervala delitve $D$, torej
-$$\delta(D) = \max{\{\delta_i \mid i = 1, 2, ..., n\}}.$$
+$$\delta(D) ~=~ \max{\{\delta_i \mid i = 1, 2, ..., n\}}.$$
 
 Na vsakem od podintervalov, na katere delitev $D$ razdeli interval $[a, b]$, izberemo \textit{testno točko} $t_i \in [x_{i-1}, x_i]$ in s $T_D = (t_1, t_2, \dots, t_n)$ označimo nabor teh točk; nabor testnih točk je \textit{usklajen} z delitvijo $D$, ker smo na vsakem podintervalu $[x_{i-1},x_i]$, določenem z $D$, izbrali natanko eno testno točko $t_i$.
 
 \textit{Riemannova vsota} funkcije $f:[a, b] \rightarrow \mathbb{R}$, pridružena delitvi $D$ in usklajenemu naboru testnih točk $T_D$ je 
-$$R(f, D, T_D) := \sum_{i=1}^{n} f(t_i) \delta_i.$$
+$$R(f, D, T_D) ~:=~ \sum_{i=1}^{n} f(t_i) \delta_i.$$
 
 \end{definicija}
 \vspace{0.5cm}
 
+\pagebreak
+
 \begin{definicija}[Riemannov integral]
 
-\textit{Riemannov integral} ali \textit{določeni integral} funkcije $f:[a, b] \rightarrow \mathbb{R}$ je limita Riemannovih vsot $R(f, D, T_D)$, kjer limito vzamemo po vseh delitvah D intervala [a, b] in usklajenih naborih testnih točk $T_D$, ko pošljemo velikost delitev $\delta(D)$ proti $0$, če ta limita obstaja (torej je končna in neodvisna od izbire delitev in testnih točk). Pišemo
-$$\int_{a}^{b} f(x) dx := \lim_{\delta(D) \rightarrow 0} R(f, D, T_D).$$
+\textit{Riemannov integral} ali \textit{določeni integral} funkcije $f: [a, b] \rightarrow \mathbb{R}$ je limita Riemannovih vsot $R(f, D, T_D)$, kjer limito vzamemo po vseh delitvah D intervala [a, b] in usklajenih naborih testnih točk $T_D$, ko pošljemo velikost delitev $\delta(D)$ proti $0$, če ta limita obstaja (torej je končna in neodvisna od izbire delitev in testnih točk). Pišemo
+$$\int_{a}^{b} f(x) dx ~:=~ \lim_{\delta(D) \rightarrow 0} R(f, D, T_D).$$
 Če zgornja limita obstaja, rečemo, da je funkcija $f$ \textit{integrabilna} na $[a, b]$.
 
 \end{definicija}
@@ -246,16 +251,35 @@ $$\int_{a}^{b} f(x) dx := \lim_{\delta(D) \rightarrow 0} R(f, D, T_D).$$
 
 \begin{definicija}
 
-$$\lim_{\delta(D) \rightarrow 0} R(f, D, T_D) = I,$$
+$$\lim_{\delta(D) \rightarrow 0} R(f, D, T_D) ~=~ I,$$
 če za $\forall \varepsilon > 0 ~ \exists \delta > 0$, da za poljubno delitev $D$ z $\delta(D) < \delta$ in poljuben usklajen nabor testnih točk $T_D$ velja
-$$|R(f, D, T_D) - I| < \varepsilon.$$ 
+$$|R(f, D, T_D) - I| ~<~ \varepsilon.$$ 
 
 \end{definicija}
+\vspace{0.5cm}
+
+\begin{trditev}[Linearnost določenega integrala]
+
+Naj bosta $f, g: [a, b] \rightarrow \mathbb{R}$ \textit{integrabilni funkciji} in $c \in \mathbb{R}$. Potem so $f \pm g$ in $cf$ \textit{integrabilne} na $[a, b]$ in velja
+\begin{align*}
+\int_a^b \left( f(x) \pm g(x) \right)~dx ~&=~ \int_a^b f(x)~dx ~\pm \int_a^b g(x)~dx \\
+\int_a^b cf(x)~dx ~&=~ c\int_a^b f(x)~dx 
+\end{align*}
+
+\end{trditev}
 \vspace{0.5cm}
 
 % *************************************************************************************************
 
 \subsection{Integrabilne funkcije}
+\vspace{0.5cm}
+
+\begin{trditev}
+
+Naj bo $f$ \textit{integrabilna} na $[a, b]$. Potem je $f$ omejena na $[a, b]$.
+
+\end{trditev}
+\vspace{0.5cm}
 
 \begin{definicija}[Zožitev]
 
