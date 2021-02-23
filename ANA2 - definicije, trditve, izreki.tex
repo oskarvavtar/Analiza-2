@@ -288,27 +288,74 @@ Naj bo $f:A \rightarrow \mathbb{R}$ funkcija in $B \subset A$. Tedaj $f |_B: B \
 \end{definicija}
 \vspace{0.5cm}
 
+\begin{trditev}[Aditivnost domene]
+
+Naj bodo $a < b < c$ in $f:[a, c] \rightarrow \mathbb{R}$. Tedaj je $f$ \textit{integrabilna} na $[a, c]$ natanko tedaj, ko sta \textit{integrabilni} zožitvi $f |_{[a, b]}$ in $f |_{[b, c]}$. V tem primeru velja
+$$\int_a^c f(x)~dx ~=~ \int_a^b f(x)~dx + \int_b^x f(x)~dx.$$
+
+\end{trditev}
+\vspace{0.5cm}
+
+\begin{trditev}
+
+Naj bosta  $f, g: [a, b] \rightarrow \mathbb{R}$ funkciji, ki se razlikujeta le v točki $c \in [a, b]$ \footnote{$f(x) = g(x)$ za $\forall x \in [a, b]$, $x \neq c$}. Potem je $f$ \textit{integrabilna} natanko tedaj, ko je \textit{integrabilna} $g$; če sta funkciji \textit{integrabilni} velja
+$$\int_a^b f(x)~dx ~=~ \int_a^b g(x)~dx.$$
+ 
+\end{trditev}
+\vspace{0.5cm}
+
+\begin{izrek}
+
+Naj bo $f$ \textit{zvezna} na $[a, b]$. Potem je $f$ \textit{integrabilna} na $[a, b]$.
+
+\end{izrek}
+\vspace{0.5cm}
+
 \begin{definicija}[Enakomerna zveznost]
 
-Naj bo $A \subseteq \mathbb{R}^n$. Funkcija $f: A \rightarrow \mathbb{R}$ je \textit{enakomerno zvezna} na $A$, če za $\forall \varepsilon > 0 ~ \exists \delta = \delta_\varepsilon > 0$, da za poljubna $x, y \in A$, ki zadoščata $|x-y| < \delta$, velja
+Naj bo $A \subseteq \mathbb{R}^n$. Funkcija $f: A \rightarrow \mathbb{R}$ je \textit{enakomerno zvezna} na $A$, če za $\forall \varepsilon > 0$ obstaja tak $\delta = \delta_\varepsilon > 0$, da za poljubna $x, y \in A$, ki zadoščata $|x-y| < \delta$, velja
 $$|f(x) - f(y)| < \varepsilon.$$ 
+Tukaj je za $x = (x_1, \ldots, x_n) \in \mathbb{R}^n$ dolžina $|x|$ definirana z
+$$|x| ~=~ \sqrt{\sum_{k=1}^n {x_k}^2} ~=~ \sqrt{{x_1}^2 + \ldots + {x_n}^2}.$$
 
 \end{definicija}
 \vspace{0.5cm}
 
+\begin{trditev}
+
+Naj bo $A \subseteq \mathbb{R}^n$ \textit{kompaktna množica} in $f: A \rightarrow \mathbb{R}$ \textit{zvezna} funkcija. Tedaj je $f$ \textit{enakomerno zvezna} na $A$.
+
+\end{trditev}
+\vspace{0.5cm}
+
 \begin{definicija}[Odsekoma zvezna funkcija]
 
-Funkcija $f: J \rightarrow \mathbb{R}$, definirana na omejenem intervalu $J$, je \textit{odsekoma zvezna}, če je zvezna v vseh točkah intervala razen morda v končno mnogo točkah, kjer ima skoke.
+Funkcija $f: J \rightarrow \mathbb{R}$, definirana na omejenem intervalu $J$, je \textit{odsekoma zvezna}, če je zvezna v vseh točkah intervala razen morda v končno mnogo točkah, kjer ima skoke. \\
 
-Funkcija f ima \textit{skos} v točki $c \in J$, če $f$ ni zvezna v $c$, ima pa (končno) levo in desno limito $c$ (če je $c$ krajišče intervala, zahtevamo le obstoj limite na tisti strani $c$, ki leži v $J$). 
+\noindent Funkcija f ima \textit{skok} v točki $c \in J$, če $f$ ni zvezna v $c$, ima pa (končno) levo in desno limito $c$ (če je $c$ krajišče intervala, zahtevamo le obstoj limite na tisti strani $c$, ki leži v $J$). 
 
 \end{definicija}
+\vspace{0.5cm}
 
 \begin{posledica}
 
 Če je $f:[a, b] \rightarrow \mathbb{R}$ \textit{odsekoma zvezna}, potem je \textit{integrabilna}. Vrednosti funkcije f v skokih ne vplivajo niti na integrabilnost niti na integral funkcije $f$ na $[a, b]$.
 
 \end{posledica}
+\vspace{0.5cm}
+
+\begin{trditev}
+~
+\begin{enumerate}
+	
+	\item[(i)] Naj bosta $f$ in $g$ \textit{integrabilni} na $[a, b]$. Če je $f(x) \leq g(x)$ za $\forall x \in [a, b]$, potem je 
+	$$\int_a^b f(x)~dx ~\leq~ \int_a^b g(x)~dx ~~~\text{(monotonost integrala)}.$$
+	
+	\item[(ii)] Če je $f$ \textit{integrabilna} na $[a, b]$, potem je tudi $|f|$ \textit{integrabilna} na $[a, b]$ in velja
+	$$\left| \int_a^b f(x)~dx \right| \leq \int_a^b |f(x)|~dx.$$	
+	
+\end{enumerate}
+\end{trditev}
 \vspace{0.5cm}
 
 \begin{dogovor}
@@ -328,6 +375,13 @@ Funkcija f ima \textit{skos} v točki $c \in J$, če $f$ ni zvezna v $c$, ima pa
 $$\mu := \frac{1}{b-a} \int_{a}^{b} f(x) dx.$$
 
 \end{definicija}
+\vspace{0.5cm}
+
+\begin{trditev}
+
+Naj bo $f:[a, b] \rightarrow \mathbb{R}$ \textit{integrabilna}, $m := \inf{f}$ in $M := \sup{f}$. Potem je za povprečno vrednost $\mu$ funkcije $f$ velja $m \leq \mu \leq M$. Če je $f$ \textit{zvezna}, obstaja taka točka $c \in [a, b]$, da je $\mu = f(c)$.
+
+\end{trditev}
 \vspace{0.5cm}
 
 % *************************************************************************************************
