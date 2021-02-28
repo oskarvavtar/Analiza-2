@@ -391,16 +391,57 @@ Naj bo $f:[a, b] \rightarrow \mathbb{R}$ \textit{integrabilna}, $m := \inf{f}$ i
 
 \begin{definicija}
 
-Naj bo $f:[a, b] \rightarrow \mathbb{R}$ \textit{integrabilna} funkcija. Funkcijo $F:[a, b] \rightarrow \mathbb{R}$, definirano s predpisom
+Naj bo $f:[a, b] \rightarrow \mathbb{R}$ \textit{integrabilna} funkcija. Funkcijo \\$F:[a, b] \rightarrow \mathbb{R}$, definirano s predpisom
 $$F(x) = \int_{a}^{x} f(t) dt,$$
 imenujemo \textit{integral kot funkcija zgornje meje}.
 
 \end{definicija}
 \vspace{0.5cm}
 
+\begin{izrek}[Prvi del osnovnega izreka]
+
+Naj bo $f:[a, b] \rightarrow \mathbb{R}$ \textit{zvezna}. Potem je funkcija $F(x) = \mathlarger{\int_a^x f(t)~dt}$ \textit{odvedljiva} na $[a, b]$ in velja
+$$F'(x) ~=~ f(x) ~~~\text{za}~\forall x \in [a, b].$$
+
+\end{izrek}
+\vspace{0.5cm}
+
+\begin{posledica}
+
+Naj bo $f:[a, b] \rightarrow \mathbb{R}$ \textit{zvezna}. Potem je $F(x) = \mathlarger{\int_a^x f(t)~dt}$ \textit{primitivna funkcija} za $f$ na $[a, b]$. Torej velja
+$$\int f(x)~dx ~=~ \int_a^x f(t)~dt + C,$$
+kjer je $C \in \mathbb{R}$ poljubna konstanta.
+
+\end{posledica}
+\vspace{0.5cm}
+
+\begin{izrek}[Drugi del osnovnega izreka]
+
+Naj bo $f:[a, b] \rightarrow \mathbb{R}$ \textit{zvezna} in $G$ poljubna primitivna funkcija za $f$ na $[a, b]$. Potem je
+$$\int_a^b f(x)~dx ~=~ G(b) - G(a) ~=~ G(x) \Big|_a^b.$$
+
+\end{izrek}
+\vspace{0.5cm}
+
 % *************************************************************************************************
 
 \subsection{Pravila za integriranje in Leibnizova formula}
+\vspace{0.5cm}
+
+\begin{trditev}
+~
+\begin{enumerate}
+
+	\item[(i)] Naj bo $g:[a, b] \rightarrow \mathbb{R}$ \textit{zvezno odvedljiva} in $f: Z_g \rightarrow \mathbb{R}$ \textit{zvezna}. Potem ob uvedbi nove spremenljivke $t = g(x)$ velja:
+	$$\int_a^b f(g(x))~g'(x)~dx ~=~ \int_{g(a)}^{g(b)} f(t)~dt.$$
+	
+	\item[(ii)] Naj bosta $f,g:[a, b] \rightarrow \mathbb{R}$ \textit{zvezno odvedljivi}. Potem je
+	$$\int_a^b f(x)g'(x)~dx ~=~ f(x)g(x) \Big|_a^b - \int_a^b g(x)f'(x)~dx.$$
+	Če označimo $u = f(x)$ in $v = g(x)$, zgornja formula postane
+	$$\int_a^b u~dv ~=~ uv \Big|_a^b - \int_a^b v~du.$$
+	
+\end{enumerate}
+\end{trditev}
 \vspace{0.5cm}
 
 % *************************************************************************************************
@@ -412,10 +453,99 @@ imenujemo \textit{integral kot funkcija zgornje meje}.
 
 Naj bo $f:(a, b] \rightarrow \mathbb{R}$ funkcija, ki je integrabilna na intervalu $[t, b]$ za $\forall t \in (a, b)$. Potem je \textit{posplošeni integral} funkcije $f$ na intervalu $[a, b]$
 $$\int_{a}^{b} f(x) dx := \lim_{t \searrow a} \int_{t}^{b} f(x) dx,$$
-če ta limita obstaja.
+če ta limita obstaja. \\
 
-Če limita obstaja , rečemo, da je $f$ \textit{posplošeno integrabilna} na $[a, b]$ in da je $\mathlarger{\int_{a}^{b} f(x) dx}$ \textit{konvergenten}, sicer pa rečemo, da je integral \textit{divergenten}.
+\noindent Če limita obstaja , rečemo, da je $f$ \textit{posplošeno integrabilna} na $[a, b]$ in da je $\mathlarger{\int_{a}^{b} f(x) dx}$ \textit{konvergenten}, sicer pa rečemo, da je integral \textit{divergenten}.
 
+\end{definicija}
+\vspace{0.5cm}
+
+\begin{opomba}
+~
+\begin{itemize}
+	
+	\item Posplošeni integral imenujemo tudi \textit{izlimitirani integral} ali \textit{nepravi integral}.
+	
+	\item Če je $f$ \textit{integrabilna} na $[a, b]$, potem je njen posplošeni integral na $[a, b]$ enak Riemannovemu integralu.	
+	
+\end{itemize}
+\end{opomba}
+\vspace{0.5cm}
+
+\begin{trditev}
+
+Naj bo $p \in \mathbb{R}$. Posplošeni integral $\mathlarger{\int_a^b \frac{1}{(x-a)^p}~dx}$ je \textit{konvergenten} natanko tedaj, ko je $p<1$.
+
+\end{trditev}
+\vspace{0.5cm}
+
+\begin{izrek}[Konvergenčni kriterij]
+
+Naj bo $g:(a, b] \rightarrow \mathbb{R}$ \textit{zvezna}.
+\begin{enumerate}
+		
+	\item[(i)] Če je $g$ \textit{omejena} na $(a, b]$ in je $p<1$, potem je $\mathlarger{\int_a^b \frac{g(x)}{(x-a)^p}~dx}$ \textit{konvergenten}.
+	
+	\item[(ii)] Če je $g$ \textit{omejena stran od nič}, torej obstaja neki $m > 0$, da velja $|g(x)| \geq m$ za $\forall x \in (a, b]$ in je $p \geq 1$, potem je $\int_a^b \frac{g(x)}{(x-a)^p}~dx$ \textit{divergenten}.		
+		
+\end{enumerate}
+\end{izrek}
+\vspace{0.5cm}
+
+\begin{opomba}
+~
+\begin{itemize}
+
+	\item Funkcija $g$ v izreku je lahko le \textit{odsekoma zvezna} na $(a, b]$, saj je takšna $g$ \textit{zvezna} na nekem manjšem intervalu $(a, c]$. Ker je integrand potem \textit{odsekoma zvezna} funkcija na $[c, b]$, moramo obravnavati le konvergenco na $(a, c]$.
+	
+	\item Podobno je v točki (ii) dovolj, da je $g$ \textit{omejena stran od nič} le na manjšem intervalu $(a, c] \subset (a, b]$.
+	
+	\item Pogoj v točki (i) je izpoljen, če ima $g$ (končno) desno limito pri $a$. Podobno je pogoj v (ii) izpoljen, le ima $g$ od nič različno desno limito v $a$.
+
+\end{itemize}
+\end{opomba}
+\vspace{0.5cm}
+
+\begin{lema}
+
+Naj bo $f:(a, b) \rightarrow \mathbb{R}$ \textit{monotona} in \textit{omejena} funkcija. Potem obstajata limiti
+$$\lim_{x \nearrow b} f(x) ~~~\text{in}~~~ \lim_{x \searrow a} f(x);$$
+ena od teh limit je enaka $\sup{f}$, druga pa $\inf{f}$.
+
+\end{lema}
+\vspace{0.5cm}
+
+\begin{trditev}[Linearnost posplošenega integrala]
+
+Naj bosta $f,g: (a, b] \rightarrow \mathbb{R}$ \textit{posplošeno integrabilni} in $c \in \mathbb{R}$. Potem so tudi $f \pm g:(a, b] \rightarrow \mathbb{R}$ in $cf:(a, b] \rightarrow \mathbb{R}$ \textit{posplošeno integrabilne} in velja 
+\begin{align*}
+\int_a^b \left( f(x) \pm g(x) \right)~dx ~&=~ \int_a^b f(x)~dx \pm \int_a^b g(x)~dx \\
+\int_a^b c f(x)~dx ~&=~ c \int_a^b f(x)~dx.
+\end{align*}
+
+\end{trditev}
+\vspace{0.5cm}
+
+\begin{opomba}
+
+Pri oznakah v zgornji trditvi velja naslednje: če sta dve od funkcij $f$, $g$ in $f \pm g$ posplošeno integrabilni na $[a, b]$, potem je tudi tretja. En primer je zajet v trditvi, iz integrabilnosti $f$ in $f+g$ pa sledi integrabilnost $g$, saj jo lahko zapišemo kot linearno kombinacijo drugih dveh: $g ~=~ (f+g) - f$.
+
+\end{opomba}
+\vspace{0.5cm}
+
+\begin{definicija}
+~
+\begin{enumerate}
+
+	\item[(i)] Naj bo $f:[a, b) \rightarrow \mathbb{R}$ \textit{integrabilna} na $[a, b]$ za $\forall s \in (a, b)$. Potem je \textit{posplošeni integral} funkcije $f$ na intervalu $[a, b]$
+	$$\int_a^b f(x)~dx ~:=~ \lim_{s \nearrow b} \int_a^s f(x)~dx,$$
+	če ta limita obstaja. Če limita obstaja, rečemo, da je $f$ \textit{posplošeno integrabilna} na $[a, b]$ in da je posplošeni integral \textit{konvergenten}, sicer pa imenujemo integral \textit{divergenten}.
+	
+	\item[(ii)]	Naj bo $f:[a, c) \cup (c, b] \rightarrow \mathbb{R}$ \textit{integrabilna} na $[a, s]$ za $\forall s \in (a, c)$ in \textit{integrabilna} na $[a, b]$ za $\forall t \in (c, b)$. Potem je \textit{posplošeni integral} $f$ na $[a, b]$
+	$$int_a^b f(x)~dx ~:=~ \lim_{s \nearrow c} \int_a^s f(x)~dx + \lim_{t \searrow c} \int_t^b
+ f(x)^dx,$$
+ če obe limiti obstajata.	
+\end{enumerate}
 \end{definicija}
 \vspace{0.5cm}
 
@@ -425,6 +555,7 @@ $$\int_{a}^{b} f(x) dx := \lim_{t \searrow a} \int_{t}^{b} f(x) dx,$$
 \vspace{0.5cm}
 
 \begin{definicija}[Posplošena integrabilnost]
+~
 	\begin{itemize}
 		\item Naj bo $f:[a, \infty) \rightarrow \mathbb{R}$ integrabilna na $[a, s]$ za $\forall s > a$. Potem je \textit{posplošeni integral} funkcije $f$ na $[a, \infty)$
 		$$\int_{a}^{\infty} f(x) dx := \lim_{s \rightarrow \infty} \int_{a}^{s} f(x) dx,$$
@@ -435,6 +566,20 @@ $$\int_{a}^{b} f(x) dx := \lim_{t \searrow a} \int_{t}^{b} f(x) dx,$$
 		\item Funkcija $f:(-\infty, \infty) \rightarrow \mathbb{R}$ je \textit{posplošeno integrabilna}, če sta posplošeno integrabilni zožitvi $f |_{(-\infty, a]}$ in $f |_{[a, \infty)}$ za $\forall a \in \mathbb{R}$. 
 	\end{itemize}
 \end{definicija}
+\vspace{0.5cm}
+
+\begin{izrek}[Konvergenčni kriterij]
+
+Naj bo $g:[a, \infty) \rightarrow \mathbb{R}$ \textit{zvezna}, $a > 0$.
+\begin{enumerate}
+
+	\item[(i)] Če je $g$ \textit{omejena} na $[a, \infty)$ in je $p>1$, potem je $\mathlarger{\int_a^{\infty} \frac{g(x)}{x^p}~dx}$ \textit{konvergenten}.
+	
+	\item[(ii)] Če je $g$ \textit{omejena stran od nič} na $[a, \infty)$ in je $p \leq 1$, potem je $\mathlarger{\int_a^{\infty} \frac{g(x)}{x^p}~dx}$ \textit{divergenten}.
+
+\end{enumerate}
+
+\end{izrek}
 \vspace{0.5cm}
 
 % *************************************************************************************************
