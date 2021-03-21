@@ -14,6 +14,11 @@
 % top=20mm,
 % }
 
+\DeclareMathOperator{\tg}{tg}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+
 \theoremstyle{definition}
 \newtheorem{definicija}{Definicija}[section]
 
@@ -135,11 +140,11 @@ $$\int u~dv ~=~ uv - \int v~du.$$
 \begin{definicija}
 
 \textit{Navadna diferencialna enačba} 1. reda je enačba za neznano funkcijo 
-$$y=g(x),$$
+$$y~=~g(x),$$
 ki vsebuje tudi odvod $y'$ funkcije $y$. \\
 
 \noindent \textit{Splošna oblika} diferencialne enačbe 1. reda je
-$$F(x,y,y')=0,$$
+$$F(x,y,y')~=~0,$$
 kjer je $F$ funkcija treh spremenljivk, ki je res odvisna od zadnje spremenljivke. \\
 
 \noindent Če iz diferencialne enačbe izrazimo odvod funkcije, dobimo \textit{standardno obliko} diferencialne enačbe 1. reda
@@ -158,7 +163,7 @@ $$F(x,g(x),g'(x)) ~=~ 0.$$
 \noindent \textit{Implicitna rešitev} diferencialne enačbe je dana z enačbo $G(x,y) = 0$, ki na nekem intervalu določa eksplicitno rešitev dane diferencialne enačbe. \\
 
 \noindent \textit{Splošna rešitev} diferencialne enačbe 1. reda je funkcija 
-$$y=g(x,C)~\footnote{\text{Lahko podana implicitno.}},$$ ki je odvisna od splošne konstante $C$ in reši dano diferencialno enačbo za poljubno izbiro vrednosti konstante $C \in \mathbb{R}$, poleg tega pa za poljuben začetni pogoj obstaja vrednost konstante $C$, pri kateri rešitev zadošča izbranemu začetnemu pogoju. Rešitev, ki ne vsebuje splošnih konstant, imenujemo tudi \textit{posebna} ali \textit{partikularna} rešitev.
+$$y~=~g(x,C)~\footnote{\text{Lahko podana implicitno.}},$$ ki je odvisna od splošne konstante $C$ in reši dano diferencialno enačbo za poljubno izbiro vrednosti konstante $C \in \mathbb{R}$, poleg tega pa za poljuben začetni pogoj obstaja vrednost konstante $C$, pri kateri rešitev zadošča izbranemu začetnemu pogoju. Rešitev, ki ne vsebuje splošnih konstant, imenujemo tudi \textit{posebna} ali \textit{partikularna} rešitev.
 
 \end{definicija}
 \vspace{0.5cm}
@@ -166,11 +171,11 @@ $$y=g(x,C)~\footnote{\text{Lahko podana implicitno.}},$$ ki je odvisna od sploš
 \begin{definicija}[LDE 1. reda]
 
 \textit{Linearna diferencialna enačba} 1. reda ima obliko
-$$r_1(x)y' + r_0(x)y = s(x),$$
+$$r_1(x)y' ~+~ r_0(x)y ~=~ s(x),$$
 kjer so $r_0, r_1, s: J \rightarrow \mathbb{R}$ funkcije, definirane na nekem intervalu $J$. Če je $s$ ničelna funkcija, rečemo, da je enačba \textit{homogena}. Če sta funkciji $r_0$, $r_1$ \textit{konstantni}, pa rečemo, da ima enačba \textit{konstante koeficiente}. \\
 
 \noindent \textit{Standardna oblika} linearne diferencialne enačbe 1. reda je
-$$y' + p(x)y = q(x),$$
+$$y' ~+~ p(x)y ~=~ q(x),$$
 kjer sta $p, q: J \rightarrow \mathbb{R}$ funkciji, definirani na intervalu $J$.
 
 \end{definicija}
@@ -179,7 +184,7 @@ kjer sta $p, q: J \rightarrow \mathbb{R}$ funkciji, definirani na intervalu $J$.
 \begin{trditev}
 
 Naj bo dana \textit{linearna} diferencialna enačba 
-$$y' + p(x) y ~=~ q(x),$$
+$$y' ~+~ p(x) y ~=~ q(x),$$
 kjer sta $p, q: J \rightarrow \mathbb{R}$ \textit{zvezni} funkciji, definirani na intervalu $J$.
 \begin{enumerate}
 
@@ -291,7 +296,7 @@ Naj bo $f:A \rightarrow \mathbb{R}$ funkcija in $B \subset A$. Tedaj $f |_B: B \
 \begin{trditev}[Aditivnost domene]
 
 Naj bodo $a < b < c$ in $f:[a, c] \rightarrow \mathbb{R}$. Tedaj je $f$ \textit{integrabilna} na $[a, c]$ natanko tedaj, ko sta \textit{integrabilni} zožitvi $f |_{[a, b]}$ in $f |_{[b, c]}$. V tem primeru velja
-$$\int_a^c f(x)~dx ~=~ \int_a^b f(x)~dx + \int_b^x f(x)~dx.$$
+$$\int_a^c f(x)\,dx ~=~ \int_a^b f(x)\,dx ~+~ \int_b^x f(x)\,dx.$$
 
 \end{trditev}
 \vspace{0.5cm}
@@ -299,7 +304,7 @@ $$\int_a^c f(x)~dx ~=~ \int_a^b f(x)~dx + \int_b^x f(x)~dx.$$
 \begin{trditev}
 
 Naj bosta  $f, g: [a, b] \rightarrow \mathbb{R}$ funkciji, ki se razlikujeta le v točki $c \in [a, b]$ \footnote{$f(x) = g(x)$ za $\forall x \in [a, b]$, $x \neq c$}. Potem je $f$ \textit{integrabilna} natanko tedaj, ko je \textit{integrabilna} $g$; če sta funkciji \textit{integrabilni} velja
-$$\int_a^b f(x)~dx ~=~ \int_a^b g(x)~dx.$$
+$$\int_a^b f(x)\,dx ~=~ \int_a^b g(x)\,dx.$$
  
 \end{trditev}
 \vspace{0.5cm}
@@ -314,7 +319,7 @@ Naj bo $f$ \textit{zvezna} na $[a, b]$. Potem je $f$ \textit{integrabilna} na $[
 \begin{definicija}[Enakomerna zveznost]
 
 Naj bo $A \subseteq \mathbb{R}^n$. Funkcija $f: A \rightarrow \mathbb{R}$ je \textit{enakomerno zvezna} na $A$, če za $\forall \varepsilon > 0$ obstaja tak $\delta = \delta_\varepsilon > 0$, da za poljubna $x, y \in A$, ki zadoščata $|x-y| < \delta$, velja
-$$|f(x) - f(y)| < \varepsilon.$$ 
+$$|f(x) - f(y)| ~<~ \varepsilon.$$ 
 Tukaj je za $x = (x_1, \ldots, x_n) \in \mathbb{R}^n$ dolžina $|x|$ definirana z
 $$|x| ~=~ \sqrt{\sum_{k=1}^n {x_k}^2} ~=~ \sqrt{{x_1}^2 + \ldots + {x_n}^2}.$$
 
@@ -349,10 +354,10 @@ Funkcija $f: J \rightarrow \mathbb{R}$, definirana na omejenem intervalu $J$, je
 \begin{enumerate}
 	
 	\item[(i)] Naj bosta $f$ in $g$ \textit{integrabilni} na $[a, b]$. Če je $f(x) \leq g(x)$ za $\forall x \in [a, b]$, potem je 
-	$$\int_a^b f(x)~dx ~\leq~ \int_a^b g(x)~dx ~~~\text{(monotonost integrala)}.$$
+	$$\int_a^b f(x)\,dx ~\leq~ \int_a^b g(x)\,dx ~~~\text{(monotonost integrala)}.$$
 	
 	\item[(ii)] Če je $f$ \textit{integrabilna} na $[a, b]$, potem je tudi $|f|$ \textit{integrabilna} na $[a, b]$ in velja
-	$$\left| \int_a^b f(x)~dx \right| \leq \int_a^b |f(x)|~dx.$$	
+	$$\left| \int_a^b f(x)\,dx \right| ~\leq~ \int_a^b |f(x)|\,dx.$$	
 	
 \end{enumerate}
 \end{trditev}
@@ -362,9 +367,9 @@ Funkcija $f: J \rightarrow \mathbb{R}$, definirana na omejenem intervalu $J$, je
 ~
 	\begin{itemize}
 		\item Integral po izrojenemu intervalu $[a, a]$ je nič: 
-		$$\int_{a}^{a} f(x) dx = 0.$$ \\
+		$$\int_{a}^{a} f(x)\,dx ~=~ 0.$$ \\
 		\item Če je $a < b$, je 
-		$$\int_{b}^{a} f(x) dx = - \int_{a}^{b} f(x) dx.$$
+		$$\int_{b}^{a} f(x)\,dx ~=~ -\int_{a}^{b} f(x)\,dx.$$
 	\end{itemize}
 \end{dogovor}
 \vspace{0.5cm}
@@ -372,7 +377,7 @@ Funkcija $f: J \rightarrow \mathbb{R}$, definirana na omejenem intervalu $J$, je
 \begin{definicija}[Povprečna vrednost]
 
 \textit{Povprečna vrednost} integrabilne funkcije $f$ na intervalu $[a, b]$ je 
-$$\mu := \frac{1}{b-a} \int_{a}^{b} f(x) dx.$$
+$$\mu ~:=~ \frac{1}{b-a} \int_{a}^{b} f(x)\,dx.$$
 
 \end{definicija}
 \vspace{0.5cm}
@@ -392,7 +397,7 @@ Naj bo $f:[a, b] \rightarrow \mathbb{R}$ \textit{integrabilna}, $m := \inf{f}$ i
 \begin{definicija}
 
 Naj bo $f:[a, b] \rightarrow \mathbb{R}$ \textit{integrabilna} funkcija. Funkcijo \\$F:[a, b] \rightarrow \mathbb{R}$, definirano s predpisom
-$$F(x) = \int_{a}^{x} f(t) dt,$$
+$$F(x) ~=~ \int_{a}^{x} f(t)\,dt,$$
 imenujemo \textit{integral kot funkcija zgornje meje}.
 
 \end{definicija}
@@ -409,7 +414,7 @@ $$F'(x) ~=~ f(x) ~~~\text{za}~\forall x \in [a, b].$$
 \begin{posledica}
 
 Naj bo $f:[a, b] \rightarrow \mathbb{R}$ \textit{zvezna}. Potem je $F(x) = \mathlarger{\int_a^x f(t)~dt}$ \textit{primitivna funkcija} za $f$ na $[a, b]$. Torej velja
-$$\int f(x)~dx ~=~ \int_a^x f(t)~dt + C,$$
+$$\int f(x)\,dx ~=~ \int_a^x f(t)\,dt ~+~ C,$$
 kjer je $C \in \mathbb{R}$ poljubna konstanta.
 
 \end{posledica}
@@ -418,7 +423,7 @@ kjer je $C \in \mathbb{R}$ poljubna konstanta.
 \begin{izrek}[Drugi del osnovnega izreka]
 
 Naj bo $f:[a, b] \rightarrow \mathbb{R}$ \textit{zvezna} in $G$ poljubna primitivna funkcija za $f$ na $[a, b]$. Potem je
-$$\int_a^b f(x)~dx ~=~ G(b) - G(a) ~=~ G(x) \Big|_a^b.$$
+$$\int_a^b f(x)\,dx ~=~ G(b) - G(a) ~=~ G(x) \Big|_a^b.$$
 
 \end{izrek}
 \vspace{0.5cm}
@@ -433,12 +438,12 @@ $$\int_a^b f(x)~dx ~=~ G(b) - G(a) ~=~ G(x) \Big|_a^b.$$
 \begin{enumerate}
 
 	\item[(i)] Naj bo $g:[a, b] \rightarrow \mathbb{R}$ \textit{zvezno odvedljiva} in $f: Z_g \rightarrow \mathbb{R}$ \textit{zvezna}. Potem ob uvedbi nove spremenljivke $t = g(x)$ velja:
-	$$\int_a^b f(g(x))~g'(x)~dx ~=~ \int_{g(a)}^{g(b)} f(t)~dt.$$
+	$$\int_a^b f(g(x))\,g'(x)\,dx ~=~ \int_{g(a)}^{g(b)} f(t)\,dt.$$
 	
 	\item[(ii)] Naj bosta $f,g:[a, b] \rightarrow \mathbb{R}$ \textit{zvezno odvedljivi}. Potem je
-	$$\int_a^b f(x)g'(x)~dx ~=~ f(x)g(x) \Big|_a^b - \int_a^b g(x)f'(x)~dx.$$
+	$$\int_a^b f(x)\,g'(x)\,dx ~=~ f(x)\,g(x) \Big|_a^b - \int_a^b g(x)\,f'(x)\,dx.$$
 	Če označimo $u = f(x)$ in $v = g(x)$, zgornja formula postane
-	$$\int_a^b u~dv ~=~ uv \Big|_a^b - \int_a^b v~du.$$
+	$$\int_a^b u\,dv ~=~ uv \Big|_a^b - \int_a^b v\,du.$$
 	
 \end{enumerate}
 \end{trditev}
@@ -452,7 +457,7 @@ $$\int_a^b f(x)~dx ~=~ G(b) - G(a) ~=~ G(x) \Big|_a^b.$$
 \begin{definicija}[Posplošeni integral]
 
 Naj bo $f:(a, b] \rightarrow \mathbb{R}$ funkcija, ki je integrabilna na intervalu $[t, b]$ za $\forall t \in (a, b)$. Potem je \textit{posplošeni integral} funkcije $f$ na intervalu $[a, b]$
-$$\int_{a}^{b} f(x) dx := \lim_{t \searrow a} \int_{t}^{b} f(x) dx,$$
+$$\int_{a}^{b} f(x)\,dx ~:=~ \lim_{t \searrow a} \int_{t}^{b} f(x)\,dx,$$
 če ta limita obstaja. \\
 
 \noindent Če limita obstaja , rečemo, da je $f$ \textit{posplošeno integrabilna} na $[a, b]$ in da je $\mathlarger{\int_{a}^{b} f(x) dx}$ \textit{konvergenten}, sicer pa rečemo, da je integral \textit{divergenten}.
@@ -538,12 +543,11 @@ Pri oznakah v zgornji trditvi velja naslednje: če sta dve od funkcij $f$, $g$ i
 \begin{enumerate}
 
 	\item[(i)] Naj bo $f:[a, b) \rightarrow \mathbb{R}$ \textit{integrabilna} na $[a, b]$ za $\forall s \in (a, b)$. Potem je \textit{posplošeni integral} funkcije $f$ na intervalu $[a, b]$
-	$$\int_a^b f(x)~dx ~:=~ \lim_{s \nearrow b} \int_a^s f(x)~dx,$$
+	$$\int_a^b f(x)\,dx ~:=~ \lim_{s \nearrow b} \int_a^s f(x)\,dx,$$
 	če ta limita obstaja. Če limita obstaja, rečemo, da je $f$ \textit{posplošeno integrabilna} na $[a, b]$ in da je posplošeni integral \textit{konvergenten}, sicer pa imenujemo integral \textit{divergenten}.
 	
 	\item[(ii)]	Naj bo $f:[a, c) \cup (c, b] \rightarrow \mathbb{R}$ \textit{integrabilna} na $[a, s]$ za $\forall s \in (a, c)$ in \textit{integrabilna} na $[a, b]$ za $\forall t \in (c, b)$. Potem je \textit{posplošeni integral} $f$ na $[a, b]$
-	$$int_a^b f(x)~dx ~:=~ \lim_{s \nearrow c} \int_a^s f(x)~dx + \lim_{t \searrow c} \int_t^b
- f(x)^dx,$$
+	$$\int_a^b f(x)\,dx ~:=~ \lim_{s \nearrow c} \int_a^s f(x)\,dx ~+~ \lim_{t \searrow c} \int_t^b f(x)\,dx,$$
  če obe limiti obstajata.	
 \end{enumerate}
 \end{definicija}
@@ -558,10 +562,10 @@ Pri oznakah v zgornji trditvi velja naslednje: če sta dve od funkcij $f$, $g$ i
 ~
 	\begin{itemize}
 		\item Naj bo $f:[a, \infty) \rightarrow \mathbb{R}$ integrabilna na $[a, s]$ za $\forall s > a$. Potem je \textit{posplošeni integral} funkcije $f$ na $[a, \infty)$
-		$$\int_{a}^{\infty} f(x) dx := \lim_{s \rightarrow \infty} \int_{a}^{s} f(x) dx,$$
+		$$\int_{a}^{\infty} f(x)\,dx ~:=~ \lim_{s \rightarrow \infty} \int_{a}^{s} f(x)\,dx,$$
 		če ta limita obstaja. Če limita obstaja, rečemo, da je posplošeni integral \textit{konvergenten}, sicer pa, da je \textit{divergenten}. \\
 		\item Naj bo $f:(-\infty, b] \rightarrow \mathbb{R}$ integrabilna na $[t, b]$ za $\forall t < b$. Potem je \textit{posplošeni integral} funkcije $f$ na $(-\infty, b]$
-		$$\int_{-\infty}^{b} f(x) dx := \lim_{t \rightarrow -\infty} \int_{t}^{b} f(x) dx,$$
+		$$\int_{-\infty}^{b} f(x)\,dx ~:=~ \lim_{t \rightarrow -\infty} \int_{t}^{b} f(x)\,dx,$$
 		če ta limita obstaja. Če limita obstaja, rečemo, da je posplošeni integral \textit{konvergenten}, sicer pa, da je \textit{divergenten}. \\
 		\item Funkcija $f:(-\infty, \infty) \rightarrow \mathbb{R}$ je \textit{posplošeno integrabilna}, če sta posplošeno integrabilni zožitvi $f |_{(-\infty, a]}$ in $f |_{[a, \infty)}$ za $\forall a \in \mathbb{R}$. 
 	\end{itemize}
@@ -597,15 +601,17 @@ Naj bo $g:[a, \infty) \rightarrow \mathbb{R}$ \textit{zvezna}, $a > 0$.
 \vspace{0.5cm}
 
 \begin{itemize}
-	\item \textsc{Eksplicitno:} Funkcija $f: j \rightarrow \mathbb{R}$ za $J \subseteq \mathbb{R}$ določa krivuljo $\Gamma_f$, ki je graf te funkcije, torej
-	$$\Gamma_f = \{(x, f(x)) \mid x \in J\}.$$
+	\item \textsc{Eksplicitno:} Funkcija $f: J \rightarrow \mathbb{R}$ za $J \subseteq \mathbb{R}$ določa krivuljo $\Gamma_f$, ki je graf te funkcije, torej
+	$$\Gamma_f ~=~ \{(x, f(x)) \mid x \in J\}.$$
 	\item \textsc{Implicitno:} Funkcija $g: A \rightarrow \mathbb{R}$ za $A \subseteq \mathbb{R}^2$ določa krivuljo $K_g$, ki je množica rešitev enačbe $g(x, y) = 0$, torej
-	$$K_g = \{(x, y) \in A \mid g(x, y) = 0\}.$$
+	$$K_g ~=~ \{(x, y) \in A \mid g(x, y) = 0\}.$$
 	\item \textsc{Parametrično:} Funkciji $\alpha, \beta: J \rightarrow \mathbb{R}$ za $J \subseteq \mathbb{R}$ določata krivuljo $K_F$, ki je množica vseh točk $(x, y)$, določenih z $x = \alpha(t)$ in $y = \beta(t)$, torej
-	$$K_F = \{(\alpha(t), \beta(t)) \mid J\}.$$
+	$$K_F ~=~ \{(\alpha(t), \beta(t)) \mid J\}.$$
 	Preslikavo $F: J \rightarrow \mathbb{R}^2$, $F(t) := (\alpha(t), \beta(t))$ imenujemo \textit{pot} ali \textit{parametrizacija} krivulje $K_F$. Krivuljo $K_F$ imenujemo tudi \textit{tir} poti $F$.
-	\item \textsc{Polarno:} Funkcija $h: J \rightarrow \mathbb{R}$ za $J \subseteq \mathbb{R}$ določa krivuljo $K_h$, ki je množica točk v ravnini s polarnima koordinatama $(r, \theta)$, kjer je $r = h(\theta)$, torej
-	$$K_h = \{(h(\theta)\cos{\theta}, h(\theta)\sin{\theta}) \mid \theta \in J\}.$$
+	\item \textsc{Polarno:} Funkcija $h: J \rightarrow \mathbb{R}$ za $J \subseteq \mathbb{R}$ določa krivuljo $K_h$, ki je množica točk v ravnini s polarnima koordinatama $(r, \varphi)$, kjer je $r = h(\varphi)$, torej
+	$$K_h ~=~ \{(h(\varphi)\cos{\varphi}, h(\varphi)\sin{\varphi}) \mid \varphi \in J\}.$$
+	Zveza med kartezičnima koordinatama $(x, y)$ ter polarnima koordinatama $(r, \varphi)$ točje v ravnini:
+	$$x ~=~ r \cos{\varphi}, ~~~y ~=~ r \sin{\varphi}, ~~~r ~=~ \sqrt{x^2 + y^2}, ~~~\tg{\varphi} ~=~ \frac{y}{x}.$$
 \end{itemize}
 \vspace{0.5cm}
 
@@ -614,26 +620,73 @@ Naj bo $g:[a, \infty) \rightarrow \mathbb{R}$ \textit{zvezna}, $a > 0$.
 \subsection{Enačba tangente na krivuljo}
 \vspace{0.5cm}
 
-\begin{definicija}[Regularna točka]
+\begin{trditev}
+
+Naj bo $f: J \rightarrow \R$ \textit{odvedljiva} v notranji točki $c$ intervala $J \subseteq \R$. Potem ima krivulja $\Gamma_f$ tangento v točki $(c, f(c))$, dano z enačbo:
+$$y - f(c) ~=~ f'(c)(x-c).$$
+Naj bo dana \textit{zvezno odvedljiva} funkcija $g: A \rightarrow \R$ in notranja točka $(a, b) \in A \subseteq \R^2$, ki zadošča $g(a, b) = 0.$ Po izreku o \textit{implicitni funkciji} enačba $g(x, y) = 0$ določa funkcijo $y = f(x)$ v okolici točke $a$, če je $\cfrac{\partial g}{\partial y}(a, b) \neq 0$: za to funkcijo velja $f(a) = b$ in 
+$$f'(a) ~=~ -\frac{g_x(a,b)}{g_y(a, b)}.$$
+
+\end{trditev}
+\vspace{0.5cm}
+
+\begin{definicija}[Regularna in singularna točka]
 
 Naj bo $g: A \rightarrow \mathbb{R}$ odvedljiva v točki $(a, b) \in A \subseteq \mathbb{R}^2$. Če je 
-$$\nabla g(a, b) \neq (0, 0),$$
+$$\nabla g(a, b) ~\neq~ (0, 0),$$
 rečemo, da je $(a, b)$ \textit{regularna točka} za $g$, sicer pa, da je $(a, b)$ \textit{singularna točka} za $g$. 
 
 \end{definicija}
 \vspace{0.5cm}
 
+\begin{trditev}
+
+Naj bo $g: A \rightarrow \R$ \textit{zvezno odvedljiva} v okolici točke $(a, b) \in A \subseteq \R^2$, naj bo $g(a, b) = 0$ in naj bo $(a, b)$ \textit{regularna} točka za $g$. Potem ima krivulja $K_g$ tangento v točki $(a, b)$, dano z enačbo
+$$g_x(a, b)(x-a) ~+~ g_y(a, b)(y-b) ~=~ 0$$
+oziroma
+$$\nabla{g(a, b)} \cdot (x-a, y-b) ~=~ 0.$$
+
+\end{trditev}
+\vspace{0.5cm}
+
+\begin{trditev}
+
+Naj bosta $\alpha, \beta: J \rightarrow \R$ \textit{zvezno odvedljivi} funkciji, kjer je $J \subset \R$ interval, ter $F = (\alpha, \beta)$ pripadajoča \textit{zvezno odvedljiva} pot. Če velja $\dot{\alpha}(t) \neq 0$ za $\forall t \in J$, potem je $K_F$ graf neke \textit{zvezno odvedljive} funkcije $f$, za katero velja
+$$f'(\alpha(t)) ~=~ \frac{\dot{\beta}(t)}{\dot{\alpha}(t)}.$$
+Če označimo $x(t) := \alpha(t)$ in $y(t) := \beta(t)$, dobimo za odvod
+$$f'(x(t)) ~=~ \frac{\dot{y}(t)}{\dot{x}(t)}.$$
+
+\end{trditev}
+\vspace{0.5cm}
+
+\begin{posledica}
+
+Naj bosta $x = x(t)$ in $y = y(t)$ \textit{dvakrat odvedljivi} na intervalu $J$ in naj velja $\dot{x}(t) \neq 0$ za $\forall t \in J$. Potem je pripadajoča funkcija $f$ iz zgornje trditve \textit{dvakrat odvedljiva} in velja
+$$f''(x(t)) ~=~ \frac{\dot{x}(t) \ddot{y}(t) - \dot{y}(t) \ddot{x}(t)}{\dot{x}(t)^3}.$$
+
+\end{posledica}
+\vspace{0.5cm}
+
 \begin{definicija}
 
-Naj bosta $\alpha, \beta: J \rightarrow \mathbb{R}$ \textit{odvedljivi}, kjer je $J \subseteq \mathbb{R}$ interval, ter $F = (\alpha, \beta)$ pripadajoča \textit{odvedljiva} pot. \textit{Odvod poti} $F$ po $t$ je hitrostni vektor $\dot{F}(t) = (\dot{\alpha}(t), \dot{\beta}(t))$. \\
+Naj bosta $\alpha, \beta: J \rightarrow \mathbb{R}$ \textit{odvedljivi}, kjer je $J \subseteq \mathbb{R}$ interval, ter $F = (\alpha, \beta)$ pripadajoča \textit{odvedljiva} pot. \textit{Odvod poti} $F$ po $t$ je hitrostni vektor $\dot{F}(t) = (\dot{\alpha}(t), \dot{\beta}(t))$. 
 Če je 
-$$\dot{F}(t) \neq (0, 0)$$ 
+$$\dot{F}(t) ~\neq~ (0, 0)$$ 
 za neki $t \in J$, imenujemo $t$ \textit{regularna točka} parametrizacije $F$. Če so vse točke intervala $J$ regularne, imenujemo $F$ \textit{regularna parametrizacija}. \\
 Naj bo $g: I \rightarrow J$ \textit{odvedljiva surjektivna} funkcija, kjer je $I \subset \mathbb{R}$ interval. Pot
-$$G := F \circ g$$
+$$G ~:=~ F \circ g$$
 imenujemo \textit{reparametrizacija} poti $F$.
 
 \end{definicija}
+\vspace{0.5cm}
+
+\begin{trditev}
+
+Naj bo $s$ \textit{regularna točka} parametrizacije $F(t) = (\alpha(t), \beta(t))$. Potem je 
+tangenta na krivuljo $K_F$ v točki $F(s)$ dana z enačbo
+$$\dot{\alpha}(s)(y - \beta(s)) ~=~ \dot{\beta}(s)(x - \alpha(s)).$$
+
+\end{trditev}
 \vspace{0.5cm}
 
 % *************************************************************************************************
@@ -644,20 +697,61 @@ imenujemo \textit{reparametrizacija} poti $F$.
 \begin{definicija}
 
 Naj bo dana pot $F:[a, b] \rightarrow \mathbb{R}^2$, $F(t) = (\alpha(t), \beta(t))$, ki določa krivuljo $K$. Izberimo delitev
-$$D = \{a = t_0 < t_1 < \ldots < t_n = b\}$$
+$$D ~=~ \{a = t_0 < t_1 < \ldots < t_n = b\}$$
 intervala $[a, b]$. Pot $F(t)$ na $i$-tem podintervalu $[t_{i-1}, t_i]$ zamenjamo z daljico od $F(t_{i-1})$ do $F(t_i)$. \\
 Dolžina tako nastale lomljene črte, ki aproksimira tir poti $F$, je 
-$$\ell(D) = \sum_{i = 1}^{n} \sqrt{ (\alpha(t_i) - \alpha(t_{i-1}))^2 + (\beta(t_i) - \beta(t_{i-1}))^2 }.$$
+$$\ell(D) ~=~ \sum_{i = 1}^{n} \sqrt{ (\alpha(t_i) - \alpha(t_{i-1}))^2 ~+~ (\beta(t_i) - \beta(t_{i-1}))^2 }.$$
 Če obstaja limita dolžin $\ell(D)$, ko pošljemo velikost delitve $\delta(D)$ proti nič (neodvisno od izbire delitev), jo imenujemo \textit{dolžina poti} $F$ in označimo $\ell(F)$:
-$$\ell(F) = \lim_{D,\delta(D) \rightarrow 0} \ell(D).$$
+$$\ell(F) ~=~ \lim_{D,\delta(D) \rightarrow 0} \ell(D).$$
 
 \end{definicija}
+\vspace{0.5cm}
+
+\begin{trditev}
+
+Naj bo pot $F: [a, b] \rightarrow \R^2$, $F(t) = (x(t), y(t))$ \textit{zvezno odvedljiva}\footnote{Komponenti $x(t)$ in $y(t)$ sta \textit{zvezno odvedljivi} funkciji}. Potem je dolžina $\ell(F)$ poti $F$ enaka
+$$\ell(F) ~=~ \int_a^b \sqrt{\dot{x}(t)^2 ~+~ \dot{y}(t)^2}\,dt.$$
+
+\end{trditev}
+\vspace{0.5cm}
+
+\begin{opomba}
+~
+\begin{enumerate}
+	\item Dolžina tangentnega vektorja $\dot{F}(t) ~=~ (\dot{x}(t), \dot{y}(t))$ na pot $F$ je \\$|\dot{F}(t)| = \sqrt{\dot{x}(t)^2 + \dot{y}(t)^2}$, torej je
+	$$\ell(F) ~=~ \int_a^b |\dot{F}(t)|\,dt.$$
+	
+	\item Iz zgornje formule za dolžino poti se zdi, da je ta odvisna od parametrizacije $F$. Na osnovi definicije pa pričakujemo, da je odvisna le od krivulje $K$, ki je tir poti. To je res, če je parametrizacija \textit{injektivna}, torej vsako točko na krivulji obišče natanko enkrat; če pa parametrizacija večkrat opiše kak del krivulje, tega v dolžini upoštevamo večkrat.
+\end{enumerate}
+\end{opomba}
+\vspace{0.5cm}
+
+\begin{trditev}
+
+Naj bo $F: [a, b] \rightarrow \R^2$ \textit{zvezno odvedljiva} parametrizacija krivulje $K$ in $g: [c, d] \rightarrow [a, b]$ \textit{zvezno odvedljiva} funkcija, ki je \textit{monotono naraščajoča} in velja $g(c) = a$ ter $g(d) = b$. Potem je $G := F \circ g: [c, d] \rightarrow \R^2$ tudi parametrizacija $K$ in velja 
+$$\ell(G) ~=~ \ell(F).$$
+Dolžino krivulje $K$ torej izračunamo kot dolžino njene poljubne injektivne parametrizacije.
+
+\end{trditev}
+\vspace{0.5cm}
+
+\begin{posledica}
+~
+\begin{enumerate}
+	\item[(i)] Dolžina \textit{eksplicitno} podane \textit{zvezno odvedljive} krivulje
+	$y = f(x)$ za $x \in [a, b]$ je
+	$$\ell(K_f) 1=~ \int_a^b \sqrt{1 ~+~ (f'(x))^2}\,dx ~=~ \int_a^b \sqrt{1 + {y'}^2}\,dx.$$
+
+	\item[(ii)] Dolžina \textit{polarno} podane \textit{zvezno odvedljive} krivulje $r = 	r(\varphi)$ za $\varphi \in [a, b]$ je
+	$$\ell(K_r) ~=~ \int_a^b \sqrt{r(\varphi)^2 ~+~ \dot{r}(\varphi)^2}\,d\varphi.$$
+\end{enumerate}
+\end{posledica}
 \vspace{0.5cm}
 
 \begin{definicija}[Ločna dolžina]
 
 Diferencial dolžina loka krivulje označimo z $ds$ in ga imenujemo \textit{ločna dolžina}. V vseh opisih krivulje velja 
-$$ds^2 = dx^2 + dy^2.$$
+$$ds^2 ~=~ dx^2 + dy^2.$$
 
 \end{definicija}
 \vspace{0.5cm}
@@ -667,11 +761,11 @@ $$ds^2 = dx^2 + dy^2.$$
 Naj bo $f:[a, b] \rightarrow \mathbb{R}$ \textit{nenegativna zvezna} funkcija. Ploskev, ki jo dobimo z vrtenjem grafa funkcije $f$ nad intervalom $[a, b]$ okoli osi $x$, imenujemo \textit{rotacijska ploskev}. \\
 
 Izberemo neko delitev
-$$D = \{a = x_0 < x_1 < \ldots < x_n = b\}$$
+$$D ~=~ \{a = x_0 < x_1 < \ldots < x_n = b\}$$
 intervala $[a, b]$. Nad intervalom $[x_{i-1}, x_i]$ graf funkcije $f$ aproksimiramo z daljico od točke $(x_{i-1}, f(x_{i-1})$ do točke $(x_i, f(x_i))$. Ko daljico zavrtimo okoli $x$-osi, dobimo plašč prisekanega stožca s polmeroma leve in desne mejne krožnice $f(x_{i-1})$ in $f(x_i)$ ter višino $\delta_i = x_i - x_{i-1}$. To da približek za površino ploskve:
-$$\sum_{i=1}^{n} \pi (f(x_{i-1}) + f(x_i)) \sqrt{{\delta_i}^2 + (f(x_{i-1}) - f(x_i))^2}.$$
+$$\sum_{i=1}^{n} \pi (f(x_{i-1}) + f(x_i)) \sqrt{{\delta_i}^2 ~+~ (f(x_{i-1}) - f(x_i))^2}.$$
 Če je $f$ \textit{zvezno odvedljiva}, dobimo za površino v limiti, ko pošljemo velikost delitve $\delta(D)$ proti $0$, formulo
-$$P = 2 \pi \int_{a}^{b} f(x) \sqrt{1 + (f'(x))^2} dx = 2 \pi \int_{a}^{b} y \sqrt{1 + {y'}^2} dx.$$
+$$P ~=~ 2 \pi \int_{a}^{b} f(x) \sqrt{1 ~+~ (f'(x))^2}\,dx = 2 \pi \int_{a}^{b} y \sqrt{1 + {y'}^2}\,dx.$$
 
 \end{uporaba}
 \vspace{0.5cm}
@@ -679,6 +773,31 @@ $$P = 2 \pi \int_{a}^{b} f(x) \sqrt{1 + (f'(x))^2} dx = 2 \pi \int_{a}^{b} y \sq
 % *************************************************************************************************
 
 \subsection{Ploščina območja, določenega s krivuljo}
+\vspace{0.5cm}
+
+\begin{trditev}
+~
+\begin{enumerate}
+	\item Naj bo $f: [a, b] \rightarrow \R$ \textit{zvezna} in \textit{nenegativna}. Ploščina območja, ki ga določa graf funkcije $y = f(x)$ nad intervalom $[a, b]$ na osi $x$, je
+	$$\int_a^b f(x)\,dx ~=~ \int_a^b y\,dx.$$
+	
+	\item Naj bo $g: [c, d] \rightarrow \R$ \textit{zvezna} in \textit{nenegativna}. Ploščina območja, ki ga določa graf funkcije $x = g(y)$ na osi $y$, je
+	$$\int_c^d g(y)\,dy ~=~ \int_c^d x\,dy.$$
+\end{enumerate}
+\end{trditev}
+\vspace{0.5cm}
+
+\begin{trditev}
+
+Naj bo $F: [a, b] \rightarrow \R^2$ \textit{zvezno odvedljiva} pot, $F(t) = (x(t), y(t))$.
+\begin{enumerate}
+	\item Če je $y(t) \geq 0$ za $\forall t$ in je $x(a) = \min{x(t)}$ ter $x(b) \max{x(t)},$ potem je ploščina med krivuljo in osjo $x$ nad intervalom $[x(a), x(b)]$ enaka
+	$$\int_a^b y(t)\,\dot{x}(t)\,dt.$$
+	
+	\item Če je $x(t) \geq 0 $ za $\forall t$ in je $y(a) = \min{y(t)}$ ter $y(b) = \max{y(t)}$, potem je ploščina med krivuljo in osjo $y$ nad intervalom $[y(a), y(b)]$ enaka
+	$$\int_a^b x(t)\,\dot{y}(t)\,dt.$$
+\end{enumerate}
+\end{trditev}
 \vspace{0.5cm}
 
 \begin{definicija}
@@ -692,6 +811,31 @@ Naj bo $A$ območje, ki ga omejuje \textit{gladka enostavna sklenjena krivulja} 
 \end{definicija}
 \vspace{0.5cm}
 
+\begin{trditev}
+
+Naj bo $F: [a, b] \rightarrow \R^2$, $F(t) = (x(t), y(t))$ \textit{regularna} parametrizacija \textit{enostavne sklenjene} krivulje $K$, ki določa pozitivno usmerjenost $K$. Potem je ploščina območja $A$ znotraj $K$ enaka
+$$\int_a^b x(t)\,\dot{y}(t)\,dt ~=~ -\int_a^b y(t)\,\dot{x}(t)\,dt ~=~ \frac{1}{2} \int_a^b (x(t)\,\dot{y}(t) - y(t)\,\dot{x}(t))\,dt.$$
+
+\end{trditev}
+\vspace{0.5cm}
+
+\begin{opomba}
+
+Zgornja trditev velja tudi za \textit{odsekoma zvezno odvedljive} poti $F$, torej za zvezne $F(t) = (x(t), y(t))$, kjer sta odvoda $\dot{x}(t)$ in $\dot{y}(t)$ \textit{odsekoma zvezni} funkciji.
+
+\end{opomba}
+\vspace{0.5cm}
+
+\begin{trditev}
+
+Naj bo $r = r(\varphi)$ za $\varphi \in [\alpha, \beta]$ \textit{zvezno polarno} podana krivulja. Potem je ploščina območja, ki ga določa krivulja skupaj z daljicama 
+$$\varphi = \alpha, ~~0 \leq r \leq r(a) ~~~\text{in}~~~ \varphi = \beta, ~~0 \leq r \leq r(\beta),$$
+enaka
+$$\frac{1}{2} \int_\alpha^\beta r(\varphi)^2\,d\varphi.$$
+
+\end{trditev}
+\vspace{0.5cm}
+
 % *************************************************************************************************
 
 \subsection{Diferencialne enačbe v obliki diferenciala}
@@ -700,11 +844,11 @@ Naj bo $A$ območje, ki ga omejuje \textit{gladka enostavna sklenjena krivulja} 
 \begin{definicija}
 
 \textit{Diferencialna enačba v obliki diferenciala} je enačba oblike 
-$$P(x, y)~dx + Q(x, y)~dy = 0,$$
+$$P(x, y)\,dx ~+~ Q(x, y)\,dy ~=~ 0,$$
 kjer sta $P, Q: A \rightarrow \mathbb{R}$ definirani na nekem območju $A \subset \mathbb{R}^2$. \\
 
 Naj bosta $P, Q: A \rightarrow \mathbb{R}$ \textit{odvedljivi}. Diferencialna enačba $P(x, y)~dx + Q(x, y)~dy = 0$ je \textit{eksaktna} na $A$, če velja 
-$$\frac{\partial P}{\partial y}(x, y) = \frac{\partial Q}{\partial x}(x, y)$$
+$$\frac{\partial P}{\partial y}(x, y) ~=~ \frac{\partial Q}{\partial x}(x, y)$$
 za $\forall x \in A$.
 
 \end{definicija}
@@ -713,7 +857,7 @@ za $\forall x \in A$.
 \begin{definicija}[Integral s parametrom]
 
 Naj bo $A = [a, b] \times [c, d] \subset \mathbb{R}^2$ pravokotnik in naj bo $f: A \rightarrow \mathbb{R}$ \textit{zvezna} funkcija. Funkcijo $F:[a, b] \rightarrow \mathbb{R}$, definirano s predpisom 
-$$F(x) = \int_{c}^{d} f(x, y) dy,$$
+$$F(x) ~=~ \int_{c}^{d} f(x, y)\,dy,$$
 imenujemo \textit{integral s parametrom}.
 
 \end{definicija}
@@ -722,7 +866,7 @@ imenujemo \textit{integral s parametrom}.
 \begin{definicija}[Integrirajoči množitelj]
 
 Naj bo dana diferencialna enačba $P(x, y)~dx + Q(x, y)~dy = 0$, kjer sta $P, Q: A \rightarrow \mathbb{R}$ \textit{zvezno odvedljivi} funkciji. Če je $\mu: A \rightarrow \mathbb{R}$ takšna \textit{zvezno odvedljiva} funkcija, da je enačba
-$$\mu(x, y) P(x, y)~dx + \mu(x, y) Q(x, y)~dy = 0$$
+$$\mu(x, y)\,P(x, y)\,dx ~+~ \mu(x, y)\,Q(x, y)\,dy ~=~ 0$$
 \textit{eksaktna}, potem funkcijo $\mu$ imenujemo \textit{integrirajoči množitelj} dane enačbe.
 
 \end{definicija}
