@@ -67,7 +67,7 @@ Naj bo $f$ funkcija \textit{ene spremenljivke}. Če obstaja \textit{odvedljiva f
 \begin{lema}
 
 Naj bosta $F$ in $G$ \textit{primitivni funkciji} za funkcijo $f$ na nekem intervalu $J$. Potem obstaja konstanta $C \in \mathbb{R}$, da velja 
-$$G(x) ~=~ F(x) + C ~~~\textit{za}~ \forall x \in J.$$
+$$G(x) ~=~ F(x) + C ~~~ \forall x \in J.$$
 
 \end{lema}
 \vspace{0.5cm}
@@ -157,7 +157,7 @@ $$y' ~=~ f(x,y).$$
 
 \begin{definicija}
 
-\textit{Eksplicitna rešitev} diferencialne enačbe $F(x,y,y') = 0$ je takšna odvedljiva funkcija $g:J \rightarrow R$, definirana na intervalu $J$, da postane diferencialna enačba identiteta na $J$, le vanjo vstavimo $y = g(x)$, torej za $\forall x \in J$ velja 
+\textit{Eksplicitna rešitev} diferencialne enačbe $F(x,y,y') = 0$ je takšna odvedljiva funkcija $g:J \rightarrow R$, definirana na intervalu $J$, da postane diferencialna enačba identiteta na $J$, le vanjo vstavimo $y = g(x)$, torej $\forall x \in J$ velja 
 $$F(x,g(x),g'(x)) ~=~ 0.$$
 
 \noindent \textit{Implicitna rešitev} diferencialne enačbe je dana z enačbo $G(x,y) = 0$, ki na nekem intervalu določa eksplicitno rešitev dane diferencialne enačbe. \\
@@ -257,7 +257,7 @@ $$\int_{a}^{b} f(x) dx ~:=~ \lim_{\delta(D) \rightarrow 0} R(f, D, T_D).$$
 \begin{definicija}
 
 $$\lim_{\delta(D) \rightarrow 0} R(f, D, T_D) ~=~ I,$$
-če za $\forall \varepsilon > 0 ~ \exists \delta > 0$, da za poljubno delitev $D$ z $\delta(D) < \delta$ in poljuben usklajen nabor testnih točk $T_D$ velja
+če $\forall \varepsilon > 0 ~ \exists \delta > 0$, da za poljubno delitev $D$ z $\delta(D) < \delta$ in poljuben usklajen nabor testnih točk $T_D$ velja
 $$|R(f, D, T_D) - I| ~<~ \varepsilon.$$ 
 
 \end{definicija}
@@ -303,7 +303,7 @@ $$\int_a^c f(x)\,dx ~=~ \int_a^b f(x)\,dx ~+~ \int_b^x f(x)\,dx.$$
 
 \begin{trditev}
 
-Naj bosta  $f, g: [a, b] \rightarrow \mathbb{R}$ funkciji, ki se razlikujeta le v točki $c \in [a, b]$ \footnote{$f(x) = g(x)$ za $\forall x \in [a, b]$, $x \neq c$}. Potem je $f$ \textit{integrabilna} natanko tedaj, ko je \textit{integrabilna} $g$; če sta funkciji \textit{integrabilni} velja
+Naj bosta  $f, g: [a, b] \rightarrow \mathbb{R}$ funkciji, ki se razlikujeta le v točki $c \in [a, b]$ \footnote{$f(x) = g(x)$ $\forall x \in [a, b]$, $x \neq c$}. Potem je $f$ \textit{integrabilna} natanko tedaj, ko je \textit{integrabilna} $g$; če sta funkciji \textit{integrabilni} velja
 $$\int_a^b f(x)\,dx ~=~ \int_a^b g(x)\,dx.$$
  
 \end{trditev}
@@ -318,7 +318,7 @@ Naj bo $f$ \textit{zvezna} na $[a, b]$. Potem je $f$ \textit{integrabilna} na $[
 
 \begin{definicija}[Enakomerna zveznost]
 
-Naj bo $A \subseteq \mathbb{R}^n$. Funkcija $f: A \rightarrow \mathbb{R}$ je \textit{enakomerno zvezna} na $A$, če za $\forall \varepsilon > 0$ obstaja tak $\delta = \delta_\varepsilon > 0$, da za poljubna $x, y \in A$, ki zadoščata $|x-y| < \delta$, velja
+Naj bo $A \subseteq \mathbb{R}^n$. Funkcija $f: A \rightarrow \mathbb{R}$ je \textit{enakomerno zvezna} na $A$, če $\forall \varepsilon > 0$ obstaja tak $\delta = \delta_\varepsilon > 0$, da za poljubna $x, y \in A$, ki zadoščata $|x-y| < \delta$, velja
 $$|f(x) - f(y)| ~<~ \varepsilon.$$ 
 Tukaj je za $x = (x_1, \ldots, x_n) \in \mathbb{R}^n$ dolžina $|x|$ definirana z
 $$|x| ~=~ \sqrt{\sum_{k=1}^n {x_k}^2} ~=~ \sqrt{{x_1}^2 + \ldots + {x_n}^2}.$$
@@ -353,7 +353,7 @@ Funkcija $f: J \rightarrow \mathbb{R}$, definirana na omejenem intervalu $J$, je
 ~
 \begin{enumerate}
 	
-	\item[(i)] Naj bosta $f$ in $g$ \textit{integrabilni} na $[a, b]$. Če je $f(x) \leq g(x)$ za $\forall x \in [a, b]$, potem je 
+	\item[(i)] Naj bosta $f$ in $g$ \textit{integrabilni} na $[a, b]$. Če je $f(x) \leq g(x)$ $\forall x \in [a, b]$, potem je 
 	$$\int_a^b f(x)\,dx ~\leq~ \int_a^b g(x)\,dx ~~~\text{(monotonost integrala)}.$$
 	
 	\item[(ii)] Če je $f$ \textit{integrabilna} na $[a, b]$, potem je tudi $|f|$ \textit{integrabilna} na $[a, b]$ in velja
@@ -406,7 +406,7 @@ imenujemo \textit{integral kot funkcija zgornje meje}.
 \begin{izrek}[Prvi del osnovnega izreka]
 
 Naj bo $f:[a, b] \rightarrow \mathbb{R}$ \textit{zvezna}. Potem je funkcija $F(x) = \mathlarger{\int_a^x f(t)~dt}$ \textit{odvedljiva} na $[a, b]$ in velja
-$$F'(x) ~=~ f(x) ~~~\text{za}~\forall x \in [a, b].$$
+$$F'(x) ~=~ f(x) ~~~ \forall x \in [a, b].$$
 
 \end{izrek}
 \vspace{0.5cm}
@@ -456,7 +456,7 @@ $$\int_a^b f(x)\,dx ~=~ G(b) - G(a) ~=~ G(x) \Big|_a^b.$$
 
 \begin{definicija}[Posplošeni integral]
 
-Naj bo $f:(a, b] \rightarrow \mathbb{R}$ funkcija, ki je integrabilna na intervalu $[t, b]$ za $\forall t \in (a, b)$. Potem je \textit{posplošeni integral} funkcije $f$ na intervalu $[a, b]$
+Naj bo $f:(a, b] \rightarrow \mathbb{R}$ funkcija, ki je integrabilna na intervalu $[t, b]$ $\forall t \in (a, b)$. Potem je \textit{posplošeni integral} funkcije $f$ na intervalu $[a, b]$
 $$\int_{a}^{b} f(x)\,dx ~:=~ \lim_{t \searrow a} \int_{t}^{b} f(x)\,dx,$$
 če ta limita obstaja. \\
 
@@ -491,7 +491,7 @@ Naj bo $g:(a, b] \rightarrow \mathbb{R}$ \textit{zvezna}.
 		
 	\item[(i)] Če je $g$ \textit{omejena} na $(a, b]$ in je $p<1$, potem je $\mathlarger{\int_a^b \frac{g(x)}{(x-a)^p}~dx}$ \textit{konvergenten}.
 	
-	\item[(ii)] Če je $g$ \textit{omejena stran od nič}, torej obstaja neki $m > 0$, da velja $|g(x)| \geq m$ za $\forall x \in (a, b]$ in je $p \geq 1$, potem je $\int_a^b \frac{g(x)}{(x-a)^p}~dx$ \textit{divergenten}.		
+	\item[(ii)] Če je $g$ \textit{omejena stran od nič}, torej obstaja neki $m > 0$, da velja $|g(x)| \geq m$ $\forall x \in (a, b]$ in je $p \geq 1$, potem je $\int_a^b \frac{g(x)}{(x-a)^p}~dx$ \textit{divergenten}.		
 		
 \end{enumerate}
 \end{izrek}
@@ -542,11 +542,11 @@ Pri oznakah v zgornji trditvi velja naslednje: če sta dve od funkcij $f$, $g$ i
 ~
 \begin{enumerate}
 
-	\item[(i)] Naj bo $f:[a, b) \rightarrow \mathbb{R}$ \textit{integrabilna} na $[a, b]$ za $\forall s \in (a, b)$. Potem je \textit{posplošeni integral} funkcije $f$ na intervalu $[a, b]$
+	\item[(i)] Naj bo $f:[a, b) \rightarrow \mathbb{R}$ \textit{integrabilna} na $[a, b]$ $\forall s \in (a, b)$. Potem je \textit{posplošeni integral} funkcije $f$ na intervalu $[a, b]$
 	$$\int_a^b f(x)\,dx ~:=~ \lim_{s \nearrow b} \int_a^s f(x)\,dx,$$
 	če ta limita obstaja. Če limita obstaja, rečemo, da je $f$ \textit{posplošeno integrabilna} na $[a, b]$ in da je posplošeni integral \textit{konvergenten}, sicer pa imenujemo integral \textit{divergenten}.
 	
-	\item[(ii)]	Naj bo $f:[a, c) \cup (c, b] \rightarrow \mathbb{R}$ \textit{integrabilna} na $[a, s]$ za $\forall s \in (a, c)$ in \textit{integrabilna} na $[a, b]$ za $\forall t \in (c, b)$. Potem je \textit{posplošeni integral} $f$ na $[a, b]$
+	\item[(ii)]	Naj bo $f:[a, c) \cup (c, b] \rightarrow \mathbb{R}$ \textit{integrabilna} na $[a, s]$ $\forall s \in (a, c)$ in \textit{integrabilna} na $[a, b]$ $\forall t \in (c, b)$. Potem je \textit{posplošeni integral} $f$ na $[a, b]$
 	$$\int_a^b f(x)\,dx ~:=~ \lim_{s \nearrow c} \int_a^s f(x)\,dx ~+~ \lim_{t \searrow c} \int_t^b f(x)\,dx,$$
  če obe limiti obstajata.	
 \end{enumerate}
@@ -561,13 +561,13 @@ Pri oznakah v zgornji trditvi velja naslednje: če sta dve od funkcij $f$, $g$ i
 \begin{definicija}[Posplošena integrabilnost]
 ~
 	\begin{itemize}
-		\item Naj bo $f:[a, \infty) \rightarrow \mathbb{R}$ integrabilna na $[a, s]$ za $\forall s > a$. Potem je \textit{posplošeni integral} funkcije $f$ na $[a, \infty)$
+		\item Naj bo $f:[a, \infty) \rightarrow \mathbb{R}$ integrabilna na $[a, s]$ $\forall s > a$. Potem je \textit{posplošeni integral} funkcije $f$ na $[a, \infty)$
 		$$\int_{a}^{\infty} f(x)\,dx ~:=~ \lim_{s \rightarrow \infty} \int_{a}^{s} f(x)\,dx,$$
 		če ta limita obstaja. Če limita obstaja, rečemo, da je posplošeni integral \textit{konvergenten}, sicer pa, da je \textit{divergenten}. \\
-		\item Naj bo $f:(-\infty, b] \rightarrow \mathbb{R}$ integrabilna na $[t, b]$ za $\forall t < b$. Potem je \textit{posplošeni integral} funkcije $f$ na $(-\infty, b]$
+		\item Naj bo $f:(-\infty, b] \rightarrow \mathbb{R}$ integrabilna na $[t, b]$ $\forall t < b$. Potem je \textit{posplošeni integral} funkcije $f$ na $(-\infty, b]$
 		$$\int_{-\infty}^{b} f(x)\,dx ~:=~ \lim_{t \rightarrow -\infty} \int_{t}^{b} f(x)\,dx,$$
 		če ta limita obstaja. Če limita obstaja, rečemo, da je posplošeni integral \textit{konvergenten}, sicer pa, da je \textit{divergenten}. \\
-		\item Funkcija $f:(-\infty, \infty) \rightarrow \mathbb{R}$ je \textit{posplošeno integrabilna}, če sta posplošeno integrabilni zožitvi $f |_{(-\infty, a]}$ in $f |_{[a, \infty)}$ za $\forall a \in \mathbb{R}$. 
+		\item Funkcija $f:(-\infty, \infty) \rightarrow \mathbb{R}$ je \textit{posplošeno integrabilna}, če sta posplošeno integrabilni zožitvi $f |_{(-\infty, a]}$ in $f |_{[a, \infty)}$ $\forall a \in \mathbb{R}$. 
 	\end{itemize}
 \end{definicija}
 \vspace{0.5cm}
@@ -651,7 +651,7 @@ $$\nabla{g(a, b)} \cdot (x-a, y-b) ~=~ 0.$$
 
 \begin{trditev}
 
-Naj bosta $\alpha, \beta: J \rightarrow \R$ \textit{zvezno odvedljivi} funkciji, kjer je $J \subset \R$ interval, ter $F = (\alpha, \beta)$ pripadajoča \textit{zvezno odvedljiva} pot. Če velja $\dot{\alpha}(t) \neq 0$ za $\forall t \in J$, potem je $K_F$ graf neke \textit{zvezno odvedljive} funkcije $f$, za katero velja
+Naj bosta $\alpha, \beta: J \rightarrow \R$ \textit{zvezno odvedljivi} funkciji, kjer je $J \subset \R$ interval, ter $F = (\alpha, \beta)$ pripadajoča \textit{zvezno odvedljiva} pot. Če velja $\dot{\alpha}(t) \neq 0$ $\forall t \in J$, potem je $K_F$ graf neke \textit{zvezno odvedljive} funkcije $f$, za katero velja
 $$f'(\alpha(t)) ~=~ \frac{\dot{\beta}(t)}{\dot{\alpha}(t)}.$$
 Če označimo $x(t) := \alpha(t)$ in $y(t) := \beta(t)$, dobimo za odvod
 $$f'(x(t)) ~=~ \frac{\dot{y}(t)}{\dot{x}(t)}.$$
@@ -661,7 +661,7 @@ $$f'(x(t)) ~=~ \frac{\dot{y}(t)}{\dot{x}(t)}.$$
 
 \begin{posledica}
 
-Naj bosta $x = x(t)$ in $y = y(t)$ \textit{dvakrat odvedljivi} na intervalu $J$ in naj velja $\dot{x}(t) \neq 0$ za $\forall t \in J$. Potem je pripadajoča funkcija $f$ iz zgornje trditve \textit{dvakrat odvedljiva} in velja
+Naj bosta $x = x(t)$ in $y = y(t)$ \textit{dvakrat odvedljivi} na intervalu $J$ in naj velja $\dot{x}(t) \neq 0$ $\forall t \in J$. Potem je pripadajoča funkcija $f$ iz zgornje trditve \textit{dvakrat odvedljiva} in velja
 $$f''(x(t)) ~=~ \frac{\dot{x}(t) \ddot{y}(t) - \dot{y}(t) \ddot{x}(t)}{\dot{x}(t)^3}.$$
 
 \end{posledica}
@@ -791,10 +791,10 @@ $$P ~=~ 2 \pi \int_{a}^{b} f(x) \sqrt{1 ~+~ (f'(x))^2}\,dx = 2 \pi \int_{a}^{b} 
 
 Naj bo $F: [a, b] \rightarrow \R^2$ \textit{zvezno odvedljiva} pot, $F(t) = (x(t), y(t))$.
 \begin{enumerate}
-	\item Če je $y(t) \geq 0$ za $\forall t$ in je $x(a) = \min{x(t)}$ ter $x(b) \max{x(t)},$ potem je ploščina med krivuljo in osjo $x$ nad intervalom $[x(a), x(b)]$ enaka
+	\item Če je $y(t) \geq 0$ $\forall t$ in je $x(a) = \min{x(t)}$ ter $x(b) \max{x(t)},$ potem je ploščina med krivuljo in osjo $x$ nad intervalom $[x(a), x(b)]$ enaka
 	$$\int_a^b y(t)\,\dot{x}(t)\,dt.$$
 	
-	\item Če je $x(t) \geq 0 $ za $\forall t$ in je $y(a) = \min{y(t)}$ ter $y(b) = \max{y(t)}$, potem je ploščina med krivuljo in osjo $y$ nad intervalom $[y(a), y(b)]$ enaka
+	\item Če je $x(t) \geq 0 $ $\forall t$ in je $y(a) = \min{y(t)}$ ter $y(b) = \max{y(t)}$, potem je ploščina med krivuljo in osjo $y$ nad intervalom $[y(a), y(b)]$ enaka
 	$$\int_a^b x(t)\,\dot{y}(t)\,dt.$$
 \end{enumerate}
 \end{trditev}
@@ -838,6 +838,36 @@ $$\frac{1}{2} \int_\alpha^\beta r(\varphi)^2\,d\varphi.$$
 
 % *************************************************************************************************
 
+\subsection{Krivinska krožnica in ukrivljenost krivulje}
+\vspace{0.5cm}
+
+\begin{definicija}
+
+Naj bo $K \subset \R^2$ krivulja, ki ima tangento v točki $(a, b) \in K$. \textit{Krivinska krožnica} na $K$ v točki $(a, b)$ je limitna lega krožnic, ki so tangentne na $K$ v $(a, b)$ ter gredo skozi točko $(x, y) \in K$, ko pošljemo $(x, y)$ proti $(a, b)$, če ta limita obstaja. Polmer krivinske krožnice imenujemo \textit{krivinski polmer}, njegovo obratno vrednost pa imenujemo \textit{ukrivljenost} krivulje v točki $(a, b)$.
+
+\end{definicija}
+\vspace{0.5cm}
+
+\begin{trditev}
+~
+\begin{enumerate}
+
+	\item[(1)] Naj bo $f$ \textit{dvakrat zvezno odvedljiva} funkcija. \textit{Ukrivljenost} grafa $f$ v točki $x$ je
+	$$\kappa(x) ~=~ \frac{f''(x)}{(1+(f'(x))^2)^\frac{3}{2}}.$$
+	
+	\item[(2)] Naj bo $F$ \textit{dvakrat zvezno odvedljiva} pot. \textit{Ukrivuljenost tira} poti $F$ v točki $t$ je
+	$$\kappa(t) ~=~ \frac{\ddot{y}(t) \dot{x}(t) - \dot{y}(t) \ddot{x}(t)}{(\dot{x}(t)^2 + \dot{y}(t)^2)^\frac{3}{2}}.$$
+	
+	\item[(3)] Naj  bo $r$ \textit{dvakrat zvezno odvedljiva} funkcija, ki določa polarno podano krivuljo. \textit{Ukrivljenost} krivulje v točki $\varphi$ je
+	$$\kappa(\varphi) ~=~ \frac{r(\varphi)^2 + 2\dot{r}(\varphi)^2 - r(\varphi)\ddot{r}(\varphi)}{(r(\varphi)^2 + \dot{r}(\varphi)^2)^\frac{3}{2}}.$$
+
+\end{enumerate}
+
+\end{trditev}
+\vspace{0.5cm}
+
+% *************************************************************************************************
+
 \subsection{Diferencialne enačbe v obliki diferenciala}
 \vspace{0.5cm}
 
@@ -847,11 +877,21 @@ $$\frac{1}{2} \int_\alpha^\beta r(\varphi)^2\,d\varphi.$$
 $$P(x, y)\,dx ~+~ Q(x, y)\,dy ~=~ 0,$$
 kjer sta $P, Q: A \rightarrow \mathbb{R}$ definirani na nekem območju $A \subset \mathbb{R}^2$. \\
 
-Naj bosta $P, Q: A \rightarrow \mathbb{R}$ \textit{odvedljivi}. Diferencialna enačba $P(x, y)~dx + Q(x, y)~dy = 0$ je \textit{eksaktna} na $A$, če velja 
+Naj bosta $P, Q: A \rightarrow \mathbb{R}$ \textit{odvedljivi}. Diferencialna enačba \\$P(x, y)\,dx + Q(x, y)\,dy = 0$ je \textit{eksaktna} na $A$, če velja 
 $$\frac{\partial P}{\partial y}(x, y) ~=~ \frac{\partial Q}{\partial x}(x, y)$$
-za $\forall x \in A$.
+$\forall x \in A$.
 
 \end{definicija}
+\vspace{0.5cm}
+
+\begin{trditev}
+
+Naj bo $A \subset \R^2$ \textit{pravokotnik} in $P, Q: A \rightarrow \R$ \textit{zvezno odvedljivi} funkciji. Če je enačba $P(x, y)\,dx + Q(x, y)\,dy = 0$ \textit{eksaktna} na $A$, potem ima splošno rešitev oblike 
+$$g(x, y) ~=~ C,$$
+kjer je $g: A \rightarrow \R$ \textit{dvakrat zvezno odvedljiva} funkcija, ki zadošča
+$$\frac{\partial g}{\partial x}(x, y) ~=~ P(x, y) ~~~\text{in}~~~ \frac{\partial g}{\partial y}(x, y) ~=~ Q(x, y).$$
+
+\end{trditev}
 \vspace{0.5cm}
 
 \begin{definicija}[Integral s parametrom]
@@ -863,6 +903,14 @@ imenujemo \textit{integral s parametrom}.
 \end{definicija}
 \vspace{0.5cm}
 
+\begin{lema}
+
+Pri oznakah kot v definiciji naj bo $f$ \textit{zvezno odvedljiva} funkcija dveh spremenljivk. Tedaj je integral s parametrom $x \mapsto F(x)$ \textit{zvezno odvedljiva} funkcija na $[a, b]$ in velja
+$$F'(x) ~=~ \int_c^d \frac{\partial f(x, y)}{\partial x}\,dy.$$
+
+\end{lema}
+\vspace{0.5cm}
+
 \begin{definicija}[Integrirajoči množitelj]
 
 Naj bo dana diferencialna enačba $P(x, y)~dx + Q(x, y)~dy = 0$, kjer sta $P, Q: A \rightarrow \mathbb{R}$ \textit{zvezno odvedljivi} funkciji. Če je $\mu: A \rightarrow \mathbb{R}$ takšna \textit{zvezno odvedljiva} funkcija, da je enačba
@@ -870,6 +918,19 @@ $$\mu(x, y)\,P(x, y)\,dx ~+~ \mu(x, y)\,Q(x, y)\,dy ~=~ 0$$
 \textit{eksaktna}, potem funkcijo $\mu$ imenujemo \textit{integrirajoči množitelj} dane enačbe.
 
 \end{definicija}
+\vspace{0.5cm}
+
+\begin{trditev}
+
+Če je $\mu$ \textit{integrirajoči množitelj} diferencialne enačbe \\$P(x, y)\,dx + Q(x, y)\,dy ~=~ 0$, potem zadošča 
+$$\mu_y P - \mu_x Q ~=~ \mu(Q_x - P_y).$$
+Dana enačba ima integrirajoči množitelj, ki je odvisen le od spremenljivke $x$, če ke izraz $\cfrac{Q_x - P_y}{Q}$ odvisen le od spremenljivke $x$ (ne pa od od $y$); v tem primeru je $\mu = \mu(x)$ rešitev enačbe
+$$\frac{1}{\mu} \frac{d\mu}{dx} ~=~ \frac{P_y - Q_x}{Q}.$$
+Dana enačba ima integrirajoči množitelj, ki je odvisen le od spremenljivke $y$, če ke izraz $\cfrac{Q_x - P_y}{P}$ odvisen le od spremenljivke $y$ (ne pa od od $x$); v tem primeru je $\mu = \mu(y)$ rešitev enačbe
+$$\frac{1}{\mu} \frac{d\mu}{dy} ~=~ \frac{Q_x - P_y}{P}.$$
+
+
+\end{trditev}
 \vspace{0.5cm}
 
 % *************************************************************************************************
@@ -897,9 +958,98 @@ Vrsta $\mathlarger{\sum_{n=1}^{\infty} a_n}$ je \textit{konvergentna (divergentn
 \end{definicija}
 \vspace{0.5cm}
 
+\begin{lema}[Potrebni pogoj za kovergenco vrste]
+
+Če vrsta $\mathlarger{\sum_{n=1}^\infty a_n}$ \textit{konvergira}, potem je 
+$$\lim_{n \rightarrow \infty} a_n ~=~ 0.$$
+
+\end{lema}
+\vspace{0.5cm}
+
+\begin{opomba}
+
+Prvih nekaj členov vrste ne vpliva na konvergenco.
+
+\end{opomba}
+\vspace{0.5cm}
+
+\pagebreak
+
 % *************************************************************************************************
 
 \subsection{Vrste s pozitivnimi členi}
+\vspace{0.5cm}
+
+\begin{trditev}[Primerjalni kriterij]
+
+Naj za zaporedji števil $(a_n)_n$ in $(b_n)_n$ velja $0 \leq a_n \leq b_n$ $\forall n \in \N$.
+\begin{enumerate}
+
+	\item[(1)] Če $\mathlarger{\sum_{n=1}^\infty b_n}$ \textit{konvergira}, potem tudi $\mathlarger{\sum_{n=1}^\infty a_n}$ \textit{konvergira}.
+	
+	\item[(2)] Če $\mathlarger{\sum_{n=1}^\infty a_n}$ \textit{divergira}, potem tudi $\mathlarger{\sum_{n=1}^\infty b_n}$ \textit{divergira}.
+
+\end{enumerate}
+Rečemo, da je vrsta $\mathlarger{\sum_{n=1}^\infty b_n}$ \textit{majoranta} za vrsto $\mathlarger{\sum_{n=1}^\infty a_n}$, ter da je vrsta $\mathlarger{\sum_{n=1}^\infty a_n}$ \textit{minoranta} za vrsto $\mathlarger{\sum_{n=1}^\infty b_n}$.
+
+\end{trditev}
+\vspace{0.5cm}
+
+\begin{trditev}[Kvocientni ali d'Alembertov kriterij]
+
+Naj bo $(a_n)_n$ zaporedje \textit{pozitivnih} števil, za katerega obstaja
+$$d ~:=~ \lim_{n \rightarrow \infty} \frac{a_{n+1}}{a_n}.$$
+Potem vrsta $\sum_{n=1}^\infty a_n ~ \begin{cases}
+\textit{konvergira}; ~&d<1\\
+\textit{divergira}; ~&d>1 \\
+\textit{konvergira ali divergira}; ~&d=1
+\end{cases}.$ 
+
+\end{trditev}
+\vspace{0.5cm}
+
+\begin{trditev}[Korenski ali Cuchyjev kriterij]
+
+Naj bo $(a_n)_n$ zaporedje \textit{nenegativnih} števil, za katerega obstaja
+$$c ~:=~ \lim_{n \rightarrow \infty} \sqrt[n]{a_n}.$$
+Potem vrsta $\sum_{n=1}^\infty a_n ~ \begin{cases}
+\textit{konvergira}; ~&c<1\\
+\textit{divergira}; ~&c>1 \\
+\textit{konvergira ali divergira}; ~&c=1
+\end{cases}.$ 
+
+\end{trditev}
+\vspace{0.5cm}
+
+\begin{trditev}[Integralski kriterij]
+
+Naj bo $f: [1, \infty) \rightarrow \R$ \textit{zvezna, pozitivna} in \textit{padajoča} funkcija. Potem vrsta $\mathlarger{\sum_{n=1}^\infty f(n)}$ \textit{konvergira} natanko tedaj, ko \textit{konvergira} posplošeni integral
+$$\int_1^\infty f(x)\,dx.$$
+
+\end{trditev}
+\vspace{0.5cm}
+
+\begin{posledica}
+
+Naj bo $p>0$ \textit{realno} število. Vrsta $\mathlarger{\sum_{n=1}^\infty \frac{1}{n^p}} ~ \begin{cases}
+\textit{konvergira}; ~&p>1 \\
+\textit{divergira}; ~&p \leq 1
+\end{cases}.$
+
+\end{posledica}
+\vspace{0.5cm}
+
+\begin{trditev}[Raabejev kriterij]
+
+Naj bo $(a_n)_n$ zaporedje \textit{pozitivnih} števil, za katerega obstaja
+$$r ~:=~ \lim_{n \rightarrow \infty} n \left( \frac{a_n}{a_{n+1}} - 1 \right).$$
+Potem vrsta $\sum_{n=1}^\infty a_n ~ \begin{cases}
+\textit{konvergira}; ~&r>1 \\
+\textit{divergira}; ~&r<1 \\
+\textit{konvergira ali divergira}; ~&r=1
+\end{cases}.$
+
+\end{trditev}
 \vspace{0.5cm}
 
 % *************************************************************************************************
@@ -909,7 +1059,7 @@ Vrsta $\mathlarger{\sum_{n=1}^{\infty} a_n}$ je \textit{konvergentna (divergentn
 
 \begin{definicija}[Alternirajoča vrsta]
 
-Vrsta $\mathlarger{\sum_{n=1}^{\infty} a_n}$ je \textit{alternirajoča}, če je člen $a_{n+1}$ nasprotno predznačen kot člen $a_n$ za $\forall n \in \mathbb{N}$.
+Vrsta $\mathlarger{\sum_{n=1}^{\infty} a_n}$ je \textit{alternirajoča}, če je člen $a_{n+1}$ nasprotno predznačen kot člen $a_n$ $\forall n \in \mathbb{N}$.
 
 \end{definicija}
 \vspace{0.5cm}
@@ -942,9 +1092,9 @@ Vrsta $\mathlarger{\sum_{n=1}^{\infty} a_n}$ je \textit{absolutno konvergentna},
 
 \begin{definicija}[Funkcijsko zaporedje]
 
-Naj bo $A \subset \mathbb{R}$ in naj bo za $\forall n \in \mathbb{N}$ dana funkcija $f_n: A \rightarrow \mathbb{R}$. Tedaj funkcije $f_n$ sestavljajo \textit{funkcijsko zaporedje} $(f_n)_{n \in \mathbb{N}}$. \\
+Naj bo $A \subset \mathbb{R}$ in naj bo $\forall n \in \mathbb{N}$ dana funkcija $f_n: A \rightarrow \mathbb{R}$. Tedaj funkcije $f_n$ sestavljajo \textit{funkcijsko zaporedje} $(f_n)_{n \in \mathbb{N}}$. \\
 
-Če za $\forall a \in A$ obstaja limita številskega zaporedja $(f_n(a))_n$, rečemo, da funkcijsko zaporedje \textit{konvergira po točkah} na $A$. V tem primeru za $a \in A$ označimo 
+Če $\forall a \in A$ obstaja limita številskega zaporedja $(f_n(a))_n$, rečemo, da funkcijsko zaporedje \textit{konvergira po točkah} na $A$. V tem primeru za $a \in A$ označimo 
 $$f(a) := \lim_{n \rightarrow \infty} f_n(a).$$
 Tako dobljeno funkcijo $f: A \rightarrow \mathbb{R}$ imenujemo \textit{limitna funkcija} zaporedja $(f_n)_n$; pišemo 
 $$f = \lim_{n \rightarrow \infty} f_n$$
@@ -962,9 +1112,9 @@ Funkcijsko zaporedje $(f_n: A \rightarrow \mathbb{R})_n$ v splošnem konvergira 
 
 \begin{definicija}[Enakomerna konvergenca funkcijskega zaporedja]
 
-Naj funkcijsko zaporedje \\ $(f_n: A \rightarrow \mathbb{R})_n$ konvergira po točkah proti limitni funkciji $f: A \rightarrow \mathbb{R}$, torej za $\forall x \in A$ in za $\forall \varepsilon > 0$ \\ $\exists n_{x,\varepsilon}$, da za $\forall n \geq n_{x,\varepsilon}$ velja 
+Naj funkcijsko zaporedje \\ $(f_n: A \rightarrow \mathbb{R})_n$ konvergira po točkah proti limitni funkciji $f: A \rightarrow \mathbb{R}$, torej $\forall x \in A$ in $\forall \varepsilon > 0$ \\ $\exists n_{x,\varepsilon}$, da $\forall n \geq n_{x,\varepsilon}$ velja 
 $$|f_n(x) - f(x)| < \varepsilon.$$
-Pravimo, da zaporedje $(f_n)_n$ \textit{konvergira proti $f$ enakomerno na $A$}, če za $\forall  \varepsilon > 0 ~\exists n_{\varepsilon}$, da za $\forall n \geq n_{\varepsilon}$ in za $\forall x \in A$ velja
+Pravimo, da zaporedje $(f_n)_n$ \textit{konvergira proti $f$ enakomerno na $A$}, če $\forall  \varepsilon > 0 ~\exists n_{\varepsilon}$, da $\forall n \geq n_{\varepsilon}$ in $\forall x \in A$ velja
 $$|f_n(x) - f(x)| < \varepsilon.$$
 
 \end{definicija}
@@ -974,7 +1124,7 @@ $$|f_n(x) - f(x)| < \varepsilon.$$
 
 Naj bo dano zaporedje funkcij $(f_n: A \rightarrow \mathbb{R})_n$. Vsoto $\mathlarger{\sum_{n=1}^{\infty} f_n}$ \\ imenujemo \textit{funkcijska vrsta}. \\
 
-Funkcijska vrsta $\mathlarger{\sum_{n=1}^{\infty} f_n}$ \textit{konvergira po točkah na $A$}, če zaporedje delnih vsot $s_k = \mathlarger{\sum_{n=1}^{k} f_n}$ \\ konvergira po točah na A; to pomeni, da za $\forall a \in A$ konvergira številska vrsta $\mathlarger{\sum_{n=1}^{\infty} f_n(a)}.$ \\
+Funkcijska vrsta $\mathlarger{\sum_{n=1}^{\infty} f_n}$ \textit{konvergira po točkah na $A$}, če zaporedje delnih vsot $s_k = \mathlarger{\sum_{n=1}^{k} f_n}$ \\ konvergira po točah na A; to pomeni, da $\forall a \in A$ konvergira številska vrsta $\mathlarger{\sum_{n=1}^{\infty} f_n(a)}.$ \\
 
 Naj bo $s: A \rightarrow \mathbb{R}$ limitna funkcija zaporedja delnih vsot $(s_k)_k$. \\
 Funkcijska vrsta $\mathlarger{\sum_{n=1}^{\infty}f_n}$ \textit{konvergira k $s: A \rightarrow \mathbb{R}$ enakomerno na A}, če zaporedje delnih vsot $(s_k)_k$ konvergira k $s$ enakomerno na $A$.
@@ -1030,7 +1180,7 @@ Konvergenčno območje potenčne vrste označimo z $D$.
 
 \begin{posledica}
 
-Naj bo $R > 0$ \textit{konvergenčni polmer potenčne vrste} $\mathlarger{\sum_{n=0}^{\infty} a_n x^n}$. Potem vrsta \textit{absolutno konvergira} za $|x| < R$. Vrsta enakomerno konvergira na vsakem manjšem intervalu $|x| \leq r < R$. Vsota potenčne vrste je zvezna funkcija na $(-R, R)$. Vrsta divergira za $\forall x$, $|x| > R$; v krajiščih intervala lahko potenčna vrsta konvergira ali divergira. Torej je
+Naj bo $R > 0$ \textit{konvergenčni polmer potenčne vrste} $\mathlarger{\sum_{n=0}^{\infty} a_n x^n}$. Potem vrsta \textit{absolutno konvergira} za $|x| < R$. Vrsta enakomerno konvergira na vsakem manjšem intervalu $|x| \leq r < R$. Vsota potenčne vrste je zvezna funkcija na $(-R, R)$. Vrsta divergira $\forall x$, $|x| > R$; v krajiščih intervala lahko potenčna vrsta konvergira ali divergira. Torej je
 $$(-R, R) \subseteq D \subseteq [-R, R].$$
 
 \end{posledica}
@@ -1055,7 +1205,7 @@ in ga imenujemo \textit{limes superior}.
 Naj bo $f$ \textit{poljubno mnogokrat zvezno odvedljiva} v okolici točke $c \in \mathbb{R}$. \textit{Taylorjeva vrsta funkcije $f$ s središčem v $c$} je 
 $$T_c(x) = \sum_{n=0}^{\infty} \frac{f^{(n)}(c)}{n!} (x-c)^n.$$ \\
 
-Naj bo $J \subset \mathbb{R}$ \textit{odprt interval} in $f \in \mathcal{C}^{\infty}(J)$. Rečemo, da je $f$ \textit{analitična} na $J$, če je za $\forall c \in J$ Taylorjeva vrsta $T_e$ enaka funkciji $f$ na neki okolici točke $c$.
+Naj bo $J \subset \mathbb{R}$ \textit{odprt interval} in $f \in \mathcal{C}^{\infty}(J)$. Rečemo, da je $f$ \textit{analitična} na $J$, če je $\forall c \in J$ Taylorjeva vrsta $T_e$ enaka funkciji $f$ na neki okolici točke $c$.
 
 \end{definicija}
 \vspace{0.5cm}
