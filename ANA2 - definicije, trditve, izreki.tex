@@ -1064,16 +1064,58 @@ Vrsta $\mathlarger{\sum_{n=1}^{\infty} a_n}$ je \textit{alternirajoča}, če je 
 \end{definicija}
 \vspace{0.5cm}
 
+\begin{trditev}[Leibnizov kriterij]
+
+Naj bo $\mathlarger{\sum_{i=1}^n a_n}$ \textit{alternirajoča} vrsta. Če zaporedje $(|a_n|)_n$ \textit{monotono} pada proti $0$, potem je vrsta $\mathlarger{\sum_{i=1}^n a_n}$ \textit{konvergentna}. Če v tem primeru $s_k$ označuje $k$-to delno vsoto vrste in $s$ vsoto vrste, potem velja
+$$|s - s_k| ~\leq~ |a_{k+1}|.$$
+
+\end{trditev}
+\vspace{0.5cm}
+
 % *************************************************************************************************
 
 \subsection{Absolutna konvergenca}
 
 \begin{definicija}
 
-Vrsta $\mathlarger{\sum_{n=1}^{\infty} a_n}$ je \textit{absolutno konvergentna}, če je konvergentna vrsta $\mathlarger{\sum_{n=1}^{\infty} |a_n|}$ iz absolutnih vrednosti členov vrste. \\
-Če je vrsta $\mathlarger{\sum_{n=1}^{\infty} a_n}$ konvergentna, ni pa absolutno konvergenta, rečemo, da je \textit{pogojno konvergentna}.
+Vrsta $\mathlarger{\sum_{n=1}^{\infty} a_n}$ je \textit{absolutno konvergentna}, če je \mbox{\textit{konvergentna}} vrsta $\mathlarger{\sum_{n=1}^{\infty} |a_n|}$ iz absolutnih vrednosti členov vrste. Če je vrsta $\mathlarger{\sum_{n=1}^{\infty} a_n}$ \mbox{\textit{konvergentna}}, ni pa absolutno konvergenta, rečemo, da je \mbox{\textit{pogojno konvergentna}}.
 
 \end{definicija}
+\vspace{0.5cm}
+
+\begin{trditev}
+
+Če je vrsta \textit{absolutno konvergentna}, potem je tudi \mbox{\textit{konvergentna}}.
+
+\end{trditev}
+\vspace{0.5cm}
+
+\begin{trditev}[Konvergentne vrste tvorijo vektorski prostor]
+
+Naj bosta vrsti $\mathlarger{\sum_{n=1}^\infty a_n}$ in $\mathlarger{\sum_{n=1}^\infty b_n}$ \textit{(absolutno) konvergentni} in naj bo $c \in \R$. Potem so \textit{(absolutno) konvergentne} tudi vrste $\mathlarger{\sum_{n=1}^\infty (a_n \pm b_n)}$ in $\mathlarger{\sum_{n=1}^\infty c \cdot a_n}$ ter velja
+$$\sum_{n=1}^\infty (a_n \pm b_n) ~=~ \sum_{n=1}^\infty a_n + \sum_{n=1}^\infty b_n ~~~\text{in}~~~ \sum_{n=1}^\infty c \cdot a_n ~=~ c \sum_{n=1}^\infty a_n.$$
+
+\end{trditev}
+\vspace{0.5cm}
+
+\begin{trditev}
+
+Naj bo $\mathlarger{\sum_{n=1}^\infty a_n}$ \textit{absolutno konvergentna} in $(b_n)_n$ \textit{omejeno} \hbox{zaporedje} števil.  Potem je $\mathlarger{\sum_{n=1}^\infty a_n b_n}$ tudi \textit{absolutno konvergentna}.\footnote{Analogna trditev za \textit{konvergentne} vrste ne velja.}
+
+\end{trditev}
+\vspace{0.5cm}
+
+\begin{izrek}[Zamenjava vrstnega reda členov]
+~
+\begin{enumerate}
+
+\item[(1)] Naj bo $\mathlarger{\sum_{n=1}^\infty a_n}$ \textit{absolutno konvergentna} vrsta. Potem je za poljubno \hbox{\textit{bijektivno}} funkcijo $\sigma: \N \rightarrow \N$ tudi vrsta $\mathlarger{\sum_{n=1}^\infty a_{\sigma(n)}}$ \hbox{\textit{absolutno konvergentna}} in ima isto vsoto kot začetna vrsta.
+
+\item[(2)] Naj bo $\mathlarger{\sum_{n=1}^\infty a_n}$ \textit{pogojno konvergentna}. Potem $\forall s \in [-\infty, \infty]$ obstaja \textit{bijektivna} funkcija $\sigma: \N \rightarrow \N$, za katero je $\mathlarger{\sum_{n=1}^\infty a_{\sigma(n)}} = s$.
+
+\end{enumerate}
+
+\end{izrek}
 \vspace{0.5cm}
 
 % *************************************************************************************************
@@ -1095,9 +1137,9 @@ Vrsta $\mathlarger{\sum_{n=1}^{\infty} a_n}$ je \textit{absolutno konvergentna},
 Naj bo $A \subset \mathbb{R}$ in naj bo $\forall n \in \mathbb{N}$ dana funkcija $f_n: A \rightarrow \mathbb{R}$. Tedaj funkcije $f_n$ sestavljajo \textit{funkcijsko zaporedje} $(f_n)_{n \in \mathbb{N}}$. \\
 
 Če $\forall a \in A$ obstaja limita številskega zaporedja $(f_n(a))_n$, rečemo, da funkcijsko zaporedje \textit{konvergira po točkah} na $A$. V tem primeru za $a \in A$ označimo 
-$$f(a) := \lim_{n \rightarrow \infty} f_n(a).$$
+$$f(a) ~:=~ \lim_{n \rightarrow \infty} f_n(a).$$
 Tako dobljeno funkcijo $f: A \rightarrow \mathbb{R}$ imenujemo \textit{limitna funkcija} zaporedja $(f_n)_n$; pišemo 
-$$f = \lim_{n \rightarrow \infty} f_n$$
+$$f ~=~ \lim_{n \rightarrow \infty} f_n$$
 in rečemo, da zaporedje $(f_n)_n$ \textit{konvergira k $f$ po točkah}.
 
 \end{definicija}
@@ -1112,22 +1154,21 @@ Funkcijsko zaporedje $(f_n: A \rightarrow \mathbb{R})_n$ v splošnem konvergira 
 
 \begin{definicija}[Enakomerna konvergenca funkcijskega zaporedja]
 
-Naj funkcijsko zaporedje \\ $(f_n: A \rightarrow \mathbb{R})_n$ konvergira po točkah proti limitni funkciji $f: A \rightarrow \mathbb{R}$, torej $\forall x \in A$ in $\forall \varepsilon > 0$ \\ $\exists n_{x,\varepsilon}$, da $\forall n \geq n_{x,\varepsilon}$ velja 
-$$|f_n(x) - f(x)| < \varepsilon.$$
-Pravimo, da zaporedje $(f_n)_n$ \textit{konvergira proti $f$ enakomerno na $A$}, če $\forall  \varepsilon > 0 ~\exists n_{\varepsilon}$, da $\forall n \geq n_{\varepsilon}$ in $\forall x \in A$ velja
-$$|f_n(x) - f(x)| < \varepsilon.$$
+Naj \hbox{funkcijsko} zaporedje $(f_n: A \rightarrow \mathbb{R})_n$ konvergira po točkah proti limitni funkciji \hbox{$f: A \rightarrow \mathbb{R}$}, torej $\forall x \in A$ in $\forall \varepsilon > 0$ obstaja tak $n_{x,\varepsilon}$, da $\forall n \geq n_{x,\varepsilon}$ velja 
+$$|f_n(x) - f(x)| ~<~ \varepsilon.$$
+Pravimo, da zaporedje $(f_n)_n$ \textit{konvergira proti $f$ enakomerno na $A$}, če $\forall  \varepsilon > 0$ obstaja tak $n_{\varepsilon}$, da $\forall n \geq n_{\varepsilon}$ in $\forall x \in A$ velja
+$$|f_n(x) - f(x)| ~<~ \varepsilon.$$
 
 \end{definicija}
 \vspace{0.5cm}
 
 \begin{definicija}[Funkcijska vrsta]
 
-Naj bo dano zaporedje funkcij $(f_n: A \rightarrow \mathbb{R})_n$. Vsoto $\mathlarger{\sum_{n=1}^{\infty} f_n}$ \\ imenujemo \textit{funkcijska vrsta}. \\
+Naj bo dano zaporedje funkcij \hbox{$(f_n: A \rightarrow \mathbb{R})_n$}. Vsoto $\mathlarger{\sum_{n=1}^{\infty} f_n}$ imenujemo \textit{funkcijska vrsta}. \\
 
-Funkcijska vrsta $\mathlarger{\sum_{n=1}^{\infty} f_n}$ \textit{konvergira po točkah na $A$}, če zaporedje delnih vsot $s_k = \mathlarger{\sum_{n=1}^{k} f_n}$ \\ konvergira po točah na A; to pomeni, da $\forall a \in A$ konvergira številska vrsta $\mathlarger{\sum_{n=1}^{\infty} f_n(a)}.$ \\
+Funkcijska vrsta $\mathlarger{\sum_{n=1}^{\infty} f_n}$ \textit{konvergira po točkah na $A$}, če zaporedje delnih vsot $s_k = \mathlarger{\sum_{n=1}^{k} f_n}$ konvergira po točah na A; to pomeni, da $\forall a \in A$ konvergira številska vrsta $\mathlarger{\sum_{n=1}^{\infty} f_n(a)}.$ \\
 
-Naj bo $s: A \rightarrow \mathbb{R}$ limitna funkcija zaporedja delnih vsot $(s_k)_k$. \\
-Funkcijska vrsta $\mathlarger{\sum_{n=1}^{\infty}f_n}$ \textit{konvergira k $s: A \rightarrow \mathbb{R}$ enakomerno na A}, če zaporedje delnih vsot $(s_k)_k$ konvergira k $s$ enakomerno na $A$.
+Naj bo $s: A \rightarrow \mathbb{R}$ limitna funkcija zaporedja delnih vsot $(s_k)_k$. \hbox{Funkcijska} vrsta $\mathlarger{\sum_{n=1}^{\infty}f_n}$ \textit{konvergira k $s: A \rightarrow \mathbb{R}$ enakomerno na A}, če zaporedje delnih vsot $(s_k)_k$ konvergira k $s$ enakomerno na $A$.
  
 
 \end{definicija}
@@ -1163,7 +1204,7 @@ imenujemo \textit{potenčna vrsta s središčem v $c$}.
 \begin{enumerate}
 	\item Potenčna vrsta vedno konvergira v središču $c$.
 	\item Središče $c$ lahko vedno prestavimo v $0$ z uvedbo nove spremenljivke $t = x - c$:
-	$$\sum_{n=0}^{\infty} a_n (x-c)^n = \sum_{n=0}^{\infty} a_n t^n.$$
+	$$\sum_{n=0}^{\infty} a_n (x-c)^n ~=~ \sum_{n=0}^{\infty} a_n t^n.$$
 \end{enumerate}
 \end{opomba}
 \vspace{0.5cm}
@@ -1171,9 +1212,8 @@ imenujemo \textit{potenčna vrsta s središčem v $c$}.
 \begin{definicija}[Konvergenčni polmer]
 
 Naj bo dana potenčna vrsta $\mathlarger{\sum_{n=0}^{\infty} a_n x^n}$. Število
-$$R := \sup \{b \geq 0 \mid \text{vrsta konvergira pri } b \} \in [0, \infty)$$
-imenujemo \textit{konvergenčni polmer} potenčne vrste. \\
-Konvergenčno območje potenčne vrste označimo z $D$.
+$$R ~:=~ \sup \{b \geq 0 \mid \text{vrsta konvergira pri } b \} ~\in~ [0, \infty)$$
+imenujemo \textit{konvergenčni polmer} potenčne vrste. Konvergenčno območje potenčne vrste označimo z $D$.
 
 \end{definicija}
 \vspace{0.5cm}
@@ -1181,7 +1221,7 @@ Konvergenčno območje potenčne vrste označimo z $D$.
 \begin{posledica}
 
 Naj bo $R > 0$ \textit{konvergenčni polmer potenčne vrste} $\mathlarger{\sum_{n=0}^{\infty} a_n x^n}$. Potem vrsta \textit{absolutno konvergira} za $|x| < R$. Vrsta enakomerno konvergira na vsakem manjšem intervalu $|x| \leq r < R$. Vsota potenčne vrste je zvezna funkcija na $(-R, R)$. Vrsta divergira $\forall x$, $|x| > R$; v krajiščih intervala lahko potenčna vrsta konvergira ali divergira. Torej je
-$$(-R, R) \subseteq D \subseteq [-R, R].$$
+$$(-R, R) ~\subseteq~ D ~\subseteq~ [-R, R].$$
 
 \end{posledica}
 \vspace{0.5cm}
@@ -1189,7 +1229,7 @@ $$(-R, R) \subseteq D \subseteq [-R, R].$$
 \begin{definicija}[Limes superior]
 
 Naj bo $(b_n)_n$ \textit{zaporedje realnih števil}. Največje stekališče zaporedja $(b_n)_n$ označimo 
-$$\lim_{n \rightarrow \infty} \sup b_n \in [-\infty, \infty]$$
+$$\lim_{n \rightarrow \infty} \sup b_n ~\in~ [-\infty, \infty]$$
 in ga imenujemo \textit{limes superior}.
 
 \end{definicija}
@@ -1203,9 +1243,9 @@ in ga imenujemo \textit{limes superior}.
 \begin{definicija}[Taylorjeva vrsta]
 
 Naj bo $f$ \textit{poljubno mnogokrat zvezno odvedljiva} v okolici točke $c \in \mathbb{R}$. \textit{Taylorjeva vrsta funkcije $f$ s središčem v $c$} je 
-$$T_c(x) = \sum_{n=0}^{\infty} \frac{f^{(n)}(c)}{n!} (x-c)^n.$$ \\
+$$T_c(x) ~=~ \sum_{n=0}^{\infty} \frac{f^{(n)}(c)}{n!} (x-c)^n.$$ \\
 
-Naj bo $J \subset \mathbb{R}$ \textit{odprt interval} in $f \in \mathcal{C}^{\infty}(J)$. Rečemo, da je $f$ \textit{analitična} na $J$, če je $\forall c \in J$ Taylorjeva vrsta $T_e$ enaka funkciji $f$ na neki okolici točke $c$.
+Naj bo $J \subset \mathbb{R}$ \textit{odprt interval} in $f \in \mathcal{C}^{\infty}(J)$. Rečemo, da je $f$ \textit{analitična} na $J$, če je $\forall c \in J$ Taylorjeva vrsta $T_c$ enaka funkciji $f$ na neki okolici točke $c$.
 
 \end{definicija}
 \vspace{0.5cm}
@@ -1218,7 +1258,7 @@ Naj bo $J \subset \mathbb{R}$ \textit{odprt interval} in $f \in \mathcal{C}^{\in
 \begin{definicija}[Fourierova vrsta]
 
 \textit{Fourierova vrsta} je funkcijska vrsta oblike
-$$a_0 + \sum_{n=1}^{\infty} (a_n \cos(nx) + b_n \sin(nx)),$$
+$$a_0 ~+~ \sum_{n=1}^{\infty} (a_n \cos(nx) + b_n \sin(nx)),$$
 kjer sta $(a_n)_{n \geq 0}$ in $(b_n)_{n \geq 1}$ \textit{realni} zaporedji.
 
 \end{definicija}
@@ -1226,8 +1266,8 @@ kjer sta $(a_n)_{n \geq 0}$ in $(b_n)_{n \geq 1}$ \textit{realni} zaporedji.
 
 \begin{definicija}[Skalarni produkt]
 
-Naj bosta $f, g: [a, b] \rightarrow \mathbb{R}$ odekoma zvezni funkciji. \\ Izraz
-$$\langle f, g \rangle := \int_{a}^{b} f(x) g(x) dx$$
+Naj bosta $f, g: [a, b] \rightarrow \mathbb{R}$ odsekoma zvezni funkciji. Izraz
+$$\langle f, g \rangle ~:=~ \int_{a}^{b} f(x) g(x)\,dx$$
 imenujemo \textit{skalarni produkt} funkcij $f$ in $g$. Če je $\langle f, g \rangle = 0$, rečemo, da sta $f$ in $g$ \textit{ortogonalni}. Izraz $\| f \| = \sqrt{\langle f, f \rangle}$ imenujemo \textit{norma} funkcije $f$.
 
 \end{definicija}
@@ -1236,7 +1276,7 @@ imenujemo \textit{skalarni produkt} funkcij $f$ in $g$. Če je $\langle f, g \ra
 \begin{dogovor}
 
 Za \textit{odsekoma zvezno} funkcijo $f$ v točkah nezveznosti vrednost funkcije v točki določimo kot
-$$f(x) = \frac{1}{2} \left( \lim_{t \nearrow x} f(t) + \lim_{t \searrow x} f(t) \right).$$
+$$f(x) ~=~ \frac{1}{2} \left( \lim_{t \nearrow x} f(t) + \lim_{t \searrow x} f(t) \right).$$
 
 \end{dogovor}
 \vspace{0.5cm}
@@ -1251,7 +1291,7 @@ Funkcija $f:[a, b] \rightarrow \mathbb{R}$ je \textit{odsekoma zvezno odvedljiva
 \begin{opomba}
 
 \textit{Odsekoma zvezno odvedljiva} funkcija ni odvedljiva v skokih in v točkah, kjer se graf $f$ zlomi, torej ima različni levo in desno tangento v tej točki. V takšni točki namreč res obstajata levi in desni odvod, saj na primer 
-$$f'(x^-) = \lim_{t \nearrow x} \frac{f(t) - f(x)}{t-x} = \lim_{t \nearrow x} f'(t),$$
+$$f'(x^-) ~=~ \lim_{t \nearrow x} \frac{f(t) - f(x)}{t-x} ~=~ \lim_{t \nearrow x} f'(t),$$
 torej levi odvod obstaja, saj pbstaja leva limita odvodov; analogno velja za desni odvod.
 
 Če torej v skoku spremenimo vrednost funkcije $f$ tako, da je enaka levi (desni) limiti $f$ v tej točki, potem obstaja levi (desni) odvod funckije $f$ v tej točki.
@@ -1271,33 +1311,37 @@ sestavljajo \textit{poln sistem funkcij} na intervalu $[-\pi, \pi]$.
 \begin{posledica}[Fourierova sinusna in kosinusna vrsta]
 
 Naj bo $f:[0, \pi] \rightarrow \mathbb{R}$ \textit{odsekoma zvezno odvedljiva}. Potem lahko $f$ na intervalu $[0, \pi]$ ravzijemo v \textit{sinusno} Fourierovo vrsto
-$$f(x) = \sum_{n=1}^{\infty} b_n \sin(nx), ~~b_n = \frac{2}{\pi} \int_{0}^{\pi} f(x) \sin(nx) dx$$
+$$f(x) ~=~ \sum_{n=1}^{\infty} b_n \sin(nx), ~~~b_n ~=~ \frac{2}{\pi} \int_{0}^{\pi} f(x) \sin(nx)\,dx$$
 in v \textit{kosinusno} Fourierovo vrsto
-$$f(x) = a_0 + \sum_{n=1}^{\infty} a_n \cos(nx), ~~a_0 = \frac{1}{\pi} \int_{0}^{\pi} f(x) dx, ~~a_n = \frac{2}{\pi} \int_{0}^{\pi} f(x) \cos(nx) dx.$$
+\begin{align*}
+f(x) ~=~ a_0 ~+~ \sum_{n=1}^{\infty} a_n \cos(nx), ~~~a_0 ~&=~ \frac{1}{\pi} \int_{0}^{\pi} f(x)\,dx, \\ a_n ~&=~ \frac{2}{\pi} \int_{0}^{\pi} f(x) \cos(nx)\,dx.
+\end{align*}
 
 \end{posledica}
 \vspace{0.5cm}
 
 \begin{posledica}[Kompleksna Fourierova vrsta]
 
-Naj bo $f:[-\pi, \pi] \rightarrow \mathbb{R}$ \textit{odsekoma zvezno odvedljiva}. Potem lahko $f$ razvijemo v \textit{kompleksno} Fourierovo vrsto
-$$f(x) = \sum_{n=-\infty}^{\infty} A_n e^{inx},$$
+Naj bo $f:[-\pi, \pi] \rightarrow \mathbb{R}$ \textit{\hbox{odsekoma} zvezno odvedljiva}. Potem lahko $f$ razvijemo v \textit{kompleksno} Fourierovo vrsto
+$$f(x) ~=~ \sum_{n=-\infty}^{\infty} A_n e^{inx},$$
 kjer je $i = \sqrt{-1}$ \textit{imaginarna enota}, koeficienti $A_n$ za $n \in \mathbb{Z}$ pa so dani z
-$$A_n = \frac{1}{2\pi} \int_{-\pi}^{\pi} f(x) e^{-inx} dx.$$
+$$A_n ~=~ \frac{1}{2\pi} \int_{-\pi}^{\pi} f(x) e^{-inx}\,dx.$$
 
 \end{posledica}
 \vspace{0.5cm}
 
 \begin{posledica}[Razvoj v Fourierovo vrsto na drugih intervalih]
 
-Naj bo $f:[a, b] \rightarrow \mathbb{R}$ \textit{odsekoma zvezno odvedljiva}. Potem $f$ lahko razvijemo v Fourierovo vrsto po funkcijah
-$$\{ 1, \cos(\frac{2n\pi}{b-a}x), \sin(\frac{2n\pi}{b-a}x) \mid n \in \mathbb{N} \}.$$
+Naj bo \hbox{$f:[a, b] \rightarrow \mathbb{R}$} \textit{odsekoma zvezno odvedljiva}. Potem $f$ lahko razvijemo v Fourierovo vrsto po funkcijah
+$$\{ 1, ~\cos \left( \frac{2n\pi}{b-a}x \right), ~\sin \left( \frac{2n\pi}{b-a}x \right) \mid n \in \mathbb{N} \}.$$
 Tako dobimo
-$$f(x) = a_0 + \sum_{n=1}^{\infty} \left( a_n \cos(\frac{2n\pi}{b-a}x) + b_n \sin(\frac{2n\pi}{b-a}x) \right),$$
+$$f(x) ~=~ a_0 ~+~ \sum_{n=1}^{\infty} \left( a_n \cos \left( \frac{2n\pi}{b-a}x \right) + b_n \sin \left( \frac{2n\pi}{b-a}x \right) \right),$$
 kjer je 
-$$a_0 = \frac{1}{b-a} \int_{a}^{b} f(x) dx,$$
-$$a_n = \frac{2}{b-a} \int_{a}^{b} f(x) \cos(\frac{2n\pi}{b-a}x) dx,$$
-$$b_n = \frac{2}{b-a} \int_{a}^{b} f(x) \sin(\frac{2n\pi}{b-a}x) dx.$$
+\begin{align*}
+a_0 ~&=~ \frac{1}{b-a} \int_{a}^{b} f(x)\,dx, \\
+a_n ~&=~ \frac{2}{b-a} \int_{a}^{b} f(x) \cos \left( \frac{2n\pi}{b-a}x \right)\,dx, \\
+b_n ~&=~ \frac{2}{b-a} \int_{a}^{b} f(x) \sin \left( \frac{2n\pi}{b-a}x \right)\,dx. \\
+\end{align*}
 
 \end{posledica}
 \vspace{0.5cm}
