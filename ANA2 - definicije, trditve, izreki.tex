@@ -74,14 +74,15 @@ $$G(x) ~=~ F(x) + C ~~~ \forall x \in J.$$
 
 \begin{definicija}[Nedoločeni integral]
 
-\textit{Nedoločeni integral} funkcije $f$ je skupek vseh njenih primitivnih funkcij. Označimo ga z $\mathlarger{\int f(x) dx}$, funkcijo $f$ pa imenujemo \textit{integrand}.
+\textit{Nedoločeni integral} funkcije $f$ je \hbox{skupek} vseh njenih primitivnih funkcij. Označimo ga z $\mathlarger{\int f(x)\,dx}$, funkcijo $f$ pa imenujemo \textit{integrand}.
 
 \end{definicija}
+\vspace{0.5cm}
 
 \begin{posledica}
 
 Naj bo $F$ neka \textit{primitivna} funkcija za $f$ na intervalu $J$. Potem je za $x \in J$
-$$\int f(x) dx ~=~ F(x) + C,$$
+$$\int f(x)\,dx ~=~ F(x) + C,$$
 kjer je $C \in \mathbb{R}$ poljubna konstanta, ki jo imenujemo \textit{splošna} ali \textit{integracijska konstanta}.
 
 \end{posledica}
@@ -89,13 +90,13 @@ kjer je $C \in \mathbb{R}$ poljubna konstanta, ki jo imenujemo \textit{splošna}
 
 \begin{trditev}[Lastnosti nedoločenega integrala]
 
-Za poljubni funkciji $f$ in $g$, ki imata primitivni funkciji na intervalu $J$, ter skalar $a \in \mathbb{R}$ velja
+Za poljubni funkciji \hbox{$f$ in $g$,} ki imata primitivni funkciji na intervalu $J$, ter skalar $a \in \mathbb{R}$ velja
 \begin{align*}
-\int \left( f(x) \pm g(x) \right)~dx ~&=~ \int f(x)~dx \pm \int g(x)~dx \\
-\int a f(x)~dx ~&=~ a \int f(x)~dx
+\int \left( f(x) \pm g(x) \right)\,dx ~&=~ \int f(x)\,dx ~\pm~ \int g(x)\,dx \\
+\int a f(x)\,dx ~&=~ a \int f(x)\,dx
 \end{align*}
 za $x \in J$; torej je nedoločeni integral \textit{linearen}. Če je $F$ odvedljiva na $J$, potem za $x \in J$ velja
-$$\int F'(x) dx ~=~ F(x) + C,$$
+$$\int F'(x)\,dx ~=~ F(x) + C,$$
 kjer je $C \in \mathbb{R}$ poljubna konstanta.
 
 \end{trditev}
@@ -109,7 +110,7 @@ kjer je $C \in \mathbb{R}$ poljubna konstanta.
 \begin{trditev}
 
 Naj bo funkcija $g$ \textit{odvedljiva} na intervalu $J$ in naj ima funkcija $f$ primitivno funkcijo $F$ na intervalu $g(J) = \{ g(x); ~x \in J \}$. Potem je $F \circ g$ \textit{primitivna} funkcija za $(f \circ g) \cdot g'$ na $J$, torej je
-$$\int f \left( g(x) \right) g'~dx ~=~ \int f(t)~dt,$$
+$$\int f \left( g(x) \right) g'\,dx ~=~ \int f(t)\,dt,$$
 kjer smo s $t = g(x)$ označili novo spremenljivko.
 
 \end{trditev}
@@ -123,9 +124,9 @@ kjer smo s $t = g(x)$ označili novo spremenljivko.
 \begin{trditev}
 
 Naj bosta $f$ in $g$ \textit{odvedljivi} funkciji na intervalu $J$. Potem velja
-$$\int f(x) g'(x)~dx ~=~ f(x) g(x) - \int g(x) f'(x)~dx.$$
+$$\int f(x) g'(x)\,dx ~=~ f(x) g(x) ~-~ \int g(x) f'(x)\,dx.$$
 Če označimo $u = f(x)$ in $v = g(x)$, lahko zgornjo formulo krajše zapišemo kot
-$$\int u~dv ~=~ uv - \int v~du.$$
+$$\int u\,dv ~=~ uv ~-~ \int v\,du.$$
 
 \end{trditev}
 \vspace{0.5cm}
@@ -157,7 +158,7 @@ $$y' ~=~ f(x,y).$$
 
 \begin{definicija}
 
-\textit{Eksplicitna rešitev} diferencialne enačbe $F(x,y,y') = 0$ je takšna odvedljiva funkcija $g:J \rightarrow R$, definirana na intervalu $J$, da postane diferencialna enačba identiteta na $J$, le vanjo vstavimo $y = g(x)$, torej $\forall x \in J$ velja 
+\textit{Eksplicitna rešitev} diferencialne enačbe $F(x,y,y') = 0$ je takšna odvedljiva funkcija $g:J \rightarrow R$, definirana na intervalu $J$, da postane diferencialna enačba identiteta na $J$, le vanjo vstavimo $y = g(x)$, \hbox{torej $\forall x \in J$ velja} 
 $$F(x,g(x),g'(x)) ~=~ 0.$$
 
 \noindent \textit{Implicitna rešitev} diferencialne enačbe je dana z enačbo $G(x,y) = 0$, ki na nekem intervalu določa eksplicitno rešitev dane diferencialne enačbe. \\
@@ -189,13 +190,13 @@ kjer sta $p, q: J \rightarrow \mathbb{R}$ \textit{zvezni} funkciji, definirani n
 \begin{enumerate}
 
 	\item[(i)] Splošna rešitev pripadajoče homogene diferencialne enačbe \\ $y' + p(x) y = 0$ je
-	$$y(x) ~=~ Ce^{-\int p(x)~dx},$$
+	$$y(x) ~=~ Ce^{-\int p(x)\,dx},$$
 	kjer je $C \in \mathbb{R}$ splošna konstanta, v kateri je zajeta integracijska konstanta.
 	
 	\item[(ii)] Splošna rešitev dane diferencialne enačbe dobimo iz splošne rešitve pripadajoče homogene enačbe z variacijo konstante, torej z nastavkom
-	$$y(x) ~=~ C(x)e^{-\int p(x)~dx},$$
+	$$y(x) ~=~ C(x)e^{-\int p(x)\,dx},$$
 	kjer funkcija $C(x)$ zadošča
-	$$C'(x) ~=~ g(x)e^{\int p(x)~dx}.$$
+	$$C'(x) ~=~ g(x)e^{\int p(x)\,dx}.$$
 
 \end{enumerate}
 
@@ -1162,6 +1163,13 @@ $$|f_n(x) - f(x)| ~<~ \varepsilon.$$
 \end{definicija}
 \vspace{0.5cm}
 
+\begin{izrek}[Zveznost limitne funkcije]
+
+Naj bo $(f_n: A \rightarrow \R)_n$ zaporedje \textit{zveznih} funkcij, ki konvergira proti $f: A \rightarrow \R$ \textit{enakomerno} na $A$. Potem je $f$ \textit{zvezna}.
+
+\end{izrek}
+\vspace{0.5cm}
+
 \begin{definicija}[Funkcijska vrsta]
 
 Naj bo dano zaporedje funkcij \hbox{$(f_n: A \rightarrow \mathbb{R})_n$}. Vsoto $\mathlarger{\sum_{n=1}^{\infty} f_n}$ imenujemo \textit{funkcijska vrsta}. \\
@@ -1184,6 +1192,31 @@ Naj bo $s: A \rightarrow \mathbb{R}$ limitna funkcija zaporedja delnih vsot $(s_
 % *************************************************************************************************
 
 \subsection{Enakomerno konvergentne vrste}
+\vspace{0.5cm}
+
+\begin{trditev}[Weierstrassov kriterij]
+
+Naj bo $(f_n: A \rightarrow \R)_n$ zaporedje funkcij in naj obstaja tako zaporedje \textit{pozitivnih} števil $(c_n)_n$, da $\forall n \in \N$ velja
+$$|f_n(x)| ~\leq~ c_n ~~~\forall x \in A.$$
+Če je številska vrsta $\mathlarger{\sum_{n=1}^\infty c_n}$ \textit{konvergentna}, potem funkcija vrsta $\mathlarger{\sum_{n=1}^\infty f_n}$ \textit{konvergira enakomerno} in \textit{absolutno} na $A$. Če so funkcije $f_n$ \textit{zvezne}, je tudi vsota vrste \textit{zvezna} funkcija.
+
+\end{trditev}
+\vspace{0.5cm}
+
+\begin{izrek}[Integriranje po členih]
+
+Naj bo $J \subset \R$ \textit{omejen} interval, $a \in J$, in naj bo $(f_n: J \rightarrow \R)_n$ zaporedje \textit{zveznih} funkcij na $J$. Če vrsta $\sum_{n=1}^\infty f_n$ \textit{konvergira enakomerno} na $J$, potem tudi $\sum_{n=1}^\infty \int_a^x f_n(t)\,dt$ \textit{konvergira enakomerno} za $x \in J$ in $\forall x \in J$ velja
+$$\int_a^x \left( \sum_{n=1}^\infty f_n(t) \right)\,dt ~=~ \sum_{n=1}^\infty \int_a^x f_n(t)\,dt.$$
+
+\end{izrek}
+\vspace{0.5cm}
+
+\begin{izrek}[Odvajanje po členih]
+
+Naj bo $J \subset \R$ interval in naj bo $(f_n: J \rightarrow \R)_n$ zaporedje \textit{zvezno odvedljivih} funkcij na $J$. Če vrsta $\mathlarger{\sum_{n=1}^n f_n}$ \textit{konvergira po točkah} na $J$ in vrsta iz odvodov $\mathlarger{\sum_{n=1}^\infty f'_n}$ \textit{konvergira enakomerno} na $J$, potem je $\mathlarger{\sum_{n=1}^\infty f_n}$ \textit{odvedljiva} na $J$ in $\forall x \in J$ velja
+$$\frac{d}{dx} \left( \sum_{n=1}^\infty f_n(x) \right) ~=~ \sum_{n=1}^\infty f'_n(x).$$
+
+\end{izrek}
 \vspace{0.5cm}
 
 % *************************************************************************************************
@@ -1209,6 +1242,18 @@ imenujemo \textit{potenčna vrsta s središčem v $c$}.
 \end{opomba}
 \vspace{0.5cm}
 
+\begin{trditev}
+
+Naj bo dana potenčna vrsta $\mathlarger{\sum_{n=0}^\infty a_n x^n}$ in naj bo $b > 0$.  
+\begin{enumerate}
+	\item[(1)] Če vrsta \textit{absolutno konvergira} pri $x = b$ ali $x = -b$, potem \textit{konvergira absolutno} in \textit{enakomerno} za $x \in [-b, b]$.
+	\item[(2)] Če vrsta \textit{konvergira} pri $x = b$ ali $x = -b$, potem \textit{absolutno konvergira} $\forall x \in (-b, b)$.
+	\item[(3)] Če vrsta \textit{divergira} pri $x = b$ ali $x = -b$, potem \textit{divergira} \\$\forall x \in (-\infty, -b) \cup (b, \infty)$.
+\end{enumerate}
+
+\end{trditev}
+\vspace{0.5cm}
+
 \begin{definicija}[Konvergenčni polmer]
 
 Naj bo dana potenčna vrsta $\mathlarger{\sum_{n=0}^{\infty} a_n x^n}$. Število
@@ -1226,6 +1271,17 @@ $$(-R, R) ~\subseteq~ D ~\subseteq~ [-R, R].$$
 \end{posledica}
 \vspace{0.5cm}
 
+\begin{trditev}[Konvergenčni polmer]
+
+Naj bo dana \textit{potenčna vrsta} $\mathlarger{\sum_{n=0}^\infty a_n x^n}$. Za konvergenčni polmer velja:
+\begin{enumerate}
+	\item[(1)] $\mathlarger{\frac{1}{R} = \lim_{n \rightarrow \infty} \frac{|a_{n+1}|}{|a_n|}}$, če ta limita obstaja;
+	\item[(2)] $\mathlarger{\frac{1}{R} = \lim_{n \rightarrow \infty} \sqrt[n]{|a_n|}}$, če ta limita obstaja.
+\end{enumerate}
+
+\end{trditev}
+\vspace{0.5cm}
+
 \begin{definicija}[Limes superior]
 
 Naj bo $(b_n)_n$ \textit{zaporedje realnih števil}. Največje stekališče zaporedja $(b_n)_n$ označimo 
@@ -1233,6 +1289,36 @@ $$\lim_{n \rightarrow \infty} \sup b_n ~\in~ [-\infty, \infty]$$
 in ga imenujemo \textit{limes superior}.
 
 \end{definicija}
+\vspace{0.5cm}
+
+\begin{izrek}[Cauchy-Hadamard]
+
+Za konvergenčni polmer $R$ potenčne vrste $\sum_{n=0}^\infty a_n x^n$ velja
+$$\frac{1}{R} ~=~ \lim_{n \rightarrow \infty} \sup{\sqrt[n]{|a_n|}}.$$
+
+\end{izrek}
+\vspace{0.5cm}
+
+\begin{izrek}[Abel]
+
+Naj bo $R$ konvergenčni polmer potenčne vrste $\mathlarger{\sum_{n=0}^\infty a_n x^n}$. Če vrsta \textit{konvergira} za $x = R$ ($x = -R$), potem je vsota vrste \textit{zvezna} v $R$ ($-R$).
+
+\end{izrek}
+\vspace{0.5cm}
+
+\begin{izrek}[Odvajanje in integriranje potenčnih vrst]
+
+Naj bo $R > 0$ konvergenčni polmer potenčne vrste $\mathlarger{f(x) = \sum_{n=0}^\infty a_n x^n}$. Potem imata vrsti, ki ju dobimo s členim odvajanjem $\mathlarger{\sum_{n=1}^\infty n a_n x^{n-1}}$ in členim integriranjem $\sum_{n=0}^\infty \frac{a_n}{n+1} x^{n+1}$ tudi konvergenči polmer $R$ in $\forall x \in (-R, R)$ velja:
+$$f'(x) ~=~ \sum_{n=1}^\infty n a_n x^{n-1} ~~~\text{in}~~~ \int_0^x f(t)\,dt ~=~ \sum_{n=0}^\infty \frac{a_n}{n+1} x^{n+1}.$$
+
+\end{izrek}
+\vspace{0.5cm}
+
+\begin{posledica}
+
+Vsota potenčne vrste je poljubno mnogokrat \textit{zvezno odvedljiva} na $(-R, R)$, kjer je $R$ konvergenčni polmer vrste.
+
+\end{posledica}
 \vspace{0.5cm}
 
 % *************************************************************************************************
