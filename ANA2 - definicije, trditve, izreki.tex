@@ -196,7 +196,7 @@ kjer sta $p, q: J \rightarrow \mathbb{R}$ \textit{zvezni} funkciji, definirani n
 	\item[(ii)] Splošna rešitev dane diferencialne enačbe dobimo iz splošne rešitve pripadajoče homogene enačbe z variacijo konstante, torej z nastavkom
 	$$y(x) ~=~ C(x)e^{-\int p(x)\,dx},$$
 	kjer funkcija $C(x)$ zadošča
-	$$C'(x) ~=~ g(x)e^{\int p(x)\,dx}.$$
+	$$C'(x) ~=~ q(x)e^{\int p(x)\,dx}.$$
 
 \end{enumerate}
 
@@ -219,7 +219,7 @@ kjer sta $p, q: J \rightarrow \mathbb{R}$ \textit{zvezni} funkciji, definirani n
 
 \begin{definicija}
 
-Naj bo $f:[a, b] \rightarrow \mathbb{R}$ \textit{nenegativna funkcija}, torej $f(x) \geq 0$ za vse $x \in [a, b]$. Rečemo, da graf funkicje f \textit{določa območje} $A \subset \mathbb{R}^2$  nad intervalom $[a, b]$. Množica $A$ je navzgor omejena z grafom funkcije $f$, na levi s premico $x=a$ in na desni s premico $x=b$.
+Naj bo $f:[a, b] \rightarrow \mathbb{R}$ \textit{nenegativna funkcija}, torej \hbox{$f(x) \geq 0$} $\forall x \in [a, b]$. Rečemo, da graf funkicje $f$ \textit{določa območje} $A \subset \mathbb{R}^2$  nad \hbox{intervalom} $[a, b]$. Množica $A$ je navzgor omejena z grafom funkcije $f$, na levi s premico $x=a$ in na desni s premico $x=b$.
 
 \end{definicija}
 \vspace{0.5cm}
@@ -231,14 +231,14 @@ Naj bo $f:[a, b] \rightarrow \mathbb{R}$ \textit{nenegativna funkcija}, torej $f
 
 \begin{definicija}[Riemannova vsota]
 
-\textit{Delitev} $D$ intervala $[a, b]$ na podintervale je dana z izbiro \textit{delilnih točk} $x_i$:
+\textit{Delitev} $D$ intervala $[a, b]$ na \hbox{podintervale} je dana z izbiro \textit{delilnih točk} $x_i$:
 $$a ~=~ x_0 < x_1 < x_2 < \ldots < x_{n-1} < x_n ~=~ b,$$
-kjer je $n \in \mathbb{N}$. Dolžino $i$-tega podintervala $[x_{i-1},x_i]$ (za $i=1,2,...,n$) označimo z $\delta_i := x_i - x_{i-1}$. \textit{Velikost delitve} $D$ je dolžina najdaljšega podintervala delitve $D$, torej
+kjer je $n \in \mathbb{N}$. Dolžino $i$-tega podintervala $[x_{i-1},x_i]$ (za $i=1,2,...,n$) označimo z $\delta_i := x_i - x_{i-1}$. \textit{Velikost delitve} $D$ je dolžina najdaljšega \hbox{podintervala} delitve $D$, torej
 $$\delta(D) ~=~ \max{\{\delta_i \mid i = 1, 2, ..., n\}}.$$
 
-Na vsakem od podintervalov, na katere delitev $D$ razdeli interval $[a, b]$, izberemo \textit{testno točko} $t_i \in [x_{i-1}, x_i]$ in s $T_D = (t_1, t_2, \dots, t_n)$ označimo nabor teh točk; nabor testnih točk je \textit{usklajen} z delitvijo $D$, ker smo na vsakem podintervalu $[x_{i-1},x_i]$, določenem z $D$, izbrali natanko eno testno točko $t_i$.
+\noindent Na vsakem od podintervalov, na katere delitev $D$ razdeli interval $[a, b]$, \hbox{izberemo} \textit{testno točko} $t_i \in [x_{i-1}, x_i]$ in s $T_D = (t_1, t_2, \dots, t_n)$ označimo nabor teh točk; nabor testnih točk je \textit{usklajen} z delitvijo $D$, ker smo na vsakem podintervalu $[x_{i-1},x_i]$, določenem z $D$, izbrali natanko eno testno točko $t_i$. \\
 
-\textit{Riemannova vsota} funkcije $f:[a, b] \rightarrow \mathbb{R}$, pridružena delitvi $D$ in usklajenemu naboru testnih točk $T_D$ je 
+\noindent \textit{Riemannova vsota} funkcije $f:[a, b] \rightarrow \mathbb{R}$, pridružena delitvi $D$ in \hbox{usklajenemu} naboru testnih točk $T_D$ je 
 $$R(f, D, T_D) ~:=~ \sum_{i=1}^{n} f(t_i) \delta_i.$$
 
 \end{definicija}
@@ -248,8 +248,8 @@ $$R(f, D, T_D) ~:=~ \sum_{i=1}^{n} f(t_i) \delta_i.$$
 
 \begin{definicija}[Riemannov integral]
 
-\textit{Riemannov integral} ali \textit{določeni integral} funkcije $f: [a, b] \rightarrow \mathbb{R}$ je limita Riemannovih vsot $R(f, D, T_D)$, kjer limito vzamemo po vseh delitvah D intervala [a, b] in usklajenih naborih testnih točk $T_D$, ko pošljemo velikost delitev $\delta(D)$ proti $0$, če ta limita obstaja (torej je končna in neodvisna od izbire delitev in testnih točk). Pišemo
-$$\int_{a}^{b} f(x) dx ~:=~ \lim_{\delta(D) \rightarrow 0} R(f, D, T_D).$$
+\textit{Riemannov integral} ali \hbox{\textit{določeni integral}} funkcije $f: [a, b] \rightarrow \mathbb{R}$ je limita Riemannovih vsot $R(f, D, T_D)$, kjer limito vzamemo po vseh delitvah D intervala [a, b] in usklajenih naborih testnih točk $T_D$, ko pošljemo velikost delitev $\delta(D)$ proti $0$, če ta limita obstaja (torej je končna in neodvisna od izbire delitev in testnih točk). Pišemo
+$$\int_{a}^{b} f(x)\,dx ~:=~ \lim_{\delta(D) \rightarrow 0} R(f, D, T_D).$$
 Če zgornja limita obstaja, rečemo, da je funkcija $f$ \textit{integrabilna} na $[a, b]$.
 
 \end{definicija}
@@ -268,8 +268,8 @@ $$|R(f, D, T_D) - I| ~<~ \varepsilon.$$
 
 Naj bosta $f, g: [a, b] \rightarrow \mathbb{R}$ \textit{integrabilni funkciji} in $c \in \mathbb{R}$. Potem so $f \pm g$ in $cf$ \textit{integrabilne} na $[a, b]$ in velja
 \begin{align*}
-\int_a^b \left( f(x) \pm g(x) \right)~dx ~&=~ \int_a^b f(x)~dx ~\pm \int_a^b g(x)~dx \\
-\int_a^b cf(x)~dx ~&=~ c\int_a^b f(x)~dx 
+\int_a^b \left( f(x) \pm g(x) \right)\,dx ~&=~ \int_a^b f(x)\,dx ~\pm~ \int_a^b g(x)\,dx \\
+\int_a^b cf(x)\,dx ~&=~ c\int_a^b f(x)\,dx 
 \end{align*}
 
 \end{trditev}
@@ -319,7 +319,7 @@ Naj bo $f$ \textit{zvezna} na $[a, b]$. Potem je $f$ \textit{integrabilna} na $[
 
 \begin{definicija}[Enakomerna zveznost]
 
-Naj bo $A \subseteq \mathbb{R}^n$. Funkcija $f: A \rightarrow \mathbb{R}$ je \textit{enakomerno zvezna} na $A$, če $\forall \varepsilon > 0$ obstaja tak $\delta = \delta_\varepsilon > 0$, da za poljubna $x, y \in A$, ki zadoščata $|x-y| < \delta$, velja
+Naj bo $A \subseteq \mathbb{R}^n$. Funkcija \hbox{$f: A \rightarrow \mathbb{R}$} je \textit{enakomerno zvezna} na $A$, če $\forall \varepsilon > 0$ obstaja tak $\delta = \delta_\varepsilon > 0$, da za poljubna $x, y \in A$, ki zadoščata $|x-y| < \delta$, velja
 $$|f(x) - f(y)| ~<~ \varepsilon.$$ 
 Tukaj je za $x = (x_1, \ldots, x_n) \in \mathbb{R}^n$ dolžina $|x|$ definirana z
 $$|x| ~=~ \sqrt{\sum_{k=1}^n {x_k}^2} ~=~ \sqrt{{x_1}^2 + \ldots + {x_n}^2}.$$
@@ -377,7 +377,7 @@ Funkcija $f: J \rightarrow \mathbb{R}$, definirana na omejenem intervalu $J$, je
 
 \begin{definicija}[Povprečna vrednost]
 
-\textit{Povprečna vrednost} integrabilne funkcije $f$ na intervalu $[a, b]$ je 
+\textit{Povprečna vrednost} integrabilne \hbox{funkcije $f$} na intervalu $[a, b]$ je 
 $$\mu ~:=~ \frac{1}{b-a} \int_{a}^{b} f(x)\,dx.$$
 
 \end{definicija}
@@ -442,9 +442,9 @@ $$\int_a^b f(x)\,dx ~=~ G(b) - G(a) ~=~ G(x) \Big|_a^b.$$
 	$$\int_a^b f(g(x))\,g'(x)\,dx ~=~ \int_{g(a)}^{g(b)} f(t)\,dt.$$
 	
 	\item[(ii)] Naj bosta $f,g:[a, b] \rightarrow \mathbb{R}$ \textit{zvezno odvedljivi}. Potem je
-	$$\int_a^b f(x)\,g'(x)\,dx ~=~ f(x)\,g(x) \Big|_a^b - \int_a^b g(x)\,f'(x)\,dx.$$
+	$$\int_a^b f(x)\,g'(x)\,dx ~=~ f(x)\,g(x) \Big|_a^b ~-~ \int_a^b g(x)\,f'(x)\,dx.$$
 	Če označimo $u = f(x)$ in $v = g(x)$, zgornja formula postane
-	$$\int_a^b u\,dv ~=~ uv \Big|_a^b - \int_a^b v\,du.$$
+	$$\int_a^b u\,dv ~=~ uv \Big|_a^b ~-~ \int_a^b v\,du.$$
 	
 \end{enumerate}
 \end{trditev}
@@ -461,7 +461,7 @@ Naj bo $f:(a, b] \rightarrow \mathbb{R}$ funkcija, ki je integrabilna na interva
 $$\int_{a}^{b} f(x)\,dx ~:=~ \lim_{t \searrow a} \int_{t}^{b} f(x)\,dx,$$
 če ta limita obstaja. \\
 
-\noindent Če limita obstaja , rečemo, da je $f$ \textit{posplošeno integrabilna} na $[a, b]$ in da je $\mathlarger{\int_{a}^{b} f(x) dx}$ \textit{konvergenten}, sicer pa rečemo, da je integral \textit{divergenten}.
+\noindent Če limita obstaja , rečemo, da je $f$ \textit{posplošeno integrabilna} na $[a, b]$ in da je $\mathlarger{\int_{a}^{b} f(x)\,dx}$ \textit{konvergenten}, sicer pa rečemo, da je integral \textit{divergenten}.
 
 \end{definicija}
 \vspace{0.5cm}
@@ -470,7 +470,7 @@ $$\int_{a}^{b} f(x)\,dx ~:=~ \lim_{t \searrow a} \int_{t}^{b} f(x)\,dx,$$
 ~
 \begin{itemize}
 	
-	\item Posplošeni integral imenujemo tudi \textit{izlimitirani integral} ali \textit{nepravi integral}.
+	\item Posplošeni integral imenujemo tudi \textit{izlimitirani integral} ali \hbox{\textit{nepravi integral}}.
 	
 	\item Če je $f$ \textit{integrabilna} na $[a, b]$, potem je njen posplošeni integral na $[a, b]$ enak Riemannovemu integralu.	
 	
@@ -480,7 +480,7 @@ $$\int_{a}^{b} f(x)\,dx ~:=~ \lim_{t \searrow a} \int_{t}^{b} f(x)\,dx,$$
 
 \begin{trditev}
 
-Naj bo $p \in \mathbb{R}$. Posplošeni integral $\mathlarger{\int_a^b \frac{1}{(x-a)^p}~dx}$ je \textit{konvergenten} natanko tedaj, ko je $p<1$.
+Naj bo $p \in \mathbb{R}$. Posplošeni integral $\mathlarger{\int_a^b \frac{1}{(x-a)^p}\,dx}$ je \hbox{\textit{konvergenten}} natanko tedaj, ko je $p<1$.
 
 \end{trditev}
 \vspace{0.5cm}
@@ -490,9 +490,9 @@ Naj bo $p \in \mathbb{R}$. Posplošeni integral $\mathlarger{\int_a^b \frac{1}{(
 Naj bo $g:(a, b] \rightarrow \mathbb{R}$ \textit{zvezna}.
 \begin{enumerate}
 		
-	\item[(i)] Če je $g$ \textit{omejena} na $(a, b]$ in je $p<1$, potem je $\mathlarger{\int_a^b \frac{g(x)}{(x-a)^p}~dx}$ \textit{konvergenten}.
+	\item[(i)] Če je $g$ \textit{omejena} na $(a, b]$ in je $p<1$, potem je $\mathlarger{\int_a^b \frac{g(x)}{(x-a)^p}\,dx}$ \hbox{\textit{konvergenten}}.
 	
-	\item[(ii)] Če je $g$ \textit{omejena stran od nič}, torej obstaja neki $m > 0$, da velja $|g(x)| \geq m$ $\forall x \in (a, b]$ in je $p \geq 1$, potem je $\int_a^b \frac{g(x)}{(x-a)^p}~dx$ \textit{divergenten}.		
+	\item[(ii)] Če je $g$ \textit{omejena stran od nič}, torej obstaja neki $m > 0$, da velja $|g(x)| \geq m$ $\forall x \in (a, b]$ in je $p \geq 1$, potem je $\mathlarger{\int_a^b \frac{g(x)}{(x-a)^p}\,dx}$ \textit{divergenten}.		
 		
 \end{enumerate}
 \end{izrek}
@@ -523,10 +523,10 @@ ena od teh limit je enaka $\sup{f}$, druga pa $\inf{f}$.
 
 \begin{trditev}[Linearnost posplošenega integrala]
 
-Naj bosta $f,g: (a, b] \rightarrow \mathbb{R}$ \textit{posplošeno integrabilni} in $c \in \mathbb{R}$. Potem so tudi $f \pm g:(a, b] \rightarrow \mathbb{R}$ in $cf:(a, b] \rightarrow \mathbb{R}$ \textit{posplošeno integrabilne} in velja 
+Naj bosta \hbox{$f,g: (a, b] \rightarrow \mathbb{R}$} \textit{posplošeno integrabilni} in $c \in \mathbb{R}$. Potem so tudi $f \pm g:(a, b] \rightarrow \mathbb{R}$ in $cf:(a, b] \rightarrow \mathbb{R}$ \textit{posplošeno integrabilne} in velja 
 \begin{align*}
-\int_a^b \left( f(x) \pm g(x) \right)~dx ~&=~ \int_a^b f(x)~dx \pm \int_a^b g(x)~dx \\
-\int_a^b c f(x)~dx ~&=~ c \int_a^b f(x)~dx.
+\int_a^b \left( f(x) \pm g(x) \right)\,dx ~&=~ \int_a^b f(x)\,dx ~\pm~ \int_a^b g(x)\,dx \\
+\int_a^b c f(x)\,dx ~&=~ c \int_a^b f(x)\,dx.
 \end{align*}
 
 \end{trditev}
@@ -550,6 +550,7 @@ Pri oznakah v zgornji trditvi velja naslednje: če sta dve od funkcij $f$, $g$ i
 	\item[(ii)]	Naj bo $f:[a, c) \cup (c, b] \rightarrow \mathbb{R}$ \textit{integrabilna} na $[a, s]$ $\forall s \in (a, c)$ in \textit{integrabilna} na $[a, b]$ $\forall t \in (c, b)$. Potem je \textit{posplošeni integral} $f$ na $[a, b]$
 	$$\int_a^b f(x)\,dx ~:=~ \lim_{s \nearrow c} \int_a^s f(x)\,dx ~+~ \lim_{t \searrow c} \int_t^b f(x)\,dx,$$
  če obe limiti obstajata.	
+ 
 \end{enumerate}
 \end{definicija}
 \vspace{0.5cm}
@@ -562,13 +563,17 @@ Pri oznakah v zgornji trditvi velja naslednje: če sta dve od funkcij $f$, $g$ i
 \begin{definicija}[Posplošena integrabilnost]
 ~
 	\begin{itemize}
-		\item Naj bo $f:[a, \infty) \rightarrow \mathbb{R}$ integrabilna na $[a, s]$ $\forall s > a$. Potem je \textit{posplošeni integral} funkcije $f$ na $[a, \infty)$
+	
+		\item Naj bo $f:[a, \infty) \rightarrow \mathbb{R}$ integrabilna na $[a, s]$ $\forall s > a$. Potem je \textit{\hbox{posplošeni} integral} funkcije $f$ na $[a, \infty)$
 		$$\int_{a}^{\infty} f(x)\,dx ~:=~ \lim_{s \rightarrow \infty} \int_{a}^{s} f(x)\,dx,$$
-		če ta limita obstaja. Če limita obstaja, rečemo, da je posplošeni integral \textit{konvergenten}, sicer pa, da je \textit{divergenten}. \\
+		če ta limita obstaja. Če limita obstaja, rečemo, da je posplošeni \hbox{integral} \textit{konvergenten}, sicer pa, da je \textit{divergenten}. \\
+		
 		\item Naj bo $f:(-\infty, b] \rightarrow \mathbb{R}$ integrabilna na $[t, b]$ $\forall t < b$. Potem je \textit{posplošeni integral} funkcije $f$ na $(-\infty, b]$
 		$$\int_{-\infty}^{b} f(x)\,dx ~:=~ \lim_{t \rightarrow -\infty} \int_{t}^{b} f(x)\,dx,$$
-		če ta limita obstaja. Če limita obstaja, rečemo, da je posplošeni integral \textit{konvergenten}, sicer pa, da je \textit{divergenten}. \\
-		\item Funkcija $f:(-\infty, \infty) \rightarrow \mathbb{R}$ je \textit{posplošeno integrabilna}, če sta posplošeno integrabilni zožitvi $f |_{(-\infty, a]}$ in $f |_{[a, \infty)}$ $\forall a \in \mathbb{R}$. 
+		če ta limita obstaja. Če limita obstaja, rečemo, da je posplošeni \hbox{integral} \textit{konvergenten}, sicer pa, da je \textit{divergenten}. \\
+		
+		\item Funkcija $f:(-\infty, \infty) \rightarrow \mathbb{R}$ je \textit{posplošeno integrabilna}, če sta \hbox{posplošeno} integrabilni zožitvi $f |_{(-\infty, a]}$ in $f |_{[a, \infty)}$ $\forall a \in \mathbb{R}$. 
+		
 	\end{itemize}
 \end{definicija}
 \vspace{0.5cm}
@@ -578,7 +583,7 @@ Pri oznakah v zgornji trditvi velja naslednje: če sta dve od funkcij $f$, $g$ i
 Naj bo $g:[a, \infty) \rightarrow \mathbb{R}$ \textit{zvezna}, $a > 0$.
 \begin{enumerate}
 
-	\item[(i)] Če je $g$ \textit{omejena} na $[a, \infty)$ in je $p>1$, potem je $\mathlarger{\int_a^{\infty} \frac{g(x)}{x^p}~dx}$ \textit{konvergenten}.
+	\item[(i)] Če je $g$ \textit{omejena} na $[a, \infty)$ in je $p>1$, potem je $\mathlarger{\int_a^{\infty} \frac{g(x)}{x^p}~dx}$ \hbox{\textit{konvergenten}}.
 	
 	\item[(ii)] Če je $g$ \textit{omejena stran od nič} na $[a, \infty)$ in je $p \leq 1$, potem je $\mathlarger{\int_a^{\infty} \frac{g(x)}{x^p}~dx}$ \textit{divergenten}.
 
