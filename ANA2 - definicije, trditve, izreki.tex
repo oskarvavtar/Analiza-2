@@ -297,7 +297,7 @@ Naj bo $f:A \rightarrow \mathbb{R}$ funkcija in $B \subset A$. Tedaj $f |_B: B \
 \begin{trditev}[Aditivnost domene]
 
 Naj bodo $a < b < c$ in $f:[a, c] \rightarrow \mathbb{R}$. Tedaj je $f$ \textit{integrabilna} na $[a, c]$ natanko tedaj, ko sta \textit{integrabilni} zožitvi $f |_{[a, b]}$ in $f |_{[b, c]}$. V tem primeru velja
-$$\int_a^c f(x)\,dx ~=~ \int_a^b f(x)\,dx ~+~ \int_b^x f(x)\,dx.$$
+$$\int_a^c f(x)\,dx ~=~ \int_a^b f(x)\,dx ~+~ \int_b^c f(x)\,dx.$$
 
 \end{trditev}
 \vspace{0.5cm}
@@ -613,10 +613,10 @@ Naj bo $g:[a, \infty) \rightarrow \mathbb{R}$ \textit{zvezna}, $a > 0$.
 	$$K_g ~=~ \{(x, y) \in A \mid g(x, y) = 0\}.$$
 	\item \textsc{Parametrično:} Funkciji $\alpha, \beta: J \rightarrow \mathbb{R}$ za $J \subseteq \mathbb{R}$ določata krivuljo $K_F$, ki je množica vseh točk $(x, y)$, določenih z $x = \alpha(t)$ in $y = \beta(t)$, torej
 	$$K_F ~=~ \{(\alpha(t), \beta(t)) \mid J\}.$$
-	Preslikavo $F: J \rightarrow \mathbb{R}^2$, $F(t) := (\alpha(t), \beta(t))$ imenujemo \textit{pot} ali \textit{parametrizacija} krivulje $K_F$. Krivuljo $K_F$ imenujemo tudi \textit{tir} poti $F$.
+	Preslikavo $F: J \rightarrow \mathbb{R}^2$, $F(t) := (\alpha(t), \beta(t))$ imenujemo \textit{pot} ali \\\textit{parametrizacija} krivulje $K_F$. Krivuljo $K_F$ imenujemo tudi \textit{tir} poti $F$.
 	\item \textsc{Polarno:} Funkcija $h: J \rightarrow \mathbb{R}$ za $J \subseteq \mathbb{R}$ določa krivuljo $K_h$, ki je množica točk v ravnini s polarnima koordinatama $(r, \varphi)$, kjer je $r = h(\varphi)$, torej
 	$$K_h ~=~ \{(h(\varphi)\cos{\varphi}, h(\varphi)\sin{\varphi}) \mid \varphi \in J\}.$$
-	Zveza med kartezičnima koordinatama $(x, y)$ ter polarnima koordinatama $(r, \varphi)$ točje v ravnini:
+	Zveza med kartezičnima koordinatama $(x, y)$ ter polarnima \hbox{koordinatama} $(r, \varphi)$ točje v ravnini:
 	$$x ~=~ r \cos{\varphi}, ~~~y ~=~ r \sin{\varphi}, ~~~r ~=~ \sqrt{x^2 + y^2}, ~~~\tg{\varphi} ~=~ \frac{y}{x}.$$
 \end{itemize}
 \vspace{0.5cm}
@@ -630,7 +630,7 @@ Naj bo $g:[a, \infty) \rightarrow \mathbb{R}$ \textit{zvezna}, $a > 0$.
 
 Naj bo $f: J \rightarrow \R$ \textit{odvedljiva} v notranji točki $c$ intervala $J \subseteq \R$. Potem ima krivulja $\Gamma_f$ tangento v točki $(c, f(c))$, dano z enačbo:
 $$y - f(c) ~=~ f'(c)(x-c).$$
-Naj bo dana \textit{zvezno odvedljiva} funkcija $g: A \rightarrow \R$ in notranja točka $(a, b) \in A \subseteq \R^2$, ki zadošča $g(a, b) = 0.$ Po izreku o \textit{implicitni funkciji} enačba $g(x, y) = 0$ določa funkcijo $y = f(x)$ v okolici točke $a$, če je $\cfrac{\partial g}{\partial y}(a, b) \neq 0$: za to funkcijo velja $f(a) = b$ in 
+Naj bo dana \textit{zvezno odvedljiva} funkcija $g: A \rightarrow \R$ in notranja točka \hbox{$(a, b) \in A \subseteq \R^2$}, ki zadošča $g(a, b) = 0.$ Po izreku o \textit{implicitni funkciji} enačba $g(x, y) = 0$ določa funkcijo $y = f(x)$ v okolici točke $a$, če je $\cfrac{\partial g}{\partial y}(a, b) \neq 0$: za to funkcijo velja $f(a) = b$ in 
 $$f'(a) ~=~ -\frac{g_x(a,b)}{g_y(a, b)}.$$
 
 \end{trditev}
@@ -638,7 +638,7 @@ $$f'(a) ~=~ -\frac{g_x(a,b)}{g_y(a, b)}.$$
 
 \begin{definicija}[Regularna in singularna točka]
 
-Naj bo $g: A \rightarrow \mathbb{R}$ odvedljiva v točki $(a, b) \in A \subseteq \mathbb{R}^2$. Če je 
+Naj bo $g: A \rightarrow \mathbb{R}$ \hbox{odvedljiva} v točki $(a, b) \in A \subseteq \mathbb{R}^2$. Če je 
 $$\nabla g(a, b) ~\neq~ (0, 0),$$
 rečemo, da je $(a, b)$ \textit{regularna točka} za $g$, sicer pa, da je $(a, b)$ \textit{singularna točka} za $g$. 
 
@@ -647,7 +647,7 @@ rečemo, da je $(a, b)$ \textit{regularna točka} za $g$, sicer pa, da je $(a, b
 
 \begin{trditev}
 
-Naj bo $g: A \rightarrow \R$ \textit{zvezno odvedljiva} v okolici točke $(a, b) \in A \subseteq \R^2$, naj bo $g(a, b) = 0$ in naj bo $(a, b)$ \textit{regularna} točka za $g$. Potem ima krivulja $K_g$ tangento v točki $(a, b)$, dano z enačbo
+Naj bo $g: A \rightarrow \R$ \textit{zvezno odvedljiva} v okolici točke \hbox{$(a, b) \in A \subseteq \R^2$}, naj bo $g(a, b) = 0$ in naj bo $(a, b)$ \textit{regularna} točka za $g$. Potem ima krivulja $K_g$ tangento v točki $(a, b)$, dano z enačbo
 $$g_x(a, b)(x-a) ~+~ g_y(a, b)(y-b) ~=~ 0$$
 oziroma
 $$\nabla{g(a, b)} \cdot (x-a, y-b) ~=~ 0.$$
@@ -708,14 +708,14 @@ intervala $[a, b]$. Pot $F(t)$ na $i$-tem podintervalu $[t_{i-1}, t_i]$ zamenjam
 Dolžina tako nastale lomljene črte, ki aproksimira tir poti $F$, je 
 $$\ell(D) ~=~ \sum_{i = 1}^{n} \sqrt{ (\alpha(t_i) - \alpha(t_{i-1}))^2 ~+~ (\beta(t_i) - \beta(t_{i-1}))^2 }.$$
 Če obstaja limita dolžin $\ell(D)$, ko pošljemo velikost delitve $\delta(D)$ proti nič (neodvisno od izbire delitev), jo imenujemo \textit{dolžina poti} $F$ in označimo $\ell(F)$:
-$$\ell(F) ~=~ \lim_{D,\delta(D) \rightarrow 0} \ell(D).$$
+$$\ell(F) ~=~ \lim_{\delta(D) \rightarrow 0} \ell(D).$$
 
 \end{definicija}
 \vspace{0.5cm}
 
 \begin{trditev}
 
-Naj bo pot $F: [a, b] \rightarrow \R^2$, $F(t) = (x(t), y(t))$ \textit{zvezno odvedljiva}\footnote{Komponenti $x(t)$ in $y(t)$ sta \textit{zvezno odvedljivi} funkciji}. Potem je dolžina $\ell(F)$ poti $F$ enaka
+Naj bo pot $F: [a, b] \rightarrow \R^2$, $F(t) = (x(t), y(t))$ \hbox{\textit{zvezno odvedljiva}}\footnote{Komponenti $x(t)$ in $y(t)$ sta \textit{zvezno odvedljivi} funkciji}. Potem je dolžina $\ell(F)$ poti $F$ enaka
 $$\ell(F) ~=~ \int_a^b \sqrt{\dot{x}(t)^2 ~+~ \dot{y}(t)^2}\,dt.$$
 
 \end{trditev}
@@ -745,7 +745,7 @@ Dolžino krivulje $K$ torej izračunamo kot dolžino njene poljubne injektivne p
 ~
 \begin{enumerate}
 	\item[(i)] Dolžina \textit{eksplicitno} podane \textit{zvezno odvedljive} krivulje
-	$y = f(x)$ za $x \in [a, b]$ je
+	$y = f(x)$ za \hbox{$x \in [a, b]$} je
 	$$\ell(K_f) 1=~ \int_a^b \sqrt{1 ~+~ (f'(x))^2}\,dx ~=~ \int_a^b \sqrt{1 + {y'}^2}\,dx.$$
 
 	\item[(ii)] Dolžina \textit{polarno} podane \textit{zvezno odvedljive} krivulje $r = 	r(\varphi)$ za $\varphi \in [a, b]$ je
@@ -764,14 +764,14 @@ $$ds^2 ~=~ dx^2 + dy^2.$$
 
 \begin{uporaba}[Površina rotacijske ploskve]
 
-Naj bo $f:[a, b] \rightarrow \mathbb{R}$ \textit{nenegativna zvezna} funkcija. Ploskev, ki jo dobimo z vrtenjem grafa funkcije $f$ nad intervalom $[a, b]$ okoli osi $x$, imenujemo \textit{rotacijska ploskev}. \\
+Naj bo $f:[a, b] \rightarrow \mathbb{R}$ \\\textit{nenegativna zvezna} funkcija. Ploskev, ki jo dobimo z vrtenjem grafa funkcije $f$ nad intervalom $[a, b]$ okoli osi $x$, imenujemo \textit{rotacijska ploskev}. \\
 
-Izberemo neko delitev
+\noindent Izberemo neko delitev
 $$D ~=~ \{a = x_0 < x_1 < \ldots < x_n = b\}$$
 intervala $[a, b]$. Nad intervalom $[x_{i-1}, x_i]$ graf funkcije $f$ aproksimiramo z daljico od točke $(x_{i-1}, f(x_{i-1})$ do točke $(x_i, f(x_i))$. Ko daljico zavrtimo okoli $x$-osi, dobimo plašč prisekanega stožca s polmeroma leve in desne mejne krožnice $f(x_{i-1})$ in $f(x_i)$ ter višino $\delta_i = x_i - x_{i-1}$. To da približek za površino ploskve:
 $$\sum_{i=1}^{n} \pi (f(x_{i-1}) + f(x_i)) \sqrt{{\delta_i}^2 ~+~ (f(x_{i-1}) - f(x_i))^2}.$$
 Če je $f$ \textit{zvezno odvedljiva}, dobimo za površino v limiti, ko pošljemo velikost delitve $\delta(D)$ proti $0$, formulo
-$$P ~=~ 2 \pi \int_{a}^{b} f(x) \sqrt{1 ~+~ (f'(x))^2}\,dx = 2 \pi \int_{a}^{b} y \sqrt{1 + {y'}^2}\,dx.$$
+$$P ~=~ 2 \pi \int_{a}^{b} f(x) \sqrt{1 ~+~ (f'(x))^2}\,dx ~=~ 2 \pi \int_{a}^{b} y \sqrt{1 + {y'}^2}\,dx.$$
 
 \end{uporaba}
 \vspace{0.5cm}
@@ -797,7 +797,7 @@ $$P ~=~ 2 \pi \int_{a}^{b} f(x) \sqrt{1 ~+~ (f'(x))^2}\,dx = 2 \pi \int_{a}^{b} 
 
 Naj bo $F: [a, b] \rightarrow \R^2$ \textit{zvezno odvedljiva} pot, $F(t) = (x(t), y(t))$.
 \begin{enumerate}
-	\item Če je $y(t) \geq 0$ $\forall t$ in je $x(a) = \min{x(t)}$ ter $x(b) \max{x(t)},$ potem je ploščina med krivuljo in osjo $x$ nad intervalom $[x(a), x(b)]$ enaka
+	\item Če je $y(t) \geq 0$ $\forall t$ in je $x(a) = \min{x(t)}$ ter $x(b) = \max{x(t)},$ potem je ploščina med krivuljo in osjo $x$ nad intervalom $[x(a), x(b)]$ enaka
 	$$\int_a^b y(t)\,\dot{x}(t)\,dt.$$
 	
 	\item Če je $x(t) \geq 0 $ $\forall t$ in je $y(a) = \min{y(t)}$ ter $y(b) = \max{y(t)}$, potem je ploščina med krivuljo in osjo $y$ nad intervalom $[y(a), y(b)]$ enaka
@@ -810,9 +810,9 @@ Naj bo $F: [a, b] \rightarrow \R^2$ \textit{zvezno odvedljiva} pot, $F(t) = (x(t
 
 Naj bo $F:[a, b] \rightarrow \mathbb{R}^2$ regularna parametrizacija krivulje K. Potem $F$ določa \textit{usmerjenost} K, določeno s smerjo, v kateri potuje točka $F(t)$ po $K$, ko potuje $t$ od $a$ do $b$. \\
 
-\textit{Gladka enostavna sklenjena krivulja} je krivulja $K$, ki ima regularno parametrizacijo $F:[a, b] \rightarrow \mathbb{R}^2$, za katero velja $F(a) = F(b)$ in $\dot{F}(a) = \dot{F}(b)$, $F |_{[a, b)}$ pa je \textit{injektivna}. \\
+\noindent \textit{Gladka enostavna sklenjena krivulja} je krivulja $K$, ki ima regularno \\parametrizacijo $F:[a, b] \rightarrow \mathbb{R}^2$, za katero velja $F(a) = F(b)$ in $\dot{F}(a) = \dot{F}(b)$, $F |_{[a, b)}$ pa je \textit{injektivna}. \\
 
-Naj bo $A$ območje, ki ga omejuje \textit{gladka enostavna sklenjena krivulja} $K$. Regularna parametrizacija $F$ krivulje $K$ določa \textit{pozitivno usmerjenost} krivulje $K$, če je $A$ na levi strani, ko se pomikamo vzdolž $K$ v smeri usmerjenosti, ki jo določa $F$.
+\noindent Naj bo $A$ območje, ki ga omejuje \textit{gladka enostavna sklenjena krivulja} $K$. \\Regularna parametrizacija $F$ krivulje $K$ določa \textit{pozitivno usmerjenost} \hbox{krivulje} $K$, če je $A$ na levi strani, ko se pomikamo vzdolž $K$ v smeri usmerjenosti, ki jo določa $F$.
 
 \end{definicija}
 \vspace{0.5cm}
@@ -834,7 +834,7 @@ Zgornja trditev velja tudi za \textit{odsekoma zvezno odvedljive} poti $F$, tore
 
 \begin{trditev}
 
-Naj bo $r = r(\varphi)$ za $\varphi \in [\alpha, \beta]$ \textit{zvezno polarno} podana krivulja. Potem je ploščina območja, ki ga določa krivulja skupaj z daljicama 
+Naj bo $r = r(\varphi)$ za $\varphi \in [\alpha, \beta]$ \textit{zvezno polarno} podana \hbox{krivulja}. Potem je ploščina območja, ki ga določa krivulja skupaj z \hbox{daljicama} 
 $$\varphi = \alpha, ~~0 \leq r \leq r(a) ~~~\text{in}~~~ \varphi = \beta, ~~0 \leq r \leq r(\beta),$$
 enaka
 $$\frac{1}{2} \int_\alpha^\beta r(\varphi)^2\,d\varphi.$$
@@ -883,9 +883,8 @@ Naj bo $K \subset \R^2$ krivulja, ki ima tangento v točki $(a, b) \in K$. \text
 $$P(x, y)\,dx ~+~ Q(x, y)\,dy ~=~ 0,$$
 kjer sta $P, Q: A \rightarrow \mathbb{R}$ definirani na nekem območju $A \subset \mathbb{R}^2$. \\
 
-Naj bosta $P, Q: A \rightarrow \mathbb{R}$ \textit{odvedljivi}. Diferencialna enačba \\$P(x, y)\,dx + Q(x, y)\,dy = 0$ je \textit{eksaktna} na $A$, če velja 
-$$\frac{\partial P}{\partial y}(x, y) ~=~ \frac{\partial Q}{\partial x}(x, y)$$
-$\forall x \in A$.
+\noindent Naj bosta $P, Q: A \rightarrow \mathbb{R}$ \textit{odvedljivi}. Diferencialna enačba \\$P(x, y)\,dx + Q(x, y)\,dy = 0$ je \textit{eksaktna} na $A$, če velja 
+$$\frac{\partial P}{\partial y}(x, y) ~=~ \frac{\partial Q}{\partial x}(x, y), ~~~\forall x \in A.$$
 
 \end{definicija}
 \vspace{0.5cm}
