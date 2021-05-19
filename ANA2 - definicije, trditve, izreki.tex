@@ -612,7 +612,7 @@ Naj bo $g:[a, \infty) \rightarrow \mathbb{R}$ \textit{zvezna}, $a > 0$.
 	\item \textsc{Implicitno:} Funkcija $g: A \rightarrow \mathbb{R}$ za $A \subseteq \mathbb{R}^2$ določa krivuljo $K_g$, ki je množica rešitev enačbe $g(x, y) = 0$, torej
 	$$K_g ~=~ \{(x, y) \in A \mid g(x, y) = 0\}.$$
 	\item \textsc{Parametrično:} Funkciji $\alpha, \beta: J \rightarrow \mathbb{R}$ za $J \subseteq \mathbb{R}$ določata krivuljo $K_F$, ki je množica vseh točk $(x, y)$, določenih z $x = \alpha(t)$ in $y = \beta(t)$, torej
-	$$K_F ~=~ \{(\alpha(t), \beta(t)) \mid J\}.$$
+	$$K_F ~=~ \{(\alpha(t), \beta(t)) \mid t \in J\}.$$
 	Preslikavo $F: J \rightarrow \mathbb{R}^2$, $F(t) := (\alpha(t), \beta(t))$ imenujemo \textit{pot} ali \\\textit{parametrizacija} krivulje $K_F$. Krivuljo $K_F$ imenujemo tudi \textit{tir} poti $F$.
 	\item \textsc{Polarno:} Funkcija $h: J \rightarrow \mathbb{R}$ za $J \subseteq \mathbb{R}$ določa krivuljo $K_h$, ki je množica točk v ravnini s polarnima koordinatama $(r, \varphi)$, kjer je $r = h(\varphi)$, torej
 	$$K_h ~=~ \{(h(\varphi)\cos{\varphi}, h(\varphi)\sin{\varphi}) \mid \varphi \in J\}.$$
@@ -746,7 +746,7 @@ Dolžino krivulje $K$ torej izračunamo kot dolžino njene poljubne injektivne p
 \begin{enumerate}
 	\item[(i)] Dolžina \textit{eksplicitno} podane \textit{zvezno odvedljive} krivulje
 	$y = f(x)$ za \hbox{$x \in [a, b]$} je
-	$$\ell(K_f) 1=~ \int_a^b \sqrt{1 ~+~ (f'(x))^2}\,dx ~=~ \int_a^b \sqrt{1 + {y'}^2}\,dx.$$
+	$$\ell(K_f) ~=~ \int_a^b \sqrt{1 ~+~ (f'(x))^2}\,dx ~=~ \int_a^b \sqrt{1 + {y'}^2}\,dx.$$
 
 	\item[(ii)] Dolžina \textit{polarno} podane \textit{zvezno odvedljive} krivulje $r = 	r(\varphi)$ za $\varphi \in [a, b]$ je
 	$$\ell(K_r) ~=~ \int_a^b \sqrt{r(\varphi)^2 ~+~ \dot{r}(\varphi)^2}\,d\varphi.$$
@@ -835,7 +835,7 @@ Zgornja trditev velja tudi za \textit{odsekoma zvezno odvedljive} poti $F$, tore
 \begin{trditev}
 
 Naj bo $r = r(\varphi)$ za $\varphi \in [\alpha, \beta]$ \textit{zvezno polarno} podana \hbox{krivulja}. Potem je ploščina območja, ki ga določa krivulja skupaj z \hbox{daljicama} 
-$$\varphi = \alpha, ~~0 \leq r \leq r(a) ~~~\text{in}~~~ \varphi = \beta, ~~0 \leq r \leq r(\beta),$$
+$$\varphi = \alpha, ~~0 \leq r \leq r(\alpha) ~~~\text{in}~~~ \varphi = \beta, ~~0 \leq r \leq r(\beta),$$
 enaka
 $$\frac{1}{2} \int_\alpha^\beta r(\varphi)^2\,d\varphi.$$
 
@@ -954,7 +954,7 @@ $$\frac{1}{\mu} \frac{d\mu}{dy} ~=~ \frac{Q_x - P_y}{P}.$$
 
 \begin{definicija}[Številska vrsta]
 
-\textit{Številska vrsta} je vsote (neskončnega) zaporedja realnih števil. Če je $(a_n)_{n \in \mathbb{N}}$ zaporedje realnih števil, je pripadajoča številska vrsta
+\textit{Številska vrsta} je vsote (neskončnega) \hbox{zaporedja} realnih števil. Če je $(a_n)_{n \in \mathbb{N}}$ zaporedje realnih števil, je \hbox{pripadajoča} številska vrsta
 $$\sum_{n=1}^{\infty} a_n = a_1 + a_2 + \ldots + a_n + \ldots .$$
 Za naravno število $k$ je \textit{$k$-ta delna vsota} vrste $\mathlarger{\sum_{n=1}^{\infty} a_n}$ enak
 $$s_k := \sum_{n=1}^{k} a_n = a_1 + a_2 + \ldots + a_k.$$
@@ -1015,7 +1015,7 @@ Potem vrsta $\sum_{n=1}^\infty a_n ~ \begin{cases}
 
 \begin{trditev}[Korenski ali Cuchyjev kriterij]
 
-Naj bo $(a_n)_n$ zaporedje \textit{nenegativnih} števil, za katerega obstaja
+Naj bo $(a_n)_n$ zaporedje \\\hbox{\textit{nenegativnih}} števil, za katerega obstaja
 $$c ~:=~ \lim_{n \rightarrow \infty} \sqrt[n]{a_n}.$$
 Potem vrsta $\sum_{n=1}^\infty a_n ~ \begin{cases}
 \textit{konvergira}\,; ~&c<1\\
@@ -1071,7 +1071,7 @@ Vrsta $\mathlarger{\sum_{n=1}^{\infty} a_n}$ je \textit{alternirajoča}, če je 
 
 \begin{trditev}[Leibnizov kriterij]
 
-Naj bo $\mathlarger{\sum_{i=1}^n a_n}$ \textit{alternirajoča} vrsta. Če zaporedje $(|a_n|)_n$ \textit{monotono} pada proti $0$, potem je vrsta $\mathlarger{\sum_{i=1}^n a_n}$ \textit{konvergentna}. Če v tem primeru $s_k$ označuje $k$-to delno vsoto vrste in $s$ vsoto vrste, potem velja
+Naj bo $\mathlarger{\sum_{i=1}^n a_n}$ \textit{alternirajoča} vrsta. Če \hbox{zaporedje} $(|a_n|)_n$ \textit{monotono} pada proti $0$, potem je vrsta $\mathlarger{\sum_{i=1}^n a_n}$ \hbox{\textit{konvergentna}}. Če v tem primeru $s_k$ označuje $k$-to delno vsoto vrste in $s$ vsoto vrste, potem velja
 $$|s - s_k| ~\leq~ |a_{k+1}|.$$
 
 \end{trditev}
@@ -1097,7 +1097,7 @@ Vrsta $\mathlarger{\sum_{n=1}^{\infty} a_n}$ je \textit{absolutno konvergentna},
 
 \begin{trditev}[Konvergentne vrste tvorijo vektorski prostor]
 
-Naj bosta vrsti $\mathlarger{\sum_{n=1}^\infty a_n}$ in $\mathlarger{\sum_{n=1}^\infty b_n}$ \textit{(absolutno) konvergentni} in naj bo $c \in \R$. Potem so \textit{(absolutno) konvergentne} tudi vrste $\mathlarger{\sum_{n=1}^\infty (a_n \pm b_n)}$ in $\mathlarger{\sum_{n=1}^\infty c \cdot a_n}$ ter velja
+Naj bosta \hbox{vrsti} $\mathlarger{\sum_{n=1}^\infty a_n}$ in $\mathlarger{\sum_{n=1}^\infty b_n}$ \textit{(absolutno) konvergentni} in naj bo $c \in \R$. Potem so \hbox{\textit{(absolutno)} konvergentne} tudi vrste $\mathlarger{\sum_{n=1}^\infty (a_n \pm b_n)}$ in $\mathlarger{\sum_{n=1}^\infty c \cdot a_n}$ ter velja
 $$\sum_{n=1}^\infty (a_n \pm b_n) ~=~ \sum_{n=1}^\infty a_n + \sum_{n=1}^\infty b_n ~~~\text{in}~~~ \sum_{n=1}^\infty c \cdot a_n ~=~ c \sum_{n=1}^\infty a_n.$$
 
 \end{trditev}
@@ -1152,7 +1152,7 @@ in rečemo, da zaporedje $(f_n)_n$ \textit{konvergira k $f$ po točkah}.
 
 \begin{opomba}
 
-Funkcijsko zaporedje $(f_n: A \rightarrow \mathbb{R})_n$ v splošnem konvergira le v točkah iz neke podmnožice $B$ definicijskega območja $A$; množico $B$ imenujemo \textit{konvergenčno območje} funkcijskega zaporedja.
+Funkcijsko zaporedje $(f_n: A \rightarrow \mathbb{R})_n$ v splošnem konvergira le v točkah iz neke podmnožice $B$ definicijskega območja $A$; množico $B$ \hbox{imenujemo} \textit{konvergenčno območje} funkcijskega zaporedja.
 
 \end{opomba}
 \vspace{0.5cm}
@@ -1202,14 +1202,14 @@ Naj bo $s: A \rightarrow \mathbb{R}$ limitna funkcija zaporedja delnih vsot $(s_
 
 Naj bo $(f_n: A \rightarrow \R)_n$ zaporedje funkcij in naj obstaja tako zaporedje \textit{pozitivnih} števil $(c_n)_n$, da $\forall n \in \N$ velja
 $$|f_n(x)| ~\leq~ c_n ~~~\forall x \in A.$$
-Če je številska vrsta $\mathlarger{\sum_{n=1}^\infty c_n}$ \textit{konvergentna}, potem funkcija vrsta $\mathlarger{\sum_{n=1}^\infty f_n}$ \textit{konvergira enakomerno} in \textit{absolutno} na $A$. Če so funkcije $f_n$ \textit{zvezne}, je tudi vsota vrste \textit{zvezna} funkcija.
+Če je številska vrsta $\mathlarger{\sum_{n=1}^\infty c_n}$ \textit{konvergentna}, potem funkcija vrsta $\mathlarger{\sum_{n=1}^\infty f_n}$ \textit{\\\hbox{konvergira} enakomerno} in \textit{absolutno} na $A$. Če so funkcije $f_n$ \textit{zvezne}, je tudi vsota vrste \textit{zvezna} funkcija.
 
 \end{trditev}
 \vspace{0.5cm}
 
 \begin{izrek}[Integriranje po členih]
 
-Naj bo $J \subset \R$ \textit{omejen} interval, $a \in J$, in naj bo $(f_n: J \rightarrow \R)_n$ zaporedje \textit{zveznih} funkcij na $J$. Če vrsta $\sum_{n=1}^\infty f_n$ \textit{konvergira enakomerno} na $J$, potem tudi $\sum_{n=1}^\infty \int_a^x f_n(t)\,dt$ \textit{konvergira enakomerno} za $x \in J$ in $\forall x \in J$ velja
+Naj bo $J \subset \R$ \textit{omejen} interval, \hbox{$a \in J$}, in naj bo $(f_n: J \rightarrow \R)_n$ zaporedje \textit{zveznih} funkcij na $J$. Če vrsta $\mathlarger{\sum_{n=1}^\infty f_n}$ \textit{\hbox{konvergira} enakomerno} na $J$, potem tudi $\mathlarger{\sum_{n=1}^\infty \int_a^x f_n(t)\,dt}$ \textit{\hbox{konvergira} \hbox{enakomerno}} za $x \in J$ in $\forall x \in J$ velja
 $$\int_a^x \left( \sum_{n=1}^\infty f_n(t) \right)\,dt ~=~ \sum_{n=1}^\infty \int_a^x f_n(t)\,dt.$$
 
 \end{izrek}
@@ -1217,7 +1217,7 @@ $$\int_a^x \left( \sum_{n=1}^\infty f_n(t) \right)\,dt ~=~ \sum_{n=1}^\infty \in
 
 \begin{izrek}[Odvajanje po členih]
 
-Naj bo $J \subset \R$ interval in naj bo $(f_n: J \rightarrow \R)_n$ zaporedje \textit{zvezno odvedljivih} funkcij na $J$. Če vrsta $\mathlarger{\sum_{n=1}^n f_n}$ \textit{konvergira po točkah} na $J$ in vrsta iz odvodov $\mathlarger{\sum_{n=1}^\infty f'_n}$ \textit{konvergira enakomerno} na $J$, potem je $\mathlarger{\sum_{n=1}^\infty f_n}$ \textit{odvedljiva} na $J$ in $\forall x \in J$ velja
+Naj bo $J \subset \R$ interval in naj bo \hbox{$(f_n: J \rightarrow \R)_n$} zaporedje \textit{zvezno odvedljivih} funkcij na $J$. Če vrsta $\mathlarger{\sum_{n=1}^n f_n}$ \textit{konvergira po točkah} na $J$ in vrsta iz odvodov $\mathlarger{\sum_{n=1}^\infty f'_n}$ \textit{konvergira enakomerno} na $J$, potem je $\mathlarger{\sum_{n=1}^\infty f_n}$ \textit{odvedljiva} na $J$ in $\forall x \in J$ velja
 $$\frac{d}{dx} \left( \sum_{n=1}^\infty f_n(x) \right) ~=~ \sum_{n=1}^\infty f'_n(x).$$
 
 \end{izrek}
@@ -1303,7 +1303,7 @@ $$\frac{1}{R} ~=~ \lim_{n \rightarrow \infty} \sup{\sqrt[n]{|a_n|}}.$$
 \end{izrek}
 \vspace{0.5cm}
 
-\begin{izrek}[Abel]
+\begin{izrek}[Abelov izrek]
 
 Naj bo $R$ konvergenčni polmer potenčne vrste $\mathlarger{\sum_{n=0}^\infty a_n x^n}$. Če vrsta \textit{konvergira} za $x = R$ ($x = -R$), potem je vsota vrste \textit{zvezna} v $R$ ($-R$).
 
@@ -1312,7 +1312,7 @@ Naj bo $R$ konvergenčni polmer potenčne vrste $\mathlarger{\sum_{n=0}^\infty a
 
 \begin{izrek}[Odvajanje in integriranje potenčnih vrst]
 
-Naj bo $R > 0$ konvergenčni polmer potenčne vrste $\mathlarger{f(x) = \sum_{n=0}^\infty a_n x^n}$. Potem imata vrsti, ki ju dobimo s členim odvajanjem $\mathlarger{\sum_{n=1}^\infty n a_n x^{n-1}}$ in členim integriranjem $\sum_{n=0}^\infty \frac{a_n}{n+1} x^{n+1}$ tudi konvergenči polmer $R$ in $\forall x \in (-R, R)$ velja:
+Naj bo $R > 0$ \\\hbox{konvergenčni} polmer potenčne vrste $\mathlarger{f(x) = \sum_{n=0}^\infty a_n x^n}$. Potem imata vrsti, ki ju dobimo s členim odvajanjem $\mathlarger{\sum_{n=1}^\infty n a_n x^{n-1}}$ in členim integriranjem $\sum_{n=0}^\infty \frac{a_n}{n+1} x^{n+1}$ tudi konvergenči polmer $R$ in $\forall x \in (-R, R)$ velja:
 $$f'(x) ~=~ \sum_{n=1}^\infty n a_n x^{n-1} ~~~\text{in}~~~ \int_0^x f(t)\,dt ~=~ \sum_{n=0}^\infty \frac{a_n}{n+1} x^{n+1}.$$
 
 \end{izrek}
@@ -1335,9 +1335,43 @@ Vsota potenčne vrste je poljubno mnogokrat \textit{zvezno odvedljiva} na $(-R, 
 Naj bo $f$ \textit{poljubno mnogokrat zvezno odvedljiva} v okolici točke $c \in \mathbb{R}$. \textit{Taylorjeva vrsta funkcije $f$ s središčem v $c$} je 
 $$T_c(x) ~=~ \sum_{n=0}^{\infty} \frac{f^{(n)}(c)}{n!} (x-c)^n.$$ \\
 
-Naj bo $J \subset \mathbb{R}$ \textit{odprt interval} in $f \in \mathcal{C}^{\infty}(J)$. Rečemo, da je $f$ \textit{analitična} na $J$, če je $\forall c \in J$ Taylorjeva vrsta $T_c$ enaka funkciji $f$ na neki okolici točke $c$.
+Naj bo $J \subset \mathbb{R}$ \textit{odprt interval} in $f \in \mathcal{C}^{\infty}(J)$. Rečemo, da je $f$ \textit{analitična} na $J$, če je $\forall c \in J$ Taylorjeva vrsta $T_c$ enaka funkciji $f$ na neki okolici \hbox{točke $c$}.
 
 \end{definicija}
+\vspace{0.5cm}
+
+\begin{definicija}[Analitična vrsta]
+
+Če Taylorjeva vrsta funkcije $f$ \textit{konvergira} tudi v okolici točke $a$ proti funkciji $f$, rečemo, da je funkcija $f$ v okolici točke $a$ \textit{analitična}.
+
+\end{definicija}
+\vspace{0.5cm}
+
+\begin{trditev}[Primeri Taylorjevih (McLaurinovih) razvojev]
+~
+\begin{enumerate}
+	
+	\item \textsc{Eksponentna funkcija}: 
+	$$e^x ~=~ \sum_{n=0}^\infty \frac{x^n}{n!} ~=~ 1 + \frac{x}{1!} + \frac{x^2}{2!} + \frac{x^3}{3!} + \ldots ~~~\forall x \in \R$$
+	
+	\item \textsc{Sinus in kosinus}:
+	\begin{align*}
+	\sin{x} ~&=~ \sum_{n=0}^\infty \frac{(-1)^n}{(2n+1)!}x^{2n+1} ~=~ x - \frac{x^3}{x!} + \frac{x^5}{5!} - \frac{x^7}{7!} + \ldots ~~~\forall x \in \R \\
+	\cos{x} ~&=~ \sum_{n=0}^\infty \frac{(-1)^n}{(2n!)}x^{2n} ~=~ 1 - \frac{x^2}{2!} + \frac{x^4}{4!} - \frac{x^6}{6!} + \ldots ~~~\forall x \in \R
+	\end{align*}
+	
+	\item \textsc{Logaritemska funkcija}:
+	$$\ln{1+x} ~=~ \sum_{n=1}^\infty \frac{(-1)^{n-1}}{n}x^n ~=~ x - \frac{x^2}{2} + \frac{x^3}{3} - \frac{x^4}{4} + \ldots ~~~\forall x \in (-1, 1]$$
+	
+	\item \textsc{Binomska vrsta}:
+	\begin{align*}
+	(1+x)^r ~=~ \sum_{n=0}^\infty \binom{r}{n}x^n ~=~ 1 + \binom{r}{1}x + \binom{r}{2}x^2 + \binom{r}{3}x^3 + \ldots ~~~ \forall x &\in (-1, 1) 
+	\end{align*}	
+	$r, n \in \N$.
+	
+\end{enumerate}
+
+\end{trditev}
 \vspace{0.5cm}
 
 % *************************************************************************************************
@@ -1356,11 +1390,30 @@ kjer sta $(a_n)_{n \geq 0}$ in $(b_n)_{n \geq 1}$ \textit{realni} zaporedji.
 
 \begin{definicija}[Skalarni produkt]
 
-Naj bosta $f, g: [a, b] \rightarrow \mathbb{R}$ odsekoma zvezni funkciji. Izraz
+Naj bosta $f, g: [a, b] \rightarrow \mathbb{R}$ \textit{odsekoma zvezni} funkciji. Izraz
 $$\langle f, g \rangle ~:=~ \int_{a}^{b} f(x) g(x)\,dx$$
 imenujemo \textit{skalarni produkt} funkcij $f$ in $g$. Če je $\langle f, g \rangle = 0$, rečemo, da sta $f$ in $g$ \textit{ortogonalni}. Izraz $\| f \| = \sqrt{\langle f, f \rangle}$ imenujemo \textit{norma} funkcije $f$.
 
 \end{definicija}
+\vspace{0.5cm}
+
+\begin{trditev}
+
+$\langle \cdot, \cdot \rangle$ ima lastnosti skalarnega produkta: za \textit{odsekoma zvezne} funkcija $f, g, h: [a, b] \rightarrow \R$ in skalarja $\lambda, \mu \in \R$ velja:
+\begin{enumerate}
+	
+	\item[(1)] \textsc{Pozitivna definitnost}:	
+	$$\langle f, f \rangle = 0 ~\iff~ f(x) = 0 ~~~\text{za vse razen morda končno mnogo}~ x$$
+	
+	\item[(2)] \textsc{Simetričnost}:
+	$$\langle g, f \rangle ~=~ \langle f, g \rangle$$
+	
+	\item[(3)] \textsc{Bilinearnost}:
+	$$\langle \lambda f + \mu g, h \rangle ~=~ \lambda \langle f, h \rangle ~+~ \mu \langle g, h \rangle$$	
+	
+\end{enumerate}
+
+\end{trditev}
 \vspace{0.5cm}
 
 \begin{dogovor}
@@ -1369,6 +1422,50 @@ Za \textit{odsekoma zvezno} funkcijo $f$ v točkah nezveznosti vrednost funkcije
 $$f(x) ~=~ \frac{1}{2} \left( \lim_{t \nearrow x} f(t) + \lim_{t \searrow x} f(t) \right).$$
 
 \end{dogovor}
+\vspace{0.5cm}
+
+\begin{trditev}[Ortogonalnost sistema trigonometričnih funkcij]
+
+Funkcije
+$$\{ 1, \cos{x}, \sin{x}, \cos{(2x)}, \sin{(2x)}, \ldots \} ~=~ \{ 1, \cos{nx}, \sin{nx} \mid n \in \N \}$$
+so \textit{paroma ortogonalne} na $[-\pi, \pi]$. Rečemo, da te funkcije sestavljajo \textit{\\\hbox{ortogonalen} sistem} na $[-\pi, \pi]$. Poleg tega velja še
+$$\| 1 \|^2 ~=~ 2\pi, ~~~\| \cos{(nx)} \|^2 ~=~ \pi, ~~~\| \sin{(nx)} \|^2 ~=~ \pi ~~~\forall n \in \N.$$
+
+\end{trditev}
+\vspace{0.5cm}
+
+\begin{lema}
+
+Naj bosta zaporedji $(a_n)_{n \geq 0}$ in $(b_n)_{n \geq 1}$ takšni, da vrsta
+$$a_0 ~+~ \sum_{n=1}^\infty (a_n \cos(nx) + b_n \sin(nx))$$
+\textit{konvergira enakomerno} na $[-\pi, \pi]$. Označimo vsoto vrste s $f: [-\pi, \pi] \rightarrow \R$. Potem je
+\begin{align*}
+a_0 ~&=~ \frac{1}{2\pi} \int_{-\pi}^\pi f(x)\,dx ~=~ \frac{\langle f(x), 1 \rangle}{\| 1 \|^2}, \\
+a_n ~&=~ \frac{1}{\pi} \int_{-\pi}^\pi f(x) \cos(nx)\,dx ~=~ \frac{\langle f(x), \cos(nx) \rangle}{\| \cos(nx) \|^2}, \\
+b_n ~&=~ \frac{1}{\pi} \int_{-\pi}^\pi f(x) \sin(nx)\,dx ~=~ \frac{\langle f(x), \sin(nx) \rangle}{\| \sin(nx) \|^2} ~~~\forall n \in \N
+\end{align*}
+
+\end{lema}
+\vspace{0.5cm}
+
+\begin{opomba}
+~
+\begin{enumerate}
+
+	\item[(1)] Izračunane formule za koeficiente $a_n$ in $b_n$ so smiselne za vsako \textit{\hbox{odsekoma} zvezno} funkcijo $f$. Lahko pa se zgodi, da tako dobljena vrsta \textit{divergira} ali pa, če \textit{konvergira}, da njena vsota ni enaka $f$.
+
+	\item[(2)] Vsota Fourierove vrste je \textit{periodilna} funkcija s periodo $2\pi$. Zato je smiselno funkcijo $f: [\pi, \pi] \rightarrow \R$, ki jo razvijemo v Fourierovo vrsto, razširiti do periodične funkcije na $\R$.
+
+\end{enumerate}
+
+\end{opomba}
+\vspace{0.5cm}
+
+\begin{izrek}
+
+Naj bo $f: \R \rightarrow \R$ \textit{dvakrat zvezno odvedljiva} funkcija, \hbox{periodična} s periodo $2\pi$. Potem Fourierova vrsta za $f$ \textit{konvergira enakomerno} in \textit{\hbox{absolutno}} na $\R$ in njena vsota je enaka $f$.
+
+\end{izrek}
 \vspace{0.5cm}
 
 \begin{definicija}
@@ -1389,6 +1486,28 @@ torej levi odvod obstaja, saj pbstaja leva limita odvodov; analogno velja za des
 \end{opomba}
 \vspace{0.5cm}
 
+\begin{izrek}
+
+Naj bo $f: [-\pi, \pi] \rightarrow \R$ \textit{odsekoma zvezno odvedljiva}. Potem Fourierova vrsta za $f$ \textit{konvergira} proti funkciji $f$ \textit{po točkah}; bolj natančno, v točki, kjer $f$ ni \textit{zvezna}, Fourierova vrsta \textit{konvergira} proti povprečni vrednosti leve in desne limite funkcije v tej točki.
+
+\end{izrek}
+\vspace{0.5cm}
+
+\begin{lema}[Riemannova lema]
+
+Naj bo $f: [a, b] \rightarrow \R$ \textit{odsekoma zvezna}. Potem je za $r \in \R$
+$$\lim_{r \rightarrow \infty} \int_a^b f(x) \sin(rx)\,dx ~=~ 0.$$
+
+\end{lema}
+\vspace{0.5cm}
+
+\begin{posledica}
+
+Naj bo $f$ \textit{poljubno mnogokrat zvezno odvedljiva} funkcija na $\R$, periodična s periodo $2\pi$. Potem je $f$ enaka svoji Fourierovi vrsti, ki \textit{\hbox{konvergira} enakomerno} in \textit{absolutno} na $\R$. Vrsto lahko poljubno mnogokrat členoma \hbox{odvajamo} in vsota tako dobljene vrste je enaka utreznemu odvodu funkcije $f$.
+
+\end{posledica}
+\vspace{0.5cm}
+
 \begin{definicija}
 
 Ker lahko vsako \textit{odsekoma zvezno odvedljivo} funkcijo na $[-\pi, \pi]$ razvijemo v Fourierovo vrsto, ki konvergira proti $f$ (vsaj po točkah), rečemo, da funkcije 
@@ -1400,7 +1519,7 @@ sestavljajo \textit{poln sistem funkcij} na intervalu $[-\pi, \pi]$.
 
 \begin{posledica}[Fourierova sinusna in kosinusna vrsta]
 
-Naj bo $f:[0, \pi] \rightarrow \mathbb{R}$ \textit{odsekoma zvezno odvedljiva}. Potem lahko $f$ na intervalu $[0, \pi]$ ravzijemo v \textit{sinusno} Fourierovo vrsto
+Naj bo $f:[0, \pi] \rightarrow \mathbb{R}$ \textit{odsekoma zvezno odvedljiva}. Potem lahko $f$ na intervalu $[0, \pi]$ razvijemo v \textit{sinusno} Fourierovo vrsto
 $$f(x) ~=~ \sum_{n=1}^{\infty} b_n \sin(nx), ~~~b_n ~=~ \frac{2}{\pi} \int_{0}^{\pi} f(x) \sin(nx)\,dx$$
 in v \textit{kosinusno} Fourierovo vrsto
 \begin{align*}
