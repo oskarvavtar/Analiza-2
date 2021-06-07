@@ -1589,9 +1589,43 @@ Tej ortogonalni družini pripada diferencialna enačba, ki je v preprosti zvezi 
 \end{definicija}
 \vspace{0.5cm}
 
+\begin{izrek}[Eksistenca in enoličnost]
+
+Naj bo $D$ \textit{odprta} množica na ravnini, $(x_0, y_0) \in U$ poljubna točka in $f: D \rightarrow \R$ poljubna funkcija dveh spremenljivk, definirana na $D$.
+\begin{enumerate}
+	
+	\item[(1)] Če je $f$ \textit{zvezna} funkcija, obstaja tak interval $I \subset \R$, in vsaj ena \textit{odvedljiva} funkcija $y = y(x)$, definirana na $I$, da je:
+	\begin{enumerate}
+		\item[(i)] $x_0 \in I$ in $y(x_0) = y_0$,
+		\item[(ii)] $(x, y(x)) \in D$ $\forall x \in I$ in
+		\item[(iii)] $y'(x) = f(x, y(x))$ $\forall x \in I$. 
+	\end{enumerate}		
+	
+	\item[(2)] Če poleg tega obstaja v okolici točke $(x_0, y_0)$ tudi \textit{zvezen} parcialni odvod $\cfrac{\partial f}{\partial y}$, je funkcija $y = y(x)$ z zgornjimi lastnostmi ena sama.
+	
+\end{enumerate}
+
+\end{izrek}
+\vspace{0.5cm}
+
 % *************************************************************************************************
 
 \subsection{Linearna diferencialna enačba prvega reda}
+\vspace{0.5cm}
+
+\begin{izrek}
+
+Splošnja rešitev \textit{linearne diferencialne enačbe prvega reda} je
+$$y ~=~ e^{-\int_{x_0}^x f(t)\,dt} \left( \int_{x_0}^x g(s) e^{\int_{x_0}^x f(t)\,dt}\,ds + C \right).$$
+
+\end{izrek}
+\vspace{0.5cm}
+
+\begin{opomba}
+
+Včasih je koristno enačbo pomnožiti z ustreznim faktorjem, tako da na levi strani dobimo odvod neke funkcije.
+
+\end{opomba}
 \vspace{0.5cm}
 
 % *************************************************************************************************
